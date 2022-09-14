@@ -1,0 +1,63 @@
+Test Branch: Old World Version 1.0.62179 Test 08/10/2022 
+Test Branch: Old World Version 1.0.62336 Test 08/17/2022 
+Main Branch: Old World Version 1.0.62422 Release 08/24/2022
+Main Hotfix: Old World Version 1.0.62443 Release 08/25/2022
+
+Design
+  Free Worker bonus card now unlocks with Administration instead of Polis
+  Egyptian improvement cost bonus now only tests for finished improvements
+  Events that reduce discontent have had the discontent reduction value doubled
+  Blessed and Curse now remove opposing effect
+  Choose law events now occur less frequently, when player has a higher civics threshold
+  Added 4 learn by playing scenarios
+  Show Resources and Improvements now just shows Urban Improvements
+
+Programming:
+  Improved rivers on lowest detail setting
+  Minor improvements to AI 
+    Improvements to disciples
+    AI more intelligent about succession and reassigning jobs
+
+UI
+  All Improvements worker filter now shows improvements in a grid
+  Bridge model appears when roads cross rivers with Engineering Law
+  When going from simple to advanced settings, the number of AI opponents gets set to the default for that map size.
+  More helptext has been added to the servers screen 
+  Movement pip colors turn orange when force march is used with force march set to Double Fatigue
+  Reminder added for when laws can be adopted
+  Announcement panel has been added to the main menu
+  Unavailable scenarios now show greyed out
+  added indicator to SP setup screen when dynasties are available
+  added right-click menu to portraits for council slots, religion/family heads, nation/tribe leaders
+  Added Slider to adjust popup text size in Accessibility options
+
+Bug Fixes
+  Improvements to localized text
+  Improvement to camera pan
+  Game no longer shows orders preview or path for moves outside of force march limits
+  Fixed issues in mod browser
+  Various text and event fixes
+  It is no longer possible to hire units on city tiles
+  Fixed issues found in no-characters mode
+  Fixed issue with terrain around mountains
+  Fixed issue with re-capturing a teammate's city.
+  Edit Hotkeys now working again
+  Nested tooltips now show when locked with shift
+  Carthage 1 ‘Build a market in Qart-Hadasht" goal now completes
+  Barbarian Horde: Fixed raiders being able to spawn on inaccessible tiles
+  Barbarian Horde: Tribe Peace/Alliance ambitions are no longer present in the scenario
+  Various small UI improvements
+  Russian: adjustments to how turnscale is handled
+  Fixed issue where city site text was not appearing when revealed but not visible
+  Fixed sorting issue for choose research popup 
+  Fixed minor issue with Greece 4 end condition causing errors
+  Fixed underwater trees in Mediterranean map 
+  Fixed issue with city widget on high graphic preset
+  Additional adjustments to events where traits are chosen the next turn
+  We no longer show defeated nations from luxury management panel
+  Game no longer shows the "could change succession" warning when there's no heir
+  Improvements to Heroes of the Aegean achievements unlock conditions
+  Fixed player list text sorting in front of some menus
+  Fixes to "Source of Power" and "Family Quarrel" events
+  Additional event fixes
+  Fixed potential game hang from Family Favors event
