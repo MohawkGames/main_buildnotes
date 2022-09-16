@@ -1,6 +1,7 @@
 Test Branch: Old World Version 1.0.62707 Test 09/07/2022 
 Test Branch: Old World Version 1.0.62594 Test 08/31/2022 
 Main Branch: Old World Version 1.0.62798 Release 09/14/2022
+Main Branch Hotfix: Old World Version 1.0.62837 Release 09/16/2022
 
 Design
   Ships can now enter their team's coastal cities
@@ -72,3 +73,5 @@ Bug Fixes
   Adjusted the age of Stratonice and Demetrius in Greece 6
   Adjustments to border growth preview
   Various text and event fixes
+  Fixed issue with cursor disappearing in events on Steam Deck 
+  Fixed issue with traded luxury disappearing on loading save
