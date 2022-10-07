@@ -60,4 +60,4 @@ Bugs Fixed
   Fixed issue with minor cities
   Fixed hang found in test build
   Fixed issues with dedicated servers
-  Fixed events not showing boni when affected characters had their maximum number of strengths or weaknesses
+  Fixed events not showing bonuses when affected characters had their maximum number of strengths or weaknesses
