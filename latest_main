@@ -1,6 +1,7 @@
 Test Branch: Old World Version 1.0.62930 Test 09/21/2022 
 Test Branch: Old World Version 1.0.63065 Test 09/28/2022 
-Main Branch: Old World Version 1.0.63201 release 10/5/2022
+Main Branch: Old World Version 1.0.63201 release 10/05/2022
+Main Branch Hotfix: Old World Version 1.0.63239 release 10/07/2022
 
 Design
   Reduced number of improvements required for some ambitions
@@ -58,3 +59,5 @@ Bugs Fixed
   Fixed issue where adopt state religion button was not updating
   Fixed issue with minor cities
   Fixed hang found in test build
+  Fixed issues with dedicated servers
+  Fixed events not showing boni when affected characters had their maximum number of strengths or weaknesses
