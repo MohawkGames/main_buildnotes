@@ -1,4 +1,5 @@
-Test Branch: Old World Version 1.0.? Main 10/19/2022 
+Test Branch: Old World Version 1.0.63322 Test 10/12/2022
+Main Branch: Old World Version 1.0.63420 Main 10/19/2022 
 
 Design
   Coin Debasement now costs Money for Upkeep and Monetary Reform costs Civics
@@ -14,6 +15,7 @@ Programming
   Better error handling for platform managers when loading game
   
 UI
+  Major rework of French translation
   Theology unlocks now shown on tech tree
   Improved error message when failing to start a Play by Cloud game
   New Map button now hidden on premade maps 
@@ -58,4 +60,4 @@ Bugs Fixed
   Notification popups auto-focus again which allows using the keyboard to dismiss them
   Fixed some cases of clicks on recommended improvements selecting units instead
   Fixed missing available promotion icon
-  Fixed missing State Religion Cities law effects
+  Fixed missing helptext for State Religion Cities law effects
