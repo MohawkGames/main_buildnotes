@@ -76,3 +76,4 @@ Bugs Fixed
   Fixed F1 not working on some tile tooltip links
   Fixed worker recommendations sometimes not updating after starting other improvements
   Teammates can no longer move another players allied tribal units when No Team Movement option is set
+  Fixed persistent server crash
