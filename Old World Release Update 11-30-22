@@ -8,7 +8,6 @@ Design
   Artisan families get +10 opinion per Artist character.  
   Champion families no longer get opinion bonus for Bold characters.
   Blocked control Holy City ambitions from appearing in One City Challenge
-  Added combat tutorials when units do low damage
   Competitive mode now disables off-map tribal raids and prevents cognomens with negative legitimacy
   Centralization allows building farms on marsh, no longer gives +10 civics.
   Farms on marsh produce +2 Wood/Turn (in addition to food)
@@ -34,7 +33,7 @@ New Events (includes some older events that were previously disabled)
   Together in the World
   Trusted
   The City to Come
-  Several tutorial events for yield deficits and caps
+  Several tutorial events for yield deficits and caps and when units do low damage
 
 Programming
   AI performance improvements
