@@ -1,4 +1,5 @@
-Main Branch: Old World Version 1.0.64196 Main 11/30/2022
+Main Branch: Old World Version 1.0.64196 release 11/30/2022
+Main Branch hotfix: 1.0.64244 release 02/02/2022
 
 Design
   City widget culture level icon tooltip no longer reveals the exact culture of rival cities
@@ -105,3 +106,4 @@ Bugs Fixed
   Fixed issues with terrain cell detail level selection and terrain cells at the edge of maps creating flickering mountains 
   Fixed crash when AI razed a city
   Fixed Steam Deck option selection bug
+  Fixed hotseat bug that prevented some players from carrying out actions like chopping and pillaging
