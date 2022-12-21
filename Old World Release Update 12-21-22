@@ -63,7 +63,7 @@ Bugs Fixed
   Fixed bug causing MP players to sometimes miss their turn when switching turn style
   Fixed bug where an already settled city site was still being treated as a tribe site in some cases
   Fixed missing information for Council assignment and Diplomacy events in Role Playing mode
-  Fixed AI unit movement bug introduced last week
+  Fixed AI unit movement bug
   Fixed some AI regressions
   Fixed unit widgets not reappearing after hiding the UI
   Fixed issues with tundra tile heightmap rendering
@@ -74,5 +74,5 @@ Bugs Fixed
   Fixed dynasty dropdown behavior for MP setup
   Fixed dowry research bug 
   Fixed issue where units hit or killed by splash damage didn't play any animations
-  Fixed cloud games getting stuck afer one of the players has been eliminated
+  Fixed cloud games getting stuck after a player was eliminated
   Fixed server exceptions causing the game to hang
