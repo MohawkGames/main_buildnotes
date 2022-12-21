@@ -1,109 +1,78 @@
-Main Branch: 1.0.64196 release 11/30/2022
-Main Branch hotfix: 1.0.64244 release 12/02/2022
+Main Branch: 1.0.64528 Release 12/21/2022
+
+There is a potential issue with Epic not allowing access to DLC or Cloud games when the Epic account has been restricted.  You may be able to resolve this by logging into your Epic account at epicgames.com and entering your date of birth when prompted.
 
 Design
-  City widget culture level icon tooltip no longer reveals the exact culture of rival cities
-  Teammates stats are now displayed on the Records screen
-  Units with generals can no longer be gifted
-  Can now select Garrison location in capital - ctrl+left click on preferred urban tile before settling
-  Artisan families get +10 opinion per Artist character.  
-  Champion families no longer get opinion bonus for Bold characters.
-  Blocked control Holy City ambitions from appearing in One City Challenge
-  Competitive mode now disables off-map tribal raids and prevents cognomens with negative legitimacy
-  Centralization allows building farms on marsh, no longer gives +10 civics.
-  Farms on marsh produce +2 Wood/Turn (in addition to food)
-  More marsh tiles will be generated near lakes
-  Ambitions have been rebalanced
-  Middle East map improvements
-  Removed demand/offer tribute variations of national peace ambassador mission
-
-New Events (includes some older events that were previously disabled)
-  An Embassy
-  All too Quick
-  Exacting Union
-  Everyone Wants a Peace
-  (Nation)'s Best Friend
-  The Will of the Profit
-  The Might of (Nation)
-  The Price of Peace
-  The Grand Hunt
-  One For The Storybooks
-  A Remarkable Discovery
-  The Sword In The Stone
-  Legacy of the Ruler
-  Together in the World
-  Trusted
-  The City to Come
-  Several tutorial events for yield deficits and caps and when units do low damage
+  New World Map - Imperium Romanum: The Roman World!
+  New map script - Donut
+  Inland Sea map script updated to give less regular sea and more mountain ranges
+  Free city site location now takes into account distance over land, not distance as the crow flies
+  Events which give traits are no longer blocked when a character already has the trait.  They will now give improvements to character ratings instead.
+  Hotseat games with 1 Human player are now treated as Multiplayer games.  This fixes teams not starting together in these games.
 
 Programming
-  AI performance improvements
-  AI is more proactive in healing units that are not in immediate danger
-  AI now knows to place improvements adjacent to tiles that can have adjacency bonuses, even before those tile have improvements
-  Worker AI improvements
-  Early-game AI move priority tweak
-  Increased AI emphasis on training production in its cities and AI improvement selection to better match the terrain
-  AI better defends its endangered cities
-  AI city garrison improvements
-  AI fort building logic updated
-  AI tries harder to preserve units' fortified, testudo, unlimbered, and anchored states
-  Added cuneiform font support
+  Performance improvements to terrain display and animations
+  AI improvements to use of forts, water control, anchoring and island movement
+  Improved AI city siege and other combat tactics
+  Improved AI unit build selection 
+  Improved AI city founding tile choice
+  Improved AI exploration with more than one unit
+  Improved AI evaluation of city projects
+  Improved AI improvement repairing
+  Improved AI reinforcements
+  Improved AI tile buying
+  AI now values discardable techs less
+  AI less likely to hire mercenaries that are damaged and/or far away 
   
+New Events
+  New Strings
+  Sorry State of Furnishings
+
 UI
-  Added Team Color Intensity option under Options - UI
-  Added option to reduce game framerate when application is not in focus under Options - Graphics
-  Added difficulty dropdown to scenario description screen.
-  Project help will no longer show impossible bonuses, e.g. Babylonia's +2 culture for Treasuries if you're not Babylonia
-  In One City Challenge, the city screen will show the button to build Settlers but the tooltip explains that they're unavailable in OCC
-  Separated city widget production text and build time text to avoid build time getting hidden with overflowing text
-  City list now defaults to sort by last ownership change (i.e. captured cities will appear at the bottom of the list)
-  Cloud games where the next player is the same as the current player now allow you to play the next turn without returning to the menu
-  Cloud games are automatically saved locally for the host each turn
-  Added Urban Tile count to population help 
-  Fatigue pips are hidden when a unit is fatigued and force march is toggled under unlimited force march
-  Map editor - Menu - Save now shows saved popup same as Menu - Save As and CTRL-S 
-  Improved Send Luxury button text
-  Luxury management buttons now appear for hostile nations/tribes  
-  Divination tooltip now shows all nation shrine types instead of only the generic shrine class
-  Added text auto-resizing for city production buttons if necessary
-  The Hill: Added scenario description/rules to victory popup screen
+  Added look-ahead terrain texture renderer.  This should reduce the instances of terrain briefly appearing at lower quality when moving to the next unit/city. 
+  Hotseat games can now be restarted 
+  Hotseat games support different languages for each player
+  Added Random Resource and Random Element Names buttons to Map Editor
+  Map start tiles for set maps can now be defined in mapStartTile.xml.  This allows modded nations to be given set start points on premade maps. 
+  Steam Input updates
+  Added project prerequisites to event option helptext
+  Unit tooltips in city screen now show per-unit cost increase (affects Settlers, Workers and Disciples)
+  Worker recommendation icons now show improvement yields and adjacency boni from all valid tiles, not just in the current city.
+  Added ambition progress to ambition bonus helptext in event options
+  Workers now have the Worker unit trait (icon art not added yet)
 
 Bugs Fixed
-  Localization text additions and fixes
-  Miscellaneous event fixes
-  Adjusted Hittite UU model to prevent potential overlaps
-  Fixed double victory point threshold being incorrectly displayed on Victory Screen 
-  Fixed initial family bonuses being applied after the initial units have already been created
-  Fixed some eliminated player issues in both network and cloud multiplayer
-  Fixed tribal marriage issue
-  Fix for hover helptext on overlay tile widgets
-  Moved out of bounds ruins on Middle East map
-  Fixed adopt religion and enact law costs not appearing in Role Playing mode
-  Added missing icons for Move Network, Expose Network missions and Enlisted cooldown
-  Fixed character random trait generation
-  Broken mods now get unloaded on game start with a notification rather than preventing the game from loading
-  Fixed network turn time extension
-  Fixed critical hits only happening after the unit has been idle, when critical hit preview was on
-  Fixed city list text not updating after governor candidates are assigned
-  Fixed bug with retreating AI
-  Fixed unit visibility issues on map reveal/unreveal
-  Fixed scenario MP setup screen showing incorrect nations
-  Fixed river movement helptext, movement bonus comes from Exploration
-  Fixed mission icon scaling issue
-  Prevented vegetation spread to wheat or barley tiles
-  Fixed self-reference in Courtier helptext
-  Fixed server mode "uploading game" popup not clearing
-  Fixed MP game tooltip stars to show the players currently expected to take their turn
-  Fix for Shrine of Vesta ember effect flickering on some machines
-  Fixed inconsistent UI portrait background assignment 
-  Network game player information fixes
-  Fixed city widget healthbar sorting issue
-  Fixed issue where a unit widget behind a city widget would steal focus from the city widget, making it hard to mouse over elements on the city widget when a unit widget was nearby
-  Fixed AI behavior issues
-  Fixed combat tutorial Highlander/Ranger events
-  Fixed BonusUnitClass hang if the class includes multiple units without a tech prerequisite
-  Fixed potential issue with Control all cities goal not completing in Greece 4
-  Fixed issues with terrain cell detail level selection and terrain cells at the edge of maps creating flickering mountains 
-  Fixed crash when AI razed a city
-  Fixed Steam Deck option selection bug
-  Fixed hotseat bug that prevented some players from carrying out actions like chopping and pillaging
+  Miscellaneous event fixes and rebalancing
+  Spanish text fixes
+  Fixed AI city site guarding bug
+  Fixed bug with character links on minimized events
+  Fixed bug with Barbarian Horde scenario difficulty not being applied when selected from description screen
+  Fixed error handling for incorrect network game host password
+  Fixed game restart for mods
+  Fixed bug allowing multi-couple polygamous marriages
+  Fixed bug with adopted children not being added to the line of succession
+  Fixed some cases where tile player ownership was checked instead of tile city territory
+  Fixed issue where units would stop their walking animation if they received a second move order while already moving 
+  Fixed display issue with cooldown icons on non-player-owned units
+  Fixed issue with resources of city sites on the centerline of mirror maps
+  Fixed server game host settings back button 
+  Fixed inconsistent button behavior between tribe/player selection and leader selection
+  Fixed revealmap and unrevealmap console commands
+  Fixed bug slowing religion spread to connected cities
+  Fixed attack preview bug
+  Fixed bug causing MP players to sometimes miss their turn when switching turn style
+  Fixed bug where an already settled city site was still being treated as a tribe site in some cases
+  Fixed missing information for Council assignment and Diplomacy events in Role Playing mode
+  Fixed AI unit movement bug
+  Fixed some AI regressions
+  Fixed unit widgets not reappearing after hiding the UI
+  Fixed issues with tundra tile heightmap rendering
+  Fixed rare unit conversion bug
+  Fixed event browser errors for event tree and advanced text editor popups
+  Fixed impossible ambition to enact Elites in Carthage 3 scenario 
+  Fixed spacing in production text on city widget
+  Fixed dynasty dropdown behavior for MP setup
+  Fixed dowry research bug 
+  Fixed issue where units hit or killed by splash damage didn't play any animations
+  Fixed cloud games getting stuck after a player was eliminated
+  Fixed server exceptions causing the game to hang
