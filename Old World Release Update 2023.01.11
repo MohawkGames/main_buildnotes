@@ -53,3 +53,4 @@ Bugs Fixed
   Fix for choice_ tags not working when subject not found;
   Bones no longer appear on water
   Fixed AI bug of overestimating damage when multiple units are used in an attack
+  Missing art for Free Longbowman and Worker traits added
