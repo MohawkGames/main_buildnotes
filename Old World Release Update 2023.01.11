@@ -1,4 +1,5 @@
 Main Branch: 1.0.64759 Release 01/11/2023
+Hotfix update: 1.0.64777 Release 01/12/2023
 
 Design
   City Discontent Level can now go negative.
@@ -18,7 +19,7 @@ Programming
   If you steal a city site from the AI, it will won't hold back from stealing one of yours
 
 UI
-  New network system enabled.  This adds support for LAN games and should improve network game stability.  
+  LAN game support added
   Added Portuguese to available languages
   New World Map icon added
   Added a Random Ruins button to map editor
