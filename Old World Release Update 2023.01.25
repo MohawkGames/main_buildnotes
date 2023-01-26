@@ -1,5 +1,4 @@
 Main Branch: 1.0.65025 Release 01/25/2023
-Main Branch: 1.0.65068 Release 01/26/2023
 
 Design
   Removed 8 towns ambition from OCC games
@@ -56,6 +55,4 @@ Bugs Fixed
   Fixed inconsistent action list for tribe/player leaders
   Fixed player getting notified when an agent network is moved in one of their cities.
   Fixed missing Heavy Chariot texture on combat preview
-  Fixed UI issues when dealing with foreign nations
-  Fixed buttons someimes being disabled inadvertently
-  Fixed network games not always showing in the game browser
+
