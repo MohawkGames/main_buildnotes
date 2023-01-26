@@ -12,7 +12,6 @@ Programming
   AI optimization for spreading religion and establishing theologies
 
 UI
-  Network system changes re-enabled
   Added progress indicator and additional help for religious council ambitions
   Added Retry option when cloud games fail to upload
   Added hidden option to enter cloud game user IDs.  To enable, add '<allowOnlineIDAsUsername>true</allowOnlineIDAsUsername>' to GameOptionsSave.xml.  This allows cross platform cloud games to be started using the players platform ID number.
@@ -55,4 +54,5 @@ Bugs Fixed
   Fixed inconsistent action list for tribe/player leaders
   Fixed player getting notified when an agent network is moved in one of their cities.
   Fixed missing Heavy Chariot texture on combat preview
-
+  Fixed UI issues when dealing with foreign nations
+  Fixed buttons someimes being disabled inadvertently
