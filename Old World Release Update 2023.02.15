@@ -1,13 +1,13 @@
 Main Branch: 1.0.65490 Release 02/15/2023
 
 Headline changes
-  New Bay mapscript added
+  New Bay map script added
   Added Happiness
   Family bonuses rebalanced
   Fixed longstanding bug with tooltips sometimes not appearing when hovering over links
 
 Design
-  New Bay mapscript added - temperate coastal map broken up by a large but shallow inland sea 
+  New Bay map script added - temperate coastal map broken up by a large but shallow inland sea 
   Added Happiness.  Cities now have a Happiness level with positive happiness which changes to a Discontent level when happiness is negative.  This changes the presentation of discontent but has no mechanical effect.
   Hunters no longer get a bonus to Nets (they still get their Camp bonus)
   Traders now have +100% Nets output instead of faster Hamlet growth
