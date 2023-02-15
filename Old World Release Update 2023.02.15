@@ -64,7 +64,8 @@ Programming
   Improved tribe placement algorithm
 
 UI
-  Select DLC option added to Advanced Setup when starting a game.  This allows disabling of owned DLC on a per game basis.
+  Added Owned DLC indicator to main menu
+  Added Select DLC option to Advanced Setup when starting a game.  This allows disabling of owned DLC on a per game basis.
   Removed workshop mod subscription check when there are no mod subscriptions
   For server games, entering an incorrect host password no longer joins the game without host access
   New console command: addcharacter CHARACTER_TYPE (playerID) (FAMILY_TYPE)
@@ -137,7 +138,7 @@ Bugs Fixed
   Fixed tutor notification turn in semester turn scale
   Fixed error on starting Learn by Playing 2
   Fixed SteamInput errors on shutdown
-  LTP3 minor text fixes
+  Learn to play 3 scenario minor text fixes
   Fixed cloud access errors on server list screen 
   Fixed Game Uploading popup sticking after setting up server game
   Fixed server game unloading 
