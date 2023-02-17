@@ -157,5 +157,5 @@ Bugs Fixed
   Fixed Council project not providing yields
   Fixed Old World map starting positions
   Fixed AIs on teams sometimes not founding starting city
-  Potential fix for network connectivity issues
   Fixed map generation exception
+  Reverted network changes
