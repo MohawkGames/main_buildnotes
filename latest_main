@@ -1,4 +1,5 @@
 Main Branch: 1.0.65497 Release 02/15/2023
+Main Branch: 1.0.65550 Release 02/17/2023
 
 Headline changes
   New Bay map script added
@@ -153,3 +154,8 @@ Bugs Fixed
   Fixed network games not getting relisted after a network outage 
   Fixed culture rate/progress not being shown on the culture tooltip of foreign cities with agents
   Text and event fixes
+  Fixed Council project not providing yields
+  Fixed Old World map starting positions
+  Fixed AIs on teams sometimes not founding starting city
+  Fixed map generation exception
+  Reverted network changes
