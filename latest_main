@@ -56,7 +56,7 @@ UI
   LAN matches no longer shown on main menu, only on the LAN games browser
   Event Browser redesign and improvements
   Always show all options in Play by Cloud username dropdown, with options that match input field sorted to the top (Steam only)
-  Changed the in-event text for a mission triggered via a mission from 'Mission Finished:' to 'Mission Result:
+  Changed the in-event text for a mission triggered via a mission from 'Mission Finished:' to 'Mission Result:'
   Added icon to MP game browser linking to Discord
   Remote servers of a different version are now excluded from the list of them
   Games hosted by remote server update the game's server password 
