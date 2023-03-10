@@ -1,5 +1,6 @@
 Main Branch: 1.0.65965 Release 03/08/2023
 Main Hotfix: 1.0.66012 Release 03/09/2023
+Main Hotfix: 1.0.66037 Release 03/10/2023
 
 Headline changes
   Happiness and Maintenance display changes
@@ -129,3 +130,4 @@ Bugs Fixed
   Fixed potential crash when razing a city - caused an issue in Heroes of the Aegean scenario 5.
   Text and event fixes
   Fixed a crash bug in Heroes of the Aegean scenario 1
+  Fixed an event bug causing the game to get stuck
