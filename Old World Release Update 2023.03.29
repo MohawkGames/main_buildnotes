@@ -1,10 +1,10 @@
 Main Branch: 1.0.66355 Release 03/29/2023
 
 Headline changes
-  More family rebalancing
   Improvement pings system added. City planning just got a lot easier!
+  More family rebalancing
+  New events added
   Text for all language localizations updated
-  Memory optimizations
 
 Design
   Cleric seat no longer gets a free Religion on founding.  Instead they get access to a one-time city project which founds a religion, available at Developing culture.
