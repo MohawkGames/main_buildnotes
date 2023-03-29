@@ -18,7 +18,7 @@ Design
   Damaged Tribal cities no longer produce units.  This only affects cities taken over by Tribes, not Tribal camps.
   Cities captured by a tribe start at 50% HP
   Hurried builds now never have production overflow
-  Eliminated players auto-gift units and goods to closest teammate
+  Eliminated players in team games will now automatically gift units and goods to their closest teammate
   Seaside map script improvements 
   Better city site generation with hopefully fewer all-flat boring starts
   Fixed the random seed for some event bonuses, to reduce undoing and redoing moves in a different order giving a different result
