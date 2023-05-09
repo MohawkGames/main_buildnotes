@@ -66,6 +66,7 @@ UI
   Added validator log to Event Browser to check if newly created events are invalid
  
 Bugs Fixed 
+  Fixed localization issues with Chinese text
   Fixed highlight behavior for newly-enacted laws 
   Fixed errors on starting Carthage 3 scenario
   Fixed game option toggles not appearing in advanced setup for scenarios
