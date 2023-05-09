@@ -1,66 +1,69 @@
 Old World Release Branch: 1.0.? Release 05/09/2023
 
+Headline changes
+  New Desert mapscript added and other mapscript improvements
+  Turn summary popup redesigned
+  AI improvements
+  Memory optimizations
+
 Design
+  New mapscript - Desert
+  Hardwood Forest mapscript redesign. More Tundra and Mountains in the north and more resources in the south.
+  Multiple Continents map script improvements.  Continents are now placed east west rather than north south which works better with mirror and wide map options and is more consistent with other map scripts.
+  Improved player start locations for team games. Teams will be placed near each other and on the same continent where possible
+  Removed mirror map option from Multiple Continents 3-continent option in MP setup
+  All opinion boosts from Laws are now +20 (previously ranged from +10 to +50)
+  Purge Religion opinion modifier changed to -40 for 20 years (from -20 for 80 years)
   Added Mercenary Tribe Units hired to Records screen
   Leaders can no longer be courtiers
   Cities captured by Tribes start at 0 health and restore 20% per turn
   Event bonuses which damage units now never kill them
   Events which could give Governor or General related traits to characters ineligble for that role are no longer blocked
   Events which give traits no longer blocked by attribute prerequisites 
-  All opinion boosts from Laws are now +20 (previously ranged from +10 to +50)
-  Purge Religion opinion modifier changed to -40 for 20 years (from -20 for 80 years)
   Roman shrines renamed. Vulcan -> Sol, Venus -> Feronia, Vesta -> Ceres, Mars -> Bellona
   Carthage's Shrine of Astarte is now Shrine of Baal Hammon
   Can now only demand tribute from a nation once every 10 turns
   Found religion project production no longer decays faster than other production when queued
   Added fallback ratings to Sacred and Profane traits
-  Multiple Continents map script improvements.  Continents are now placed east west rather than north south which works better with mirror and wide map options and is more consistent with other map scripts.
-  Improved player start locations for team games. Teams will be placed near each other and on the same continent where possible
   Visibility in completed hotseat games is now consistent with other multiplayer modes (the map is revealed after the game is won or lost)
-  New mapscript - Desert
-  Hardwood Forest mapscript redesign. More Tundra and Mountains in the north and more resources in the south.
-  Removed mirror map option from Multiple Continents 3-continent option in MP setup
   Generals can no longer be reassigned on the same turn as the unit they are leading is killed (only affects network MP)
   Tweaked event occurrence rates
   Build Wonder ambitions no longer fail when a Wonder is started by another nation. Instead, they fail when the Wonder has been completed.
   
 Programming
   AI improvements 
-  Memory optimizations
-  Gendered text refactor
-  Improved code maintenance and thread safety
-  Unity version upgrade to 2021.3.22f1
-  Memory optimizations, less memory held when changing save or restarting / generating new map
-  Fixed memory leak between game editor and event browser
-  Exposed number of autosaves to player settings in options file
   Fixed AI anchoring indecision
   Improved AI tile improvement selection to better account for adjacency bonuses
+  Memory optimizations, less memory held when changing save or restarting / generating new map
+  Fixed memory leak between game editor and event browser
+  Improved code maintenance and thread safety
+  Unity version upgrade to 2021.3.22f1
+  Gendered text refactor
+  Exposed number of autosaves to player settings in options file
   
 UI
   Added categories and icons to turn summary popup
   Changed improvement ping (map tacks) popup dropdown to searchable dropdown
-  Cleaned up Carthage campaign advanced options
-  Disabled options button for scenarios where it is not relevant
+  Steam Deck controller improvements
+  Added toggle to UI Options to Allow Keyboard Button Navigation, disabled by default
   Damage preview for non-hostile units when holding Alt now shows potential damage to cities as well as units 
-  Improved city yield help text
   Added Ctrl+Click option to agent cities list to sort by city base production
-  Agent cities with no visible info always sorted to the bottom of the list
-  Improved layout of Mods Manage screen
+  Agent cities with no visible info always sorted to the bottom of the list  
   + symbol for free promotions now shown even if you don't have orders or unit is on cooldown
   Redo pans the camera to a moving unit's destination tile instead of its start location
-  Changed city widget name/production text to use a less heavy outline/underlay
   Replay now skips animations of your own previous actions
-  Added validator log to Event Browser to check if newly created events are invalid
-  Trait bonuses listed in event text area are now less verbose unless hovered over
-  Steam Deck controller improvements
+  Changed city widget name/production text to use a less heavy outline/underlay
   Improved display of production, stockpile yields and breakdowns in city screen and global stockpiles, reflecting overflow & hurrying effects
   Queued production items that are prerequisites for other queued production can now be removed with ctrl+click, which removes all related production from the queue
   Added UI support for user IDs in cloud game setup to make cross platform cloud games easier to set up
   Added improvement filter buttons for disciples
-  Steam Input improvements
-  Improvement filter selection is now stored separately by unit type (i.e. workers and disciples)
   Skull icon will now be shown on units that will be killed by splash damage in attack preview
-  Added toggle to UI Options to Allow Keyboard Button Navigation, disabled by default
+  Disabled options button for scenarios where it is not relevant
+  Cleaned up Carthage campaign advanced options
+  Improved city yield help text
+  Improved layout of Mods Manage screen
+  Trait bonuses listed in event text area are now less verbose unless hovered over
+  Added validator log to Event Browser to check if newly created events are invalid
  
 Bugs Fixed 
   Fixed highlight behavior for newly-enacted laws 
@@ -142,5 +145,4 @@ Bugs Fixed
   Fixed Tribe units not capturing empty cities 
   Fixed issue with overlapping characters on Inheritance screen
   Fixed MP turn indicator text
-  Text and event fixes
   Text and event fixes
