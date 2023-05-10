@@ -37,7 +37,7 @@ Programming
   Memory optimizations, less memory held when changing save or restarting / generating new map
   Fixed memory leak between game editor and event browser
   Improved code maintenance and thread safety
-  Unity version upgrade to 2021.3.22f1
+  Unity version upgrade to 2021.3.24f1
   Gendered text refactor
   Exposed number of autosaves to player settings in options file
   
