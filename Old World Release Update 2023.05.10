@@ -136,7 +136,7 @@ Bugs Fixed
   Fixed crash caused by trying to start a caravan mission with no target player 
   Fixed Steam achievements not syncing to local options file
   Fixed music player icon highlight behavior
-  Fixed camera controls activating when navigating buttons and added restrictions on when and where button navigation is active. WASD no longer scrolls tech screen.
+  Fixed camera controls activating when navigating buttons and added restrictions on when and where button navigation is active. WASD no longer scrolls tech or inhertiance screens.
   Fixed MP issues caused by authentication timeouts
   Fixed AI/UI threading issue
   Fixed rendering issue when navigating through buttons at some scales 
