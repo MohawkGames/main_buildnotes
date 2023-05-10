@@ -2,8 +2,8 @@ Old World Release Branch: 1.0.66959 Release 05/10/2023
 
 Headline changes
   New Desert mapscript added and other mapscript improvements
-  Turn summary popup redesigned
-  AI improvements
+  UI enhancements including a redesigned turn summary popup 
+  AI improvements 
   Memory optimizations
 
 Design
@@ -18,7 +18,7 @@ Design
   Leaders can no longer be courtiers
   Cities captured by Tribes start at 0 health and restore 20% per turn
   Event bonuses which damage units now never kill them
-  Events which could give Governor or General related traits to characters ineligble for that role are no longer blocked
+  Events which could give Governor or General related traits to characters ineligible for that role are no longer blocked
   Events which give traits no longer blocked by attribute prerequisites 
   Roman shrines renamed. Vulcan -> Sol, Venus -> Feronia, Vesta -> Ceres, Mars -> Bellona
   Carthage's Shrine of Astarte is now Shrine of Baal Hammon
@@ -136,7 +136,7 @@ Bugs Fixed
   Fixed crash caused by trying to start a caravan mission with no target player 
   Fixed Steam achievements not syncing to local options file
   Fixed music player icon highlight behavior
-  Fixed camera controls activating when navigating buttons and added restrictions on when and where button navigation is active. WASD no longer scrolls tech or inhertiance screens.
+  Fixed camera controls activating when navigating buttons and added restrictions on when and where button navigation is active. WASD no longer scrolls tech or inheritance screens.
   Fixed MP issues caused by authentication timeouts
   Fixed AI/UI threading issue
   Fixed rendering issue when navigating through buttons at some scales 
