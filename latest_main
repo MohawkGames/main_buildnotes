@@ -1,131 +1,149 @@
-Main Branch: 1.0.66355 Release 03/29/2023
+Old World Release Branch: 1.0.66959 Release 05/10/2023
 
 Headline changes
-  Improvement pings system added. City planning just got a lot easier!
-  Family balancing
-  New events added
-  Text for all language localizations updated
+  New Desert mapscript added and other mapscript improvements
+  UI enhancements including a redesigned turn summary popup 
+  AI improvements 
+  Memory optimizations
 
 Design
-  Cleric seat no longer gets a free Religion on founding.  Instead they get access to a one-time city project which founds a religion, available at Developing culture.
-  Trader cities get Money per Specialist instead of Culture
-  Sage cities now get a free Archive I and lose the Urban Specialist Cost discount
-  Statesmen cities get a -25% Specialist Resource Cost and lose the free Treasury I
-  Bullion Resources have been renamed to Precious Resources.  Map scripts amended to make these resources more common.
-  Discontent penalty for having more citizens than urban tiles removed.
-  Stunned cooldown now reduces at the start of the player's turn instead of the end.  This prevents teammates from using a stunned unit later in the same turn.
-  Stunned cooldown now changes to Attacked Cooldown after one turn, for UI clarity.
-  Damaged Tribal cities no longer produce units.  This only affects cities taken over by Tribes, not Tribal camps.
-  Cities captured by a tribe start at 50% HP
-  Hurried builds now never have production overflow
-  Eliminated players in team games will now automatically gift units and goods to their closest teammate
-  Seaside map script improvements 
-  Better city site generation with hopefully fewer all-flat boring starts
-  Fixed the random seed for some event bonuses, to reduce undoing and redoing moves in a different order giving a different result
-  
- New Events
-  Research at Rest
-  Three Days of Solace
-  On the Payroll
-  Fled in the Night
-  Sorry State of Furnishings
-  New Strings
-  Building Better Governors
-  Governor School
-  Governor Training
-  Heart of the Empire
-  Glory and Heroes
-  Tales Spread
-  Rule of Wisdom
-  Sow Discord
+  New mapscript - Desert
+  Hardwood Forest mapscript redesign. More Tundra and Mountains in the north and more resources in the south.
+  Multiple Continents map script improvements.  Continents are now placed east west rather than north south which works better with mirror and wide map options and is more consistent with other map scripts.
+  Improved player start locations for team games. Teams will be placed near each other and on the same continent where possible
+  Removed mirror map option from Multiple Continents 3-continent option in MP setup
+  All opinion boosts from Laws are now +20 (previously ranged from +10 to +50)
+  Purge Religion opinion modifier changed to -40 for 20 years (from -20 for 80 years)
+  Added Mercenary Tribe Units hired to Records screen
+  Leaders can no longer be courtiers
+  Cities captured by Tribes start at 0 health and restore 20% per turn
+  Event bonuses which damage units now never kill them
+  Events which could give Governor or General related traits to characters ineligible for that role are no longer blocked
+  Events which give traits no longer blocked by attribute prerequisites 
+  Roman shrines renamed. Vulcan -> Sol, Venus -> Feronia, Vesta -> Ceres, Mars -> Bellona
+  Carthage's Shrine of Astarte is now Shrine of Baal Hammon
+  Can now only demand tribute from a nation once every 10 turns
+  Found religion project production no longer decays faster than other production when queued
+  Added fallback ratings to Sacred and Profane traits
+  Visibility in completed hotseat games is now consistent with other multiplayer modes (the map is revealed after the game is won or lost)
+  Generals can no longer be reassigned on the same turn as the unit they are leading is killed (only affects network MP)
+  Tweaked event occurrence rates
+  Build Wonder ambitions no longer fail when a Wonder is started by another nation. Instead, they fail when the Wonder has been completed.
   
 Programming
-  Memory optimizations
-  Improved AI getting out of the way of its own units for retreat
-  AI is more frugal with its yield expenses
-  AI more likely to choose Tacticians and Zealots as generals
-  Exposed recruit mercenary legitimacy cost, city build queue decay rate and promotion cost per XP to XML
-  Optimized load time of Event Browser
-  Improved raider priorities.  They will now move to the target city and are then free to attack units and pillage rather than just attack the city.
-  AI now properly takes into account the yield consumption cost of free units  
-  Better support for cloud games with multiple players having the same online ID
+  AI improvements 
+  Fixed AI anchoring indecision
+  Improved AI tile improvement selection to better account for adjacency bonuses
+  Memory optimizations, less memory held when changing save or restarting / generating new map
+  Fixed memory leak between game editor and event browser
+  Improved code maintenance and thread safety
+  Unity version upgrade to 2021.3.24f1
+  Gendered text refactor
+  Exposed number of autosaves to player settings in options file
   
 UI
-  Improvement pings system added.  Click on a tile while holding Alt and select the down arrow. This allows you to plan out your city layout visually.  
-  Text for all language localizations updated
-  Added hotkey (by default '/' ) to show known visibility of other players.  Select a foreign player or unit and press hotkey to highlight tiles they have visibility on.
-  Placeholder icon added for Rival Player visibility overlay
-  Added UX to explain to players how to resume construction of a wonder 
-  Pings with a reminder turn now show on the map
-  Improved ping interactions with animated resources
-  Scrollbar position now reset when cycling between decisions
-  Improved clarity of city happiness and discontent bar when level is decreasing
-  Added outlines to yield progress text on city screen, for readability on happiness bar
-  Added more descriptive text on religion tab for unfounded religions
-  Wonders are sorted by culture and appear after other improvements in worker actions
-  Scenario screen background can change per scenario
-  Nation help text no longer shows irrelevant information
-  Added URL field to characters.  Some historical characters now have a globe symbol which can be clicked for more information about them.
-  Undo turn now skips animations for each move.
-  Advanced Options in Single Player setup are now organized by category
-  Event Browser tab improvements
-  Rival player visibility overlay hotkey works with a selected rival unit as well as a selected rival player  
-  Initial tech tree screen position now based on current tech
-  Removed advanced options from Heroes of the Aegean scenarios that didn't do anything
-  Added more custom backgrounds to scenario screens
-  Law adoption added to timeline
-  Added lines for opinion thresholds on family opinion graphs
-  Added subtotal to city yields tooltip, if that yield is being modified 
-  When a theology is established, the establishing nation is now shown in the turn summary message
-  
+  Added categories and icons to turn summary popup
+  Changed improvement ping (map tacks) popup dropdown to searchable dropdown
+  Steam Deck controller improvements
+  Added toggle to UI Options to Allow Keyboard Button Navigation, disabled by default
+  Damage preview for non-hostile units when holding Alt now shows potential damage to cities as well as units 
+  Added Ctrl+Click option to agent cities list to sort by city base production
+  Agent cities with no visible info always sorted to the bottom of the list  
+  + symbol for free promotions now shown even if you don't have orders or unit is on cooldown
+  Redo pans the camera to a moving unit's destination tile instead of its start location
+  Replay now skips animations of your own previous actions
+  Changed city widget name/production text to use a less heavy outline/underlay
+  Improved display of production, stockpile yields and breakdowns in city screen and global stockpiles, reflecting overflow & hurrying effects
+  Queued production items that are prerequisites for other queued production can now be removed with ctrl+click, which removes all related production from the queue
+  Added UI support for user IDs in cloud game setup to make cross platform cloud games easier to set up
+  Added improvement filter buttons for disciples
+  Skull icon will now be shown on units that will be killed by splash damage in attack preview
+  Disabled options button for scenarios where it is not relevant
+  Cleaned up Carthage campaign advanced options
+  Improved city yield help text
+  Improved layout of Mods Manage screen
+  Trait bonuses listed in event text area are now less verbose unless hovered over
+  Added validator log to Event Browser to check if newly created events are invalid
+ 
 Bugs Fixed 
-  Fixed requirements text sometimes showing in the wrong color
-  Fixed issue on Epic build that would cause mouse inputs to sometimes not work as intended
-  Fixed issues with national alliance vision
-  Fixed Capture Three City ambition for OCC 
-  Fixed Barracks helptext still showing the requirement for a unit to be idle in order to gain XP
-  Fixed city widget happiness color not applying in some cases
-  Fixed low level specialist being lost when upgrading improvement
-  Fixed issue where anchoring radii were culled when they shouldn't be
-  Fixed issues with happiness/discontent display
-  Fixed filename inside zipped save files
-  Fixed AI being too cautious when capturing cities and sites
-  Fixed Elephant Panic messing with AI danger tiles cache
-  Fixed AI build hurrying
-  Fixed yield previews sometimes getting stuck
-  Fixed bug with production overflow
-  Fixed movement pips initializing with wrong rotation
-  Fix tribe succession issues
-  Fixed bug with display of culture requirements for free city projects in events
-  Fixed some units with the siege trait not showing up under the siege filter
-  Fixed missing subtitle on Barbarian Horde scenario and updated rules text
-  Fixed display of city gift and luxury menus
-  Fixed bug with locked save remote server hosting
-  Fixed bug with Improvements that give Legitimacy 
-  Fixed inconsistent specialist background color on city screen city widget
-  Fixed bug with animal model display when hiding units
-  Fixed map pings appearing for all players in MP
-  Fixed yield rates not updating when connecting hamlets
-  Fixed tooltip positioning null reference on research popup
-  Fixed unit cycling after closing popup
-  Fixed end turn button effect not persisting in some cases 
-  Fixed bug with only one custom mapscript showing
-  Fixed bug with number of Barbarian camps spawned around player start
-  Fixed some luxury menu overlap issues in Russian/German
-  Fixed AI getting Legitimacy in No Characters games
-  Fixed city tooltip sometimes not updating
-  Fixed bugs with coastal improvement orientation
-  Fixed citrus trees missing from groves
-  Fixed elephant resource model animation
-  Fixed scrolling sometimes not working in mod manager
-  Fix for cycling to a stacked unit not always updating the other stacked unit's banner 
-  Fixed character url links showing in generated character tooltips
-  Fixed cloud game replay turning active player into observer 
-  Fixed incorrect UI yield values when changing from governors with yield-granting traits 
-  Fixes for Heroes of the Aegean scenario 4 discontent 
-  Fixed Heroes of the Aegean scenario 6 nations not displaying correctly in the Hall of Fame
-  Fixed distant raids spawning in inaccessible locations
-  Fixed research button widget error
-  Fixed issues with holding Alt to see a damage preview for non hostile units.  Now works inside neutral borders and with other nations units selected
-  Fixed mission audio sometimes not playing
+  Fixed localization issues with Chinese text
+  Fixed highlight behavior for newly-enacted laws 
+  Fixed errors on starting Carthage 3 scenario
+  Fixed game option toggles not appearing in advanced setup for scenarios
+  Fixed family opinion graph issues
+  Fixed issue that prevented Learn To Play 4 scenario from completing correctly when using automated scouts
+  Fixed Alliance Proposal event option showing truce icon instead of alliance icon 
+  Fixed language detection from Epic and Steam
+  Fixed found city incorrectly showing invalid nation tooltip instead of unit/turn warning when not players turn (MP)
+  Fixed team color load/save inconsistency (MP)
+  Fixed improvement ping list not showing lumbermills on cut trees
+  Fixed improvement pings not working correctly with undo/redo
+  Fixed missing requirement warning color coding for a project when all requirements are links
+  Removed outdated hint about lack of urban tiles leading to discontent
+  Fixed city discontent change log help
+  Fixed maximum number of players issues in MP setup
+  Fixed unique nations check in MP setup
+  Fixed tutor event occurring and immediately becoming invalid
+  Fixed current construction yield tooltip flicker
+  Fixed disciple improvement list getting filtered
+  Fixed technology screen tooltip text 
+  Fixed music manager null reference 
+  Fixed issue causing undo to perform slowly in Learn to Play 4
+  Fixed tab panel tooltips overlapping right-click missions menu
+  Tooltip sizing fix
+  Learn to Play text fixes
+  Fixed player opinion UI not updating when player leader opinion changes 
+  Fixed theology display showing in former religion slot after adopting state religion
+  Fixed tile overlay widgets sometimes appearing on invalid tiles
+  Fixed hover targeting issue for mission indicators
+  Fixed multiple instances of Shrines by having your teammate build them for you 
+  Fixed hidden stacked units not being revealed when they should have been
+  Fixed duplicate tribe leader in Carthage 4 scenario
+  Fixed player list text not updating after changes in alliance status
+  Fixed intermittent overlay button click handling issues
+  Fixed icons in loading screen hints
+  Fixed Event Browser causing input issues when loading a game
+  Fixed free promotion icon showing on non-player units
+  Fixed turn summary popup showing at incorrect time in hotseat
+  Fixed some issues with production overflow display
+  Fixed issues with family opinion graph on records screen not getting updated
+  Fixed Sacred and Profane event frame not having offsets to avoid blocking the UI on the top bar 
+  Fixed save file browser prompting to delete file when using delete key while the input field is focused
+  Fixed tooltip flicker on city widget
+  Fixed server password field resetting on server list update 
+  Fixed found city archetype help bug 
+  Fixed broken encyclopedia links for religious improvement classes
+  Fixed missing icon for victory messages in turn summary
+  Can no longer use a unit with no fatigue left to swap positions with an adjacent unit  Fixed popups sticking in Map Editor and Event Browser
+  Fixed bug with character attribute tooltips
+  Fixed character action panel showing missions for which they are always invalid targets (i.e. Convert Religion for Heads of Religion)
+  Fixed UI bug with Found City button not updating on turn change in network MP games
+  Fixed water control preview of other players' units not updating immediately
+  Fixed bug with luxury panel display
+  Fixed nested link issue
+  Fixed improvement pings
+  Fixed map editor issues
+  Fixed bug with scenario selection in MP setup
+  Fixed turn summary undo behavior
+  Fixed decision popups breaking undo/redo 
+  Fixed undo button tooltip
+  Fixed missing anchor range preview
+  Fixed material configurations for Cataphracts, Horsemen, and Palton Cavalry which prevented them from showing silhouettes behind widgets
+  Fixed locked cloud game showing too much information 
+  Fixed decision popups remaining open if they become invalid
+  Fixed crash affecting some Windows 7 PCs
+  Fixed Head of Pagan Religion starting off dead in the Learn to Play 5 scenario
+  Fixed crash caused by trying to start a caravan mission with no target player 
+  Fixed Steam achievements not syncing to local options file
+  Fixed music player icon highlight behavior
+  Fixed camera controls activating when navigating buttons and added restrictions on when and where button navigation is active. WASD no longer scrolls tech or inheritance screens.
+  Fixed MP issues caused by authentication timeouts
+  Fixed AI/UI threading issue
+  Fixed rendering issue when navigating through buttons at some scales 
+  Fixed turn summary appearing before the turn has been fully processed
+  Fixed expanded tooltips collapsing when locking with middle mouse button
+  Fixed character action menu on family tree screen 
+  Fixed Tribe units not capturing empty cities 
+  Fixed issue with overlapping characters on Inheritance screen
+  Fixed MP turn indicator text
   Text and event fixes
