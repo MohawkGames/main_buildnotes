@@ -1,9 +1,14 @@
 Main Branch: 1.0.67279 Release 05/31/2023
 
+Headline Changes
+  Alliance Victory is now possible in single player
+  Minor cities are easier to create
+  The Found Religion project cost has been reduced
+
 Design
-  Exploring trait now gives +20XP per turn
-  Alliance Victory now works in single player (previously MP only) 
+  Alliance Victory is now possible in single player (this was previously MP only) 
   Impassable tiles no longer need to be owned for Minor Cities
+  Found Religion project cost reduced from 80 to 60 civics
   Land tribe units no longer pillage water tiles
   Distant raids can now now occur for coastal cities and contain ships of the same type the city is able to build
   Added a 10-turn memory for tribal invasions. Truce offers via the Matchmaker event will no longer happen with a recently invaded tribe.
@@ -14,7 +19,7 @@ Design
   Chaste trait is no longer a strength 
   Free ship tech cards will no longer appear until the player owns a coast tile. 
   Free ships will appear in the player's borders if possible. 
-  Found Religion project cost reduced from 80 to 60 civics
+  Exploring trait now gives +20XP per turn
   
 
 Programming
