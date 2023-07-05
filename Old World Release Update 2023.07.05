@@ -2,7 +2,7 @@ Main Branch: 1.0.67757 Release 07/05/2023
 
 Headline Changes
   New Options 'Only Show Map Tacks for Worker' and 'Disable environmental sounds'
-  Added support for changing players mid game in multiplayer
+  Added support for changing players mid game when loading a multiplayer save
   Heroes of the Aegean scenario rebalancing
   Tribes and AI nations can now raze captured cities if the option for razing cities is enabled
   AI and performance improvements
