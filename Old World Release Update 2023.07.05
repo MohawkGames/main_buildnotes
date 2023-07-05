@@ -59,6 +59,7 @@ UI
   Added Event Browser subject re-ordering tool
   
 Bugs Fixed
+  Fixed resource density setting being ignored
   Fixed improvement filters showing on opponents workers
   Fixed ship stacking in city center
   Fixed click being triggered on game startup
