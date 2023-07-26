@@ -6,13 +6,13 @@ Headline Changes
   Improved AIs use of anchoring
 
 Design
-  Added Customize Leader option to game setup when Pick Later Archetype is selected.  This allows you to choose your leader's portrait, name, age, gender and starting trait as well as their archetype.
-  Added city site density map option: High, Medium, and Low.  High is the default, Medium has 1.5x distance between city sites and Low has 2x
+  Added Customize Leader option to game setup when Pick Later Archetype is selected.  This allows you to choose your leader's portrait, name, age, gender and starting trait as well as their archetype
+  Added city site density map options to random maps: High, Medium, and Low.  High is the default, Medium has 1.5x distance between city sites and Low has 2x
+  The No Ancient Ruins option will now work on premade maps. Ruins tiles get cleared and changed to a nearby terrain type
   Chaste trait will no longer be randomly assigned to characters
   Units of a tribe without settlements but with a player ally no longer convert to Raiders
   Cities captured by tribes and by the player in One City Challenge now go through the normal capturing period before switching hands or being razed
-  Ending a tribal or national alliance now bounces units out of tiles they can no longer occupy (i.e city center)
-  The No Ancient Ruins option will now work on premade maps. Ruins tiles get cleared and changed to a nearby terrain type
+  Ending a tribal or national alliance now bounces units out of tiles they can no longer occupy (i.e city center)  
   Can no longer start a diplomatic mission to change war/truce/peace state until both sides have met each other.  This is particularly relevant for Schemer archetypes who can no longer declare war immediately on meeting a nation with an invisible scout
   AI now builds the Found Religion project
   2 new ambitions added for Hittites to build their unique units
