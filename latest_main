@@ -1,4 +1,5 @@
 Main Branch: 1.0.68045 Release 07/26/2023
+Main Branch Hotfix: 1.0.68068 Release 07/28/2023
 
 Headline Changes
   Added Customize Leader option   
@@ -61,10 +62,10 @@ Bugs Fixed
   Fixed no heir events not firing as often as they should
   Fixed family opinion graph
   Fixed production list for non-player-owned cities with agents
-  Fixed border expansion bug (introduced in last test patch)
   Fixed achievements not firing for clients in MP games
   Fixed bug with Destroy Rival Nation ambition in OCC
   Progress sorting by happiness levels now properly treats discontent progress as negative 
   When character becomes leader more events that would no longer make sense are made invalid 
   Student traits are removed on imprisonment
+  Fixed border expansion bug
   Text and event fixes
