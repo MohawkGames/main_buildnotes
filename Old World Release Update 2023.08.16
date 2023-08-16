@@ -2,7 +2,7 @@ Main Branch: 1.0.68245 release 08/16/2023
 
 Headline changes
   AI combat improvements
-  Combat preview damage text next to unit health bar now shows the unit's maximum damage even if the target has less HP or a Zealot general
+  Combat damage preview improvement
   Fixed issue with minimum distance between city sites
 
 Design
