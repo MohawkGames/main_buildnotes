@@ -1,5 +1,11 @@
 Main Branch: 1.0.68541 release 09/06/2023
 
+Headline changes:
+  New map option City Site Number 
+  AI performance improvements
+  Enhanced modding features
+
+
 Design
   New map option City Site Number that limits the number of city sites available based on the number of nations.  Options are Unrestricted (default), Restricted (3 city sites per family per nation), Family Seats (1 city site per family per nation) and Capitals (1 city site per nation).   Tribal settlements will still appear in places that would have been city sites but these cannot be settled by nations.
   Map generator tries to place at least as many free city sites as starting locations on a given land area surrounded by water and mountains.
