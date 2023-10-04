@@ -1,6 +1,8 @@
 Main Branch: 1.0.68949 release 10/04/2023
+Main Hotfix: 1.0.68964 release 10/04/2023
 
-To celebrate the release of our 3rd DLC, Pharaohs of the Nile, this weeks Game of the Week (4th-10th October) will feature the new nation from the DLC, the Kush, regardless of DLC ownership.
+To celebrate the release of our 3rd DLC, Pharaohs of the Nile, this weeks Game of the Week (4th-10th October) will feature the new nation from the DLC, the Kush, regardless of DLC ownership.   
+The hotfix adjusts the current Game of the Week to have friendlier settings in order to give Kush a chance to sh(r)ine.  It also fixes a bug where some premade maps would fail to start for non-DLC owners.
 
 Headline changes
 Commander leader flanking bonus increased
@@ -64,4 +66,5 @@ Fixed potential data issue for tile text with undo
 Fixed non-allied units not being bounced when a unit newly occupies a tile.
 Fixed rare issue that could cause saves started whilst offline to fail to load when online
 Fixed scenarios not unlocking when playing offline
+Fixed premade maps failing to start without Kush
 Text and event fixes
