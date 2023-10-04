@@ -61,4 +61,5 @@ Bugs Fixed
   Fixed potential data issue for tile text with undo 
   Fixed non-allied units not being bounced when a unit newly occupies a tile.
   Fixed rare issue that could cause saves started whilst offline to fail to load when online
+  Fixed scenarios not unlocking when playing offline
   Text and event fixes
