@@ -42,7 +42,7 @@ UI
   Removed 16 nation display cap from Choose Leader screen
   Better improvement ping support for bonus improvements. If there is no improvement ping, an improvement ping for the same class is considered.
   Added helptext to events requiring an active Occurrence 
-  Mod Manager - Uploading mods is now background task like downloading is. Status added to bottom of mod manager
+  Mod Manager - Uploading mods is now a background task like downloading is. Status added to bottom of mod manager
   Mod Manager - faster Modio downloads.  Download size and percentage added to mod download status. 
   Added warning to the tooltip if assigning a general or governor is going to replace another character
   Character illness is now included in the turn 
