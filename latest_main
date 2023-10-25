@@ -1,70 +1,112 @@
-Main Branch: 1.0.68949 release 10/04/2023
-Main Hotfix: 1.0.68964 release 10/04/2023
-
-To celebrate the release of our 3rd DLC, Pharaohs of the Nile, this weeks Game of the Week (4th-10th October) will feature the new nation from the DLC, the Kush, regardless of DLC ownership.   
-The hotfix adjusts the current Game of the Week to have friendlier settings in order to give Kush a chance to sh(r)ine.  It also fixes a bug where some premade maps would fail to start for non-DLC owners.
+Main Branch: 1.0.69265 release 10/25/2023
 
 Headline changes
-Commander leader flanking bonus increased
-Added list of past events to character tooltip 
-AI and performance improvements
-  
+
+Zealot leader generals have a new action 'Apply Enlist'
+Reworked regencies
+Added option to disable tile improvement recommendations
+
 Design
-Commander leaders now get +100% bonus attack strength while Flanking (up from +50%)
-City Site ownership is now determined first by who has a military unit on the tile (in the case of an ally)
-Event options with the chance to gain 1 delayed trait now get offered as a fallback rating if the trait is invalid.
-Non-allied tribe settlements that are not on city sites no longer get absorbed into a nation by border expansion  
-Revised city site placement algorithm so that you can now have player starts closer than two minimum city site distances apart, if the map is too small for the number of players
-Higher-tier wonders now count toward lower-tier goals - e.g. Legendary wonders will be counted for the "have 1 Strong wonder" goal 
-Can now hurry obsolete units already in the build queue
-End turn is canceled if there are new decisions to make after automated units move
+
+Zealot leader generals have a new action 'Apply Enlist', which gives their next kill a 100% chance to Enlist for 3 turns, for the cost of 400 civics.  This replaces their previous 10% chance to enlist on kill.
+Reworked regencies:
+  Regents no longer lead to legitimacy decay as normal leader changes do.
+  The Rightful Heir will automatically become the Chosen Heir and this cannot be changed by the Regent. 
+  Regents no longer cause others in the line of succession to become bypassed on becoming Regent or on giving up the throne.
+  Regents who do not give up the throne become Usurpers and do cause others in the line of succession to become bypassed.
+The free Garrison in your Capital and Fair from a Traders seat can now appear on any valid tile instead of only on existing urban tiles.  As before, the locations of these can be set by using improvement pings.
+Exiting a cloud game mid turn will now save your progress and no longer reset to the start of the turn on reload
+Urban tiles no longer placed under tribal settlements unless they are city sites (applies when City Sites number is modified)
+Pharaohs of the Nile campaign - No leader turns family opinion penalty no longer applies
+Pharaohs of the Nile scenario 3 - Reduced raids and increased Amun units on higher difficulties
+Pharaohs of the Nile scenario 6 - Climate change induced Nile flooding now has a 10 turn grace period
+Tweaked capture foreign cities ambition tiers
+Sacred and Profane - Make Clergy mission requires target to be single
+Enabled Extreme Terrain and Tribal Lands map options for multiplayer Continent and Donut map scripts and Tribe Number map option for multiplayer Seaside and Bay map scripts
+Fervent trait (from the Kush Piye dynasty) now grants the bonus militia in the city the religion spreads to instead of in the capital
+Enlightenment Theology now gives +3 happiness per Monk class instead of +2 per Elder Monk
+Guilds now gives happiness per Hamlet class improvement instead of just per Town
+Random maps are more likely to have at least one luxury resource of each type (does not apply to mirror maps)
 
 Programming
-Games in the completed folder no longer include replay data
-Adjacent effectUnit refactor
-Tribal invasion AI improvements
-Combat AI improvements
-Added console command setTribeInvasion
-Added mod support for specific tribes and tribe strengths to use central AI to coordinate their units
-Change mod Infos files now processed after append mod Infos files 
-Improved terrain mod support and performance optimizations
-Map scripts now use internal variable/functions to set terrain formations, without persisting them to tile data since formations are only needed at generation time
-Removed terrain formation ID and tile elevation from network data 
-Removed some unused terrain renderers
-Removed unnecessary calls for timeline border tiles
-Got rid of tile latitude in network data and saves. The save now instead stores the min/max latitude of the generating mapscript, latitudes are calculated as needed
-Optimization to avoid calls to native code in a few places
-  
+
+Added new EffectUnit options for modders - SelfApplyEffectUnitYieldCost, SelfApplyEffectUnitTurns, AttackApplyEffectUnitTurns, aiOccurrenceFromModifier, bMercenary
+Added new EffectPlayer option for modders - miMaxCities
+AI now waits until it has a greater power ratio before launching an attack outside of its borders 
+Clarified the distinction between a tribe city site, a tribe settlement tile, and a tribe site, which are all technically different things but in many cases the same
+AI performance optimization
+Added AI for Zealot leader enlisting 
+Improved performance in Heroes of the Aegean scenario 2
+
 UI
-Added list of past events to character tooltip 
-The location of initial city improvements (Garrison, Fair) can be specified by using the relevant improvement ping on a valid urban tile. This replaces the old system of ctrl+clicking the preferred tile.
-Improvement pings now always get removed when a tile improvement or terrain changes
-Leader selection screen now uses multiple rows instead of scroll arrows
-Peace mission now shows tooltip explaining mission is disabled when one nation has not met the other
-Added toggle to tutorial events to allow the tutorial to be disabled directly from the event
-Improved urban adjacency requirement help text
-Tooltips for Barracks, Harbors etc now say they are a spawn point for relevant units
-Removed city site text on tiles with settlements on them.  Tile tooltip now shows if tile is a city site.
-Map editor UI cleanup
-Added progress for "Establish a State Religion" ambition
-Hurry helptext now shows warning if cannot hurry due to missing prereq, such as Scholar governor for Inquiry 
-Event browser added new event warnings
-Added strategy notes to Encyclopedia entries for Laws
-Turning existing characters into Courtiers no longer triggers a popup 
-  
+
+Added player option to disable tile improvement recommendations
+Schemer's Adopt Child mission now visible on the leader
+Character event log now puts all events of the same year on the same line, to save some vertical space
+Removed 16 nation display cap from Choose Leader screen
+Better improvement ping support for bonus improvements. If there is no improvement ping, an improvement ping for the same class is considered.
+Added helptext to events requiring an active Occurrence 
+Mod Manager - Uploading mods is now a background task like downloading is. Status added to bottom of mod manager
+Mod Manager - faster Modio downloads.  Download size and percentage added to mod download status. 
+Added warning to the tooltip if assigning a general or governor is going to replace another character
+Character illness is now included in the turn 
+Rival visibility toggle (\) now shows visibility from allied units as well 
+New cognomen popup will now display the legitimacy it gives
+Other team VPs will now display in yellow/red as they get close to victory
+Improved display of Zealot Enlist Next effect
+Tooltip for event bonuses that affect all cities of a religion now shows how many cities it will affect
+Added loading hint for Slow AI option    
+
 Bugs Fixed
-Fixed theology ambitions getting canceled too early
-Fixed AI bug where city sites were sometimes claimed by non military units, when they should not have been claimed at all
-Fixed missing icon in turn notification when in no characters mode
-Bonuses that takes away citizens are no longer possible if it means removing specialist builds with progress from the city queue 
-Events featuring nations that are eliminated are now correctly made invalid
-Fixed tile status tooltips not showing
-Fixed issues with mountain renderer
-Fixed save/load bugs
-Fixed tile tooltips overlapping minimap in Windowed mode
-Fixed potential data issue for tile text with undo 
-Fixed non-allied units not being bounced when a unit newly occupies a tile.
-Fixed rare issue that could cause saves started whilst offline to fail to load when online
-Fixed scenarios not unlocking when playing offline
-Fixed premade maps failing to start without Kush
+
+Fixed cloud game bug where sometimes it remained locked to a player who had exited the game without ending their turn
+Fixed potential issues with transition from sequential to simultaneous turnStyle
+Units that were under attacked cooldown and now are supposed to be allowed to move because of a turnStyle change, have their cooldown removed
+Attacked cooldown is no longer given if an attacked unit could not move at that point in the turn anyway
+Fixed null reference 
+Fixed tile visibility exception
+Fixed OccurrenceEndPlayer bonus
+Fixed victory popup display with more than 10 ambitions or players
+Fixed camera panning to attacked cities with Follow AI set to None
+Fixed turn style and turn timer in the options popup being applied before you click save 
+Fixed reset button on options panel not updating the turnStyle and turnTimer settings
+AI now does diplomacy with other AI first before getting to humans so diplomacy events are more current
+Fixed improvement help text bug on city sites 
+Fixed victory event not appearing if the leader dies on the last turn
+Pharaohs of the Nile campaign - Blocked Visitor from the East event
+Pharaohs of the Nile scenario 2 - Blocked Monotheism law 
+Pharaohs of the Nile scenario 3 - Change state religion hidden until appropriate time in the campaign
+Pharaohs of the Nile scenario 3 - Fixed some Zone of Control bugs
+Pharaohs of the Nile scenario 3 - Fixed defeat event not popping on total defeat, or loss of Akhetaten.  Improved speed of victory event popup.
+Pharaohs of the Nile scenario 3 - fix possible AI hang when it's thinking about healing an Amun unit by pillaging
+Pharaohs of the Nile scenario 4 - Ramesses and Muwatalli event and achievement fixes 
+Pharaohs of the Nile scenario 5 - fix defeat event not popping.
+Pharaohs of the Nile scenario 6 - Worst Possible Ending achievement fix 
+Learn to Play 3 - Fixed rare null ref error if there's no heir. Fix defeat not triggering if conquered by raiders/rebels/barbs
+Fixed AI not declaring war on tribes to expand
+AI retreat fix 
+Fixed some AI exploration confusion
+Map Editor - Fixed null ref when removing ruins improvement from an urban tile
+Old World premade map fix to Kush starting location
+Fixed events featuring players or tribes the player has not yet met
+Fixed some rare AI behavior when encountering danger before founding the first city
+Fixed new game portraits being overwritten with second display of portraits using nation index instead of playable nation index. Was affecting Hatti and Kush if those DLC were not owned. 
+Fixed some issues with loading a save in a different game mode from where it was saved
+Reduced frequency of limit of 5 events per turn getting exceeded
+Fixed improvement upgrade cost bug 
+Fixed Resume and Quick Cloud Load on main menu not unloading mods first
+Fixed bug with tribe settlement distribution
+Fixed free tech preferring tech currently being researched
+Fixed bad AI exploration with military units
+Fixed events not working for cities in anarchy
+Fixed bugs with Rise of Carthage scenario 3 sometimes failing to generate goals 
+Fixed stolen city/city site trigger not taking teams into account
+Fixed family luxury menu display issue
+Fixed opinion bars displaying inconsistently
+Fixed specialist widget timers not updating when city yield production changes
+Fixed Learn to Play 5 bug where player couldn't declare war again after accepting truce via an event
+Fixed unit/city stats sometimes not updating when general/governor stats change 
+Fixed frame limit functionality
+Fixed map script non-city resource placement 
+Fixed premade maps failing to start when No Ancient Ruins option enabled
 Text and event fixes
