@@ -8,7 +8,7 @@ Added option to disable tile improvement recommendations
 
 Design
 
-Zealot leader generals have a new action 'Apply Enlist', which gives their next kill a 100% chance to Enlist for 3 turns, for the cost of 400 civics.  This replaces their previous 10% chance to enlist on kill.
+Zealot leader generals have a new action 'Apply Enlist', which gives their next kill a 100% chance to Enlist for 3 turns, for the cost of 400 civics.  This replaces their previous 10% chance to enlist on kill.  Zealot leader generals have a new action 'Apply Enlist', which gives their next kill a 100% chance to Enlist for 3 turns, for the cost of 400 civics.  This replaces their previous 10% chance to enlist on kill.  When a unit is Enlisted, instead of dying it switches sides and can be controlled by the player.
 Reworked regencies:
   Regents no longer lead to legitimacy decay as normal leader changes do.
   The Rightful Heir will automatically become the Chosen Heir and this cannot be changed by the Regent. 
