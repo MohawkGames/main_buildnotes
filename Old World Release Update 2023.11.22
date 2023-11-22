@@ -72,6 +72,7 @@ Bugs Fixed
   Fixed events not triggering on clearing tribal camps
   Fixed bug with cloud games not updating correctly when exiting without completing turn, causing them to need to be rewound
   Fixed bugs causing replay data to get discarded unnecessarily  
+  Fixed Kush Unique Units not applying Zone of Control
   Fixed map script bug causing generation to sometimes fail on Desert maps with large number of players
   Fixed last page of Modio mods not displaying in install tab
   Fixed double folder names when mod name contains plus (+) symbol
