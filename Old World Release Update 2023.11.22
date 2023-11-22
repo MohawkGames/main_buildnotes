@@ -1,5 +1,11 @@
 Main Branch: 1.0.69678 Release 11/22/2023
 
+Headline changes:
+  Lower difficulty levels are now easier and a new lowest level difficulty added
+  Many balance changes including nerfs to Persian UUs and Schemer leaders
+  Kush now available on the Middle East premade map
+  AI combat, strategic and performance improvements
+
 Design
   New difficulty level added The New.  Reworked AI penalties on lower difficulty levels.
   Passive AI will not capture cities from a player who originally founded them
