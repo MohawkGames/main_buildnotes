@@ -55,10 +55,13 @@ Programming
 
 
 UI
-  Dynasties are now shown and can be selected on the Choose Leader screen
   Alt+right mouse button is now a shortcut for improvement pings
-  Loading a single player game as a network game now allows AI player reassignment 
   Mouse click no longer triggers when releasing button after drag
+  Loading a single player game as a network game now allows AI player reassignment 
+  Dynasties are now shown and can be selected on the Choose Leader screen
+  Added option to only use default dynasties for AI players 
+  Random nation now sets random dynasty for both SP and MP 
+  Dynasty dropdown with Pick Later will use the dynasty name if available 
   Moved cycle button tooltips to right of cycle button UI 
   Added border expansion preview for under construction specialists
   Added yields change from trade and tribute to war declaration effect tooltip and yield loss from connected cities to peace breaking effect tooltip 
@@ -66,10 +69,7 @@ UI
   Improvement suggestions no longer take worker safety into account
   Reduced spacing in yield display for tile/specialist widgets 
   Reduced tile text font and icon size 
-  Random nation now sets random dynasty for both SP and MP 
   Negative changes in happiness/discontent now shown using opposite yield color
-  Dynasty dropdown with Pick Later will use the dynasty name if available 
-  Added option to only use default dynasties for AI players 
   Added Deficit concept to Encyclopedia
   Event Browser: The New Entry button now opens a new event the Wizard
 
