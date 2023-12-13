@@ -1,8 +1,11 @@
 Main Branch: 1.0.70024 Release 12/13/2023
 
+Headline changes  
+  Sacred and Profane Clergy have been reworked
+  Changes to Competitive mode character yields and modifiers
+  History of the Old World added to loading screen for new games
+
 Design
-  In Competitive mode character yields and modifiers now scale linearly.  Ratings lower than 5 will have higher effects and higher ratings lower effects.  Previous flat 50% penalty removed.  
-  Character upgrades for leaders, governors, and generals (under retirement age) now include only traits, if possible
   Sacred and Profane Clergy rework:
     The Initiate into Clergy mission run by the Head of Religion has been replaced by a new mission Suggest For Clergy.  This is run via the Chancellor and uses the target characters religion
     A limit of 2 Clergy per nation has been added
@@ -12,6 +15,8 @@ Design
     Pagan Clergy have a +40% chance to become the next Head of Religion and World Religion Clergy have a +20% chance
     Pagan Clergy have a new mission Pagan Sacrifices.  This targets a pagan city and has a 75% chance to increase the cities happiness and 25% chance to give an opinion penalty to the religion 
     World Religion Clergy can now act as Agents in cities of their religion
+  In Competitive mode character yields and modifiers now scale linearly.  Ratings lower than 5 will have higher effects and higher ratings lower effects.  Previous flat 50% penalty removed.  
+  Character upgrades for leaders, governors, and generals (under retirement age) now include only traits, if possible
   Doubled money income from connected foreign cities  
   Event-caused tribal raids will now target the player, even if at Peace or if another foreign city would be a better target
   Added doubled Desert map size as a map option (this is the same size as Deserts were before being reduced recently)
