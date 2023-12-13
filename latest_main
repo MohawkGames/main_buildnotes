@@ -1,125 +1,105 @@
-Main Branch: 1.0.69678 Release 11/22/2023
+Main Branch: 1.0.70024 Release 12/13/2023
 
-Headline changes
+Headline changes  
 
-Lower difficulty levels are now easier and a new lowest level difficulty added 'The New'
-Many balance changes including nerfs to Persian UUs and Schemer leaders
-Kush now available on the Middle East premade map
-AI combat, strategic and performance improvements
+Sacred and Profane Clergy have been reworked
+Changes to Competitive mode character yields and modifiers
+History of the Old World added to loading screen for new games
 
 
 Design
 
-New difficulty level added The New.  Reworked AI penalties on lower difficulty levels.
-Passive AI will not capture cities from a player who originally founded them
-Persian Unique Units (Palton Cavalry and Cataphract Archer) now have a range of 1.  This can be increased by effects which increase range (Hills, Marksman promotion etc).
-Reduced Schemer leader orders per war from 2 to 1
-Kush now available on the Middle East premade map 
-Reduced Desert mapscript size to be in line with other maps 
-Upgrading an improvement now also upgrades the specialist, if the existing specialist is less advanced than the starting specialist of the upgraded improvement
-Garrison getting pillaged no longer removes existing governor
-Autonomous rule now repairs damaged cities that cannot passively heal completely in a turn, even if it's currently building something else
-Collateral damage (pierce, splash etc) formula simplified. This now does the percentage of the damage of a direct attack to the same unit, rounded up.  This change increases collateral damage dealt in some circumstances.
-Tweaked a few trait inheritance outcomes
-Added new trait flavor text and changed some to only appear dependent on character age. Reduced the likelihood of vomiting and diarrhea when characters become severely ill.
-Tweaked tutorial events to make them less prone to cluster on the same turns
-Generals of tribal units now get XP 
-Tribes now attack civilian units at a lower priority 
-Former regents now get a trait giving +1 wisdom and keep their King/Queen Regent title
-In the Rise of Carthage scenarios, Balearic Slingers are now buildable on the islands instead of regular Slingers. Regular Slingers can upgrade to Balearics.
-Rise of Carthage scenario 4 starting city happiness boosted
+Sacred and Profane Clergy rework:
+
+The Initiate into Clergy mission run by the Head of Religion has been replaced by a new mission Suggest For Clergy.  This is run via the Chancellor and uses the target characters religion
+A limit of 2 Clergy per nation has been added
+Clergy can now also be Courtiers and marriage restrictions have been removed
+Clergy can run the Tutor as Courtier mission (even if they are not a Courtier)
+Clergy give a base bonus of +30 religion opinion, modified by character opinion
+Pagan Clergy have a +40% chance to become the next Head of Religion and World Religion Clergy have a +20% chance
+Pagan Clergy have a new mission Pagan Sacrifices.  This targets a pagan city and has a 75% chance to increase the cities happiness and 25% chance to give an opinion penalty to the religion 
+World Religion Clergy can now act as Agents in cities of their religion
+
+In Competitive mode character yields and modifiers now scale linearly.  Ratings lower than 5 will have higher effects and higher ratings lower effects.  Previous flat 50% penalty removed.  
+Character upgrades for leaders, governors, and generals (under retirement age) now include only traits, if possible
+Doubled money income from connected foreign cities  
+Event-caused tribal raids will now target the player, even if at Peace or if another foreign city would be a better target
+Added doubled Desert map size as a map option (this is the same size as Deserts were before being reduced recently)
+Tweaks to the New Difficulty level - start with an added Militia, increased civics and training per turn
+Unimproved water tiles can now be exchanged between cities
+Tiles cannot be exchanged between cities if that will cause a city territory to no longer be contiguous
+Increased tier of grove luxuries ambition 
 
 
 Programming
 
-AI combat, strategic and performance improvements
-Improved retreat and target selection. 
-Better AI coordination so it doesn't get some units attacking a target while other healthy ones are retreating.
-Better AI awareness of power shift when it moves its units 
-Improved AI evaluation of tiles for border expansion and buying
-AI exploration and wood chopping improvements
-Reduced AI fort spam outside of borders, especially for Kush 
-Revised AI Settler movement to force march when it has excess orders
-Fixed the AI starting multiple Settlers at the same time, when it just needs one
-Fixed AI not viewing rebels of other nations as a threat when they actually are
-Fixed AI incorrectly estimating the cost of buying resources
-Fixed AI risky behavior of attacking too close to the fog of war without protection
-Fixed tribe AI movement bug 
-Fixed Hittite AI chopping trees too much at the expense of exploring 
-AI builds militia more frequently instead of festivals if it cannot build other units
-Minor Stun/Push AI optimization
-Minor AI exploration fix
-One AI cache per player, instead of one per game
-Units that require a non-buildable improvement are no longer considered a possible build, unless that improvement is present
-GOG SDK updated
-Added STAT_YEARS_REGENT
-Starting location resource placement order shuffled, so players later in the turn order don't always slightly benefit from rare luxury placement
-Added Pharaohs of the Nile campaign source and XML to Reference folder
-Added effectCity bAutoBuildUnits, which is like the current autonomous rule, but builds units instead of projects and specialists  
-
+Improved AI obsolete unit upgrading 
+AI now has memory about what non-visible city sites are being claimed by other players 
+AI tries to avoid ending the turn with pending in-place attacks
+AI tries to connect road network to foreign cities at peace for the money
+Placed a limit on the number of military units the AI uses for exploring
+Corrected AI performance regression
+AI no longer razes gifted cities and cities obtained from events, even if it can 
+Fixed bug in AI hurry cost value that was causing it to spend civics instead of saving them for better use
+Fixed AI sometimes not healing units when it has the chance
+Revised character portrait selection algorithm to duplicate the portrait from a different player, if global duplication can't be avoided 
+Removed hardcoded prohibition on foreign paganisms being picked for religion subjects
+Platform achievements now unlock completed scenarios when resetting gameOptionsSave file
+Added Modio verbose logging added to gameOptionsSave file (off by default)
+Added better logging for undo/redo errors
+More logging and a possible fix for remote server disconnections
+Better failure reporting when an EventOption using the new syntax specifies an invalid subject alias
+mapPath now excluded from GameParameters when writing to XML 
+  
 
 UI
 
-Alt+right mouse button is now a shortcut for improvement pings
-Mouse click no longer triggers when releasing button after drag
-Loading a single player game as a network game now allows AI player reassignment 
-Dynasties are now shown and can be selected on the Choose Leader screen
-Added option to only use default dynasties for AI players 
-Random nation now sets random dynasty for both SP and MP 
-Dynasty dropdown with Pick Later will use the dynasty name if available 
-Moved cycle button tooltips to right of cycle button UI 
-Added border expansion preview for under construction specialists
-Added yields change from trade and tribute to war declaration effect tooltip and yield loss from connected cities to peace breaking effect tooltip 
-Revised cloud game host control popup to be more consistent. Replaced general save button with individual action buttons.
-Improvement suggestions no longer take worker safety into account
-Reduced spacing in yield display for tile/specialist widgets 
-Reduced tile text font and icon size 
-Negative changes in happiness/discontent now shown using opposite yield color
-Added Deficit concept to Encyclopedia
-Event Browser: The New Entry button now opens a new event the Wizard
-
+History of the Old World added to loading screen for new games.  This will also appear on the Game Log after the first turn
+Added a generic improvement ping that is used to indicate preferred placement of any improvement
+Improvement pings are less restrictive in checking validity (i.e. can now add improvement pings to Sand that would be valid for Clerics before founding city)
+CTRL-click Heal now automatically heals the unit every turn until fully healed or idle healing would bring unit to full health anyway
+Specialist tooltip adjusted. All yields are summarized first and the Rural/Apprentice/etc effects are no longer separated from the rest of the list
+Character tooltip always shows heir rank, if any 
+Improved succession help text for characters after the 4th in line
+Clergy included in turn summary announcements and notable character list
+Religion changes for unimportant characters no longer shown in turn summary
+Clergy traits in Encyclopaedia show the related religion
+Added Encyclopedia description for city site improvement 
+Removed "Could lead to future events" link help which was not working consistently 
+Added text scaling to reduce overlap on city production menu for some mods
+Added hint about Polytheism to the 8 shrine ambition 
+When an Idle Leader reminder is active, the reminder icon replaces the General/Governor icon to the left of the leader portrait
+Added Idle Leader reminder for Tutor as Leader (Scholar ability)
+Added tooltips to some cloud game host control buttons
+Added new Active DLC Encyclopedia category
+Fewer characters included in the turn summary 
+    
 
 Bugs Fixed
 
-Fixed events not triggering on clearing tribal camps
-Fixed bug with cloud games not updating correctly when exiting without completing turn, causing them to need to be rewound
-Fixed bugs causing replay data to get discarded unnecessarily  
-Fixed Kush Unique Units not applying Zone of Control
-Fixed map script bug causing generation to sometimes fail on Desert maps with large number of players
-Fixed last page of Modio mods not displaying in install tab
-Fixed double folder names when mod name contains plus (+) symbol
-Fixed simultaneous mode non-dynamic turn timer length
-Fixed turn style and turn timer dropdowns in server host controls
-Fixed AI assert
-EffectUnit iActionsExtra are now applied immediately upon acquiring the effect 
-Fixed a few instances where the number of tribes were miscounted
-Fixed the Sentinel dynamic tutorial triggering in the wrong player's territory 
-Fixed collection modification during enumeration
-Fixed reveal map division by zero when one of the players has been eliminated
-Fixed city sites not keeping track of original tribe upon being cleared
-Fixed tribe site visibility on the minimap when settlements are not city sites
-Fixed improvement construction time remaining not updating when worker goes on cooldown
-Fixed Spartan elimination event in Rise of Carthage scenario 2
-Fixed idle councilor reminder showing when no missions available
-Fixed Wonders being eligible for pillage by event bonuses
-Fixed Cognomens getting replaced with lower value versions in some scenarios
-Fixed critical hit icons not being immediately updated on ending turn or changing turn style in MP
-Tribe units now actively occupy empty city sites to convert them to settlements again
-City widget and culture bar update fixes
-Fixed city attack damage preview for adjacent effectUnits 
-Nested link fix (affected anti-Melee, anti-Infantry etc links)
-Fixed some null references for tribal invasion AI 
-Fixed leaderboard display in Pharaohs of the Nile scenario 6
-Fixed families of starting units in Pharaohs of the Nile scenarios 3 and 6
-Fixed issue with scenarios not getting unloaded correctly
-Fixed Map Editor not setting mapWidth and mapHeight values on loading a map
-A slot assigned to an AI when loading a MP game now gets full AI state
-Fixed an AI cache issue for of existing improvements outside territory
-Fixed no character UI issues 
-Happiness/discontent bar sign issue fixes
-Fixed subject reordering breaking old saves
-Fixed out of range exception 
-Fixed decision cycling sometimes not actually cycling 
-Worker selection cycling UI performance fix 
-Fixed client background task deadlock
+Fixed context buttons not showing up consistently (Send Goods, Assign Agent etc)
+Fixed unit upgrades requiring a city with a resource (for an upgrade of A to B, the EffectCity requirements of unit B are only checked if they're different from requirements of unit A)
+Fixed some cases where clicking on non-link text doesn't trigger button underneath   
+Fixed Unavailable trait not always getting removed at the start of the players turn
+Fixed interrupting a unit in motion over water with a combat action failing to update the unit's model from water to land 
+Fixed unit healthbar ticks not getting the correct material, leading to tall models obscuring the ticks
+Fixed Carthage scenario null reference for tribal invasion
+Fixed city selection lighting change bug
+Fixed bug in Heroes of the Aegean scenario with late-game event getting invalidated upon triggering
+Fixed display issue with Hierro in Carthage scenarios 3 and 4 
+Fixed nested link issue with some goal links
+Possible fix for EOS re-authentication at 59 minutes causing Modio to reload and throw errors
+Fixed replay being discarded in Learn to Play 4
+Fix Ptolemy and Seleucus being unable to adopt a state religion in Heroes of the Aegean scenario 6
+Fixed stolen city site event trigger
+Fixed some flickering on tooltips and unit HP bar
+Fixed boundary tiles remaining visible after gaining and then losing visibility 
+Fixed Caravan stacking bug 
+Fixed Event Browser showing new syntax message for all events 
+Fixed Theology Ambitions getting canceled as impossible too soon 
+Fixed trade events not getting canceled on war declaration
+Fixed no-target missions not working with reminders
+Fixed some undo/redo issues (i.e. hunter family opinion not resetting after undoing unit kills in territory)
+Fixed bonus help text when adding trait
+Fixed missing city happiness modifiers for Kush and Hittite pagan religions
 Text and event fixes
