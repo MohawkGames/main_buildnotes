@@ -1,4 +1,5 @@
 Main Branch: 1.0.70024 Release 12/13/2023
+Main Branch Hotfix: 1.0.70054 Release 12/15/2023
 
 Headline changes  
 
@@ -102,4 +103,5 @@ Fixed no-target missions not working with reminders
 Fixed some undo/redo issues (i.e. hunter family opinion not resetting after undoing unit kills in territory)
 Fixed bonus help text when adding trait
 Fixed missing city happiness modifiers for Kush and Hittite pagan religions
+Fixed bug with DLC ownership check
 Text and event fixes
