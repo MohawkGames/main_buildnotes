@@ -1,9 +1,9 @@
 Main Branch: 1.0.70??? Release 01/11/2024
 
 Headline changes  
-  Enabled extra map options when selecting a Random map script
-  Added extra map randomisation options
+  Added extra map randomisation options and enabled more options for Random map scripts
   Added heir name selection popup on birth of heir
+  UI and AI improvements
 
 Design
   Enabled Resource Density, City Site Density, and City Site Number map options on Random map script selection
