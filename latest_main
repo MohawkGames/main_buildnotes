@@ -1,107 +1,88 @@
-Main Branch: 1.0.70024 Release 12/13/2023
-Main Branch Hotfix: 1.0.70052 Release 12/15/2023
+Main Branch: 1.0.70360 Release 01/11/2024
 
 Headline changes  
 
-Sacred and Profane Clergy have been reworked
-Changes to Competitive mode character yields and modifiers
-History of the Old World added to loading screen for new games
+Added extra map randomisation options and enabled more options for Random map scripts
+Added heir name selection popup on birth of heir
+UI and AI improvements
 
 
 Design
 
-Sacred and Profane Clergy rework:
-
-The Initiate into Clergy mission run by the Head of Religion has been replaced by a new mission Suggest For Clergy.  This is run via the Chancellor and uses the target characters religion
-A limit of 2 Clergy per nation has been added
-Clergy can now also be Courtiers and marriage restrictions have been removed
-Clergy can run the Tutor as Courtier mission (even if they are not a Courtier)
-Clergy give a base bonus of +30 religion opinion, modified by character opinion
-Pagan Clergy have a +40% chance to become the next Head of Religion and World Religion Clergy have a +20% chance
-Pagan Clergy have a new mission Pagan Sacrifices.  This targets a pagan city and has a 75% chance to increase the cities happiness and 25% chance to give an opinion penalty to the religion 
-World Religion Clergy can now act as Agents in cities of their religion
-
-In Competitive mode character yields and modifiers now scale linearly.  Ratings lower than 5 will have higher effects and higher ratings lower effects.  Previous flat 50% penalty removed.  
-Character upgrades for leaders, governors, and generals (under retirement age) now include only traits, if possible
-Doubled money income from connected foreign cities  
-Event-caused tribal raids will now target the player, even if at Peace or if another foreign city would be a better target
-Added doubled Desert map size as a map option (this is the same size as Deserts were before being reduced recently)
-Tweaks to the New Difficulty level - start with an added Militia, increased civics and training per turn
-Unimproved water tiles can now be exchanged between cities
-Tiles cannot be exchanged between cities if that will cause a city territory to no longer be contiguous
-Increased tier of grove luxuries ambition 
+Enabled Resource Density, City Site Density, and City Site Number map options on Random map script selection
+Added Random options to above map options and set these with the Random game preset
+Added Random option to Map Size
+Increased city site density for lower density options (25% and 50% distance increases instead of 50% and 100%) 
+Christian and Manichaean clergy can now marry like clergy of other religions 
+Game of the week now has a 4.5% chance to use competitive mode
+Added heir name selection popup on birth of heir
+Halved number of center area resources when using the King of the Hill map option for the Disjunction mapscript
 
 
 Programming
 
-Improved AI obsolete unit upgrading 
-AI now has memory about what non-visible city sites are being claimed by other players 
-AI tries to avoid ending the turn with pending in-place attacks
-AI tries to connect road network to foreign cities at peace for the money
-Placed a limit on the number of military units the AI uses for exploring
-Corrected AI performance regression
-AI no longer razes gifted cities and cities obtained from events, even if it can 
-Fixed bug in AI hurry cost value that was causing it to spend civics instead of saving them for better use
-Fixed AI sometimes not healing units when it has the chance
-Revised character portrait selection algorithm to duplicate the portrait from a different player, if global duplication can't be avoided 
-Removed hardcoded prohibition on foreign paganisms being picked for religion subjects
-Platform achievements now unlock completed scenarios when resetting gameOptionsSave file
-Added Modio verbose logging added to gameOptionsSave file (off by default)
-Added better logging for undo/redo errors
-More logging and a possible fix for remote server disconnections
-Better failure reporting when an EventOption using the new syntax specifies an invalid subject alias
-mapPath now excluded from GameParameters when writing to XML 
-  
+Improved AI exploration and use of reveal territory missions
+Added support for events that can trigger for the AI
+New attempt to address remote server disconnection issues
+
 
 UI
 
-History of the Old World added to loading screen for new games.  This will also appear on the Game Log after the first turn
-Added a generic improvement ping that is used to indicate preferred placement of any improvement
-Improvement pings are less restrictive in checking validity (i.e. can now add improvement pings to Sand that would be valid for Clerics before founding city)
-CTRL-click Heal now automatically heals the unit every turn until fully healed or idle healing would bring unit to full health anyway
-Specialist tooltip adjusted. All yields are summarized first and the Rural/Apprentice/etc effects are no longer separated from the rest of the list
-Character tooltip always shows heir rank, if any 
-Improved succession help text for characters after the 4th in line
-Clergy included in turn summary announcements and notable character list
-Religion changes for unimportant characters no longer shown in turn summary
-Clergy traits in Encyclopaedia show the related religion
-Added Encyclopedia description for city site improvement 
-Removed "Could lead to future events" link help which was not working consistently 
-Added text scaling to reduce overlap on city production menu for some mods
-Added hint about Polytheism to the 8 shrine ambition 
-When an Idle Leader reminder is active, the reminder icon replaces the General/Governor icon to the left of the leader portrait
-Added Idle Leader reminder for Tutor as Leader (Scholar ability)
-Added tooltips to some cloud game host control buttons
-Added new Active DLC Encyclopedia category
-Fewer characters included in the turn summary 
+When random map options are selected, the game description help text shows which option was actually selected 
+Permanent game log tweaks - fewer deaths, city breaches shown instead of city captures, offensives no longer shown
+State religion notification reminder now opens the Adopt Stage Religion context menu 
+Team games with duplicate nations no longer force team colors 
+Revised player color assignment so that unique colors are always assigned to the active team players 
+Made the "adopt state religion" list in the UI use the same check as gameplay logic for whether a religion can be adopted
+Added tooltip to gift unit button
+Nation opinion now displayed when there is at least one modifier even if the net opinion is 0
+Removed event option text from tutorial events that directs players to options to turn off (redundant with in-event tutorial toggle)
+Renamed Active DLC in Encyclopedia to DLC Mechanics 
+Added duplicate Steam Deck-specific GraphicsOptionsSave fields for scaling options, with higher defaults
+Added Wonders & Dynasties DLC to announcement popup
+Added support for preset characters with suffixes
+Trait help now shows conditional probabilities for gaining other traits or removing this one
+Added helptext and concept for trait fallback ratings 
+Added helptext for a dynasty's first ruler character to link back to the dynasty description
+Hall Of Fame screen layout tweaked
     
 
 Bugs Fixed
 
-Fixed context buttons not showing up consistently (Send Goods, Assign Agent etc)
-Fixed unit upgrades requiring a city with a resource (for an upgrade of A to B, the EffectCity requirements of unit B are only checked if they're different from requirements of unit A)
-Fixed some cases where clicking on non-link text doesn't trigger button underneath   
-Fixed Unavailable trait not always getting removed at the start of the players turn
-Fixed interrupting a unit in motion over water with a combat action failing to update the unit's model from water to land 
-Fixed unit healthbar ticks not getting the correct material, leading to tall models obscuring the ticks
-Fixed Carthage scenario null reference for tribal invasion
-Fixed city selection lighting change bug
-Fixed bug in Heroes of the Aegean scenario with late-game event getting invalidated upon triggering
-Fixed display issue with Hierro in Carthage scenarios 3 and 4 
-Fixed nested link issue with some goal links
-Possible fix for EOS re-authentication at 59 minutes causing Modio to reload and throw errors
-Fixed replay being discarded in Learn to Play 4
-Fix Ptolemy and Seleucus being unable to adopt a state religion in Heroes of the Aegean scenario 6
-Fixed stolen city site event trigger
-Fixed some flickering on tooltips and unit HP bar
-Fixed boundary tiles remaining visible after gaining and then losing visibility 
-Fixed Caravan stacking bug 
-Fixed Event Browser showing new syntax message for all events 
-Fixed Theology Ambitions getting canceled as impossible too soon 
-Fixed trade events not getting canceled on war declaration
-Fixed no-target missions not working with reminders
-Fixed some undo/redo issues (i.e. hunter family opinion not resetting after undoing unit kills in territory)
-Fixed bonus help text when adding trait
-Fixed missing city happiness modifiers for Kush and Hittite pagan religions
-Fixed bug with DLC ownership check
+Fixed some legacy issues with harvesting and forts 
+Fixed dynasty selection being unavailable on Choose Leader screen after using a custom archetype
+Fixed MP teammate portraits not displaying
+Fixed improvement turns remaining not updating when military units go on cooldown (affects Kush when building Forts)
+Fixed unit action indicators sorting incorrectly with other worldspace UI
+Fixed trait layout for character encyclopedia pages
+Fixed unit position jitter on city sites during undo
+Fixed stacked workers using different positions
+Fixed cloud shader clipping at certain viewing angles
+Fixed Odeons on hills not displaying correctly 
+Fixed resource fade not being preserved when changing graphics settings, and resource fade not occurring when a unit sharing a resource tile is revealed via exploration
+Fixed issue with hill height textures cutting off and leaving tear lines in the terrain 
+Fixed river start flow splats being too large, causing artifacts when it's placed next to other assets with water 
+Fixed inconsistent hex grid outlines in the transition between passable and impassable terrain
+Fixed undo not updating timeline screen 
+Fixed AI not invalidating danger calculations after a city has been captured
+Fixed tooltip overlap for Leonidas effect in Greece2 
+Fixed unique dynasty buildings not showing on nation select stats (Ptolemy)
+Fixed nested link issue with Pagan Clergy subject 
+Fixed bug where iAdultProb traits would never be assigned to dynamically generated already-adult characters
+Fixed Encyclopedia breaking if there are UnitTraits with no EffectUnits (affects mods)
+Fixed modio upload not storing correct metadata blob 
+Fixed modio API url
+Fixed event browser audio picker layout 
+Updating mods now deletes any files from previous versions that are no longer present in the mod
+Heirs can no longer marry other nations leaders, causing them to leave the players nation
+Mod Manager will no longer try to display mod update popup if not in the main menus
+Rout indicator now longer shown when unit cannot advance to target tile
+Fixed DLC ownership caching
+Fixed More Water map script option
+Fixed map script desert generation error
+Fixed bug where characters with Archetypes that allowed them to be Agents could not be Agents if they were also Clergy
+Caravans can no longer displace neutral units from their positions
+AI discontent value correction
+Fixed leftover sign error from discontent to happiness conversion
+Fixed replay for team turnstyle cloud games
 Text and event fixes
