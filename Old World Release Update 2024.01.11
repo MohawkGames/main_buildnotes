@@ -1,4 +1,4 @@
-Main Branch: 1.0.70??? Release 01/11/2024
+Main Branch: 1.0.70355 Release 01/11/2024
 
 Headline changes  
   Added extra map randomisation options and enabled more options for Random map scripts
@@ -75,4 +75,5 @@ Bugs Fixed
   Caravans can no longer displace neutral units from their positions
   AI discontent value correction
   Fixed leftover sign error from discontent to happiness conversion
+  Fixed replay failing in team turnstyle cloud games
   Text and event fixes
