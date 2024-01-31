@@ -3,7 +3,7 @@ Main Branch: 1.0.70671 Release 01/31/2024
 Design
   New map script Player islands.  Each nation gets their own island, with optional empty islands.
   New map script Highlands.  Inland map with lots of mountain ranges and elevated terrain.
-  Inland Sea map script reworked.  Now has more variation and should be more Mediterranean-like.
+  Inland Sea map script reworked.  Now has more variation and is more Mediterranean-like.
   New game option Random Tech Tree.  Shuffles the position of each tech within its column.
   No longer possible to lose when dying without an heir, another character will take over
   Tech tree changes: 
