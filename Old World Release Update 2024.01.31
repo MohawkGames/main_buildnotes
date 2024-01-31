@@ -1,4 +1,4 @@
-Test Branch: 1.0.70456 Test 01/17/2024
+Main Branch: 1.0.70671 Release 01/31/2024
 
 Design
   New map script Player islands.  Each nation gets their own island, with optional empty islands.
@@ -134,7 +134,7 @@ UI
   Custom Leader Archetype shown on Choose Leader screen when selected
   In network games the client no longer exits to main menu immediately upon disconnection but instead tries to automatically reconnect
   Smoke particles on mines are now hidden when the smokestack is hidden
-  New Game option enabled on premade maps, will reroll nation and dynasty selection if these have been randomised
+  New Game option enabled on premade maps, will reroll nation and dynasty selection if these have been randomized
   Made Religion/Family/Nation/Tribe sections on tab panels collapsible 
   Added concepts/linkable helptext about the tech card system
   Added intermediate Scripted/Freeform menu to Learn to Play
