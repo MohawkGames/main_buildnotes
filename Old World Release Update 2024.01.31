@@ -33,7 +33,7 @@ Design
   Rider family seat bonus now includes the addition of horses, elephants, and camels to tiles within the city territory, no longer allows building units without resources.
   Generals over 50 now get general-related traits offered on upgrade (previously only Generals eligible for assignment were offered these)
   Autonomous rule no longer clears the build queue, but AI can change it to build what it wants to
-  Leaders can no longer be Exploring
+  Leaders can no longer be Exploring.  Exploring Leader events have been reworked.
   Khufu now has a family penalty for each wonder built (Wonders and Dynasties)
   Meritities is now Righteous instead of Revered (Wonders and Dynasties)
 
