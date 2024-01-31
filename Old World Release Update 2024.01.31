@@ -1,5 +1,10 @@
 Main Branch: 1.0.70671 Release 01/31/2024
 
+Headline changes  
+  Major localization text update for all languages 
+  95 new events added
+  Many design changes including new map scripts, game options and rebalancing
+
 Design
   New map script Player islands.  Each nation gets their own island, with optional empty islands.
   New map script Highlands.  Inland map with lots of mountain ranges and elevated terrain.
@@ -119,7 +124,7 @@ Programming
   Can now set a religion to be not Pagan or World
   
 UI
-  Big localization text update for all languages including all missing Wonders and Dynasties text
+  Major localization text update for all languages including all missing Wonders and Dynasties text
   Added missing Wonders and Dynasties event art
   Changed Remind Turn to Turns until Reminder in Improvement and Text pings
   Temporary traits now display time remaining in parentheses
