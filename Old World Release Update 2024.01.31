@@ -11,16 +11,21 @@ Design
   Inland Sea map script reworked.  Now has more variation and is more Mediterranean-like.
   New game option Random Tech Tree.  Shuffles the position of each tech within its column.
   No longer possible to lose when dying without an heir, another character will take over
+  
   Tech tree changes: 
     Infantry Square now requires Battleline instead of Bodkin Arrow
     Windlass now requires Architecture instead of Scholarship
     Added Luxury bonus cards to the tech tree - on Forestry, Metaphysics, Coinage, Portcullis and Lateen Sail
-  Baths class improvements give one extra Happiness per turn
-  Player start adjustment to try to avoid being placed in a small area surrounded by impassable terrain
+    Added Kush UU bonus techs - Free Medjay Archer (Composite Bow) and Free Beja Archer (Bodkin Arrow)
+    Hittite UU 2 bonus tech (Free Three Man Chariot) science cost reduced from 800 to 600 (to be consistent with other UU bonus techs)
+
   Free-for-all multiplayer game player start improvements:
     All map scripts now spread out the players as much as possible, at the expense of selecting the best terrain. 
     Added a different, experimental, player placement for highlands and coastal rain basin map scripts, which are relatively uniform land maps
+  
+  Player start adjustment to try to avoid being placed in a small area surrounded by impassable terrain
   More resources between city sites, especially at low city site density
+  Baths class improvements give one extra Happiness per turn
   AI (nations and tribes) now have a chance to cancel an alliance when at cautious opinion or lower 
   Split Away from Court event class into individual classes. This lowers the frequency of some events that were triggering too often (i.e. imprisoned events)
   Players without an online ID (e.g. not running through Steam, Epic Launcher or GoG Galaxy) are now able to play network multiplayer   
@@ -28,8 +33,6 @@ Design
   Rider family seat bonus now includes the addition of horses, elephants, and camels to tiles within the city territory, no longer allows building units without resources.
   Generals over 50 now get general-related traits offered on upgrade (previously only Generals eligible for assignment were offered these)
   Autonomous rule no longer clears the build queue, but AI can change it to build what it wants to
-  Added Kush UU bonus techs - Free Medjay Archer (Composite Bow) and Free Beja Archer (Bodkin Arrow)
-  Hittite UU 2 bonus tech (Free Three Man Chariot) science cost reduced from 800 to 600 (to be consistent with other UU bonus techs)
   Leaders can no longer be Exploring
   Khufu now has a family penalty for each wonder built (Wonders and Dynasties)
   Meritities is now Righteous instead of Revered (Wonders and Dynasties)
