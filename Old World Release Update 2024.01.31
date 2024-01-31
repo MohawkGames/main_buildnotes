@@ -184,3 +184,6 @@ Bugs Fixed
   Fixed Carthage scenario 1 goal (Markets and Money) 
   Fixed Jebel Barkal bonus description (Wonders and Dynasties)
   Text and event fixes
+
+Known Bugs
+  Starting Game of the Week after having started a game using a premade map will cause GotW to use that map.
