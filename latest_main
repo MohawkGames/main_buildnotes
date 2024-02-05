@@ -4,6 +4,7 @@ Main Branch Hotfix: 1.0.70751 Release 02/05/2024
 This hotfix release changes the Rider family bonus from free resources on founding the seat to enabling one time projects to import these resources.  
 There are 3 projects, Import Horses, Import Elephants and Import Camels. Completing the project will add the relevant resource to the city on an empty tile. 
 Each project can only be built once per nation and is restricted to Rider cities.
+This change was made to prevent issues with Rider families losing access to units mid game for ongoing games.
 
 Headline changes  
 
