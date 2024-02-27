@@ -1,9 +1,14 @@
 Main Branch: 1.0.71??? Release 02/28/2024
 
+Headline changes  
+  Portrait Interpolation enabled
+  City production can now be automated
+  New map script 'Lakes and Gulfs', new turn scale 'Seasons' and new game options
+
 Design
   New turn scale 'Seasons' 
   New game option 'Random Improvements', which randomizes the unique improvements (Shrines) for each nation
-  New game option Revealed Map
+  New game option Revealed Map, which reveals the map on game start but regular visibility rules apply
   New map script 'Lakes and Gulfs'
   Artisans no longer get the Ingenuity promotion for Ship and Siege units, instead get a 25% resource cost reduction on these units
   Promotion options of a general no longer include invalid effects for their unit 
@@ -46,18 +51,18 @@ UI
   Portrait Editor added to Extras menu
   City production can now be automated
   Worker icon replaced with a shovel (to disambiguate it from Axemen)
+  Added Current Tile worker filter and made it the default. Valid Improvements filter now ignores terrain requirements
   Research popup no longer always appears at the start of the turn and follows the priority set for events
   Visual improvements for Royal Library, Jerwan Aqueducts, Hanging Gardens, Hovel and Range Improvements
   Added action menu when right clicking military units in the Units tab
+  F1 will now always open the encyclopedia even if no related tooltip showing
+  Encyclopedia now defaults to a random Hints page instead of a completely random page 
   Hid "F1 to open encyclopedia entry" helptext for hidden projects 
   Added Encyclopedia category for "Traits (Items)" 
-  Encyclopedia now defaults to a random Hints page instead of a completely random page 
   Removed obsolete warnings about losing the game due to having no heirs
   Improved Riders family helptext
   Converted bug report screen to use TextTypes (for future localization)
   Removed popup warning about losing progress when exiting a cloud game, as progress is automatically saved
-  Added Current Tile worker filter and made it the default. Valid Improvements filter now ignores terrain requirements.
-  F1 will now always open the encyclopedia even if no related tooltip showing.
 
 
 Bugs Fixed
@@ -95,7 +100,7 @@ Bugs Fixed
   Fixed city right-click menu clipping
   Heir name popup gets invalidated when the character is no longer the heir 
   Fixed bug with Carthage scenario 3 calculation for ship damage goal
-    Fixed bug that prevented units in their own territory from bumping other units out of the way 
+  Fixed bug that prevented units in their own territory from bumping other units out of the way 
   Fixed Portrait Editor behavior when a selected mod has no portraits
   Fixed game load exception  
   Fixed for team color slider not working
@@ -103,7 +108,7 @@ Bugs Fixed
   Tab panel layout fixes 
   Fixed Heroes of the Aegean scenario 3 bug where the Control Thessaly cities goal did not complete if the final city was acquired peacefully 
   Premade maps with tiles that have no terrain now load and terrain is treated as out of bounds instead of causing map load to fail
-    Fixed Clergy opinion calculation bug 
+  Fixed Clergy opinion calculation bug 
   Fixed generic ping null reference
   Fixed null reference from razing a city near the map boundary 
   Fixed city production icon not showing correctly on loading save
