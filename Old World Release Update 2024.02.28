@@ -2,14 +2,14 @@ Main Branch: 1.0.71??? Release 02/28/2024
 
 Headline changes  
   Portrait Interpolation enabled
+  New map script, turn scale and game options
   City production can now be automated
-  New map script 'Lakes and Gulfs', new turn scale 'Seasons' and new game options
 
 Design
+  New map script 'Lakes and Gulfs'
   New turn scale 'Seasons' 
   New game option 'Random Improvements', which randomizes the unique improvements (Shrines) for each nation
   New game option Revealed Map, which reveals the map on game start but regular visibility rules apply
-  New map script 'Lakes and Gulfs'
   Artisans no longer get the Ingenuity promotion for Ship and Siege units, instead get a 25% resource cost reduction on these units
   Promotion options of a general no longer include invalid effects for their unit 
   The Jerwan Aqueduct gives free Farmers even to new farms after it has been built
@@ -66,6 +66,7 @@ UI
 
 
 Bugs Fixed
+  Potential fix for Multiplayer disconnect issues
   Fixed history generator not showing for SP games
   Fixed game of the week using the premade map in the options file 
   Fixed razed city undo/redo visibility issue 
@@ -121,4 +122,6 @@ Bugs Fixed
   Fixed clicking on preset character links in Encyclopedia not going to character page
   Fixed bugs with when African Elephants are valid to build in Carthage scenario 4
   Fixed Donut mascript sometimes generating maps with a square hole
+  Fixed missing platform DLL on GOG Mac build
+  Fixed rare game freeze when exiting to main men
   Text and event fixes
