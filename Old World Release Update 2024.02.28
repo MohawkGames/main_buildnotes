@@ -123,5 +123,5 @@ Bugs Fixed
   Fixed bugs with when African Elephants are valid to build in Carthage scenario 4
   Fixed Donut mascript sometimes generating maps with a square hole
   Fixed missing platform DLL on GOG Mac build
-  Fixed rare game freeze when exiting to main men
+  Fixed rare game freeze when exiting to main menu
   Text and event fixes
