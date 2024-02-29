@@ -27,22 +27,21 @@ Design
 
 Programming
   Unity upgrade to 2021.3.34
+  AI expansion improvements
+  AI economy improvements
+  Improved AI luxury strategy
   Refactor non-event legitimacy for completing wonders so the AI understands it
   AI now takes better advantage of the Jerwan Aqueduct
   Added AI for new Rider ability
-  AI expansion improvements
-  Improved AI luxury strategy
+  AI performance optimizations
   AI cache memory optimization
   Sprite repo optimization
   XML reading optimization
   Compressed MeshAnimator animations
   Improved performance of scenario menu when switching scenarios
-  AI economy improvements 
   Infos and validation refactor
   Enabled parallel loading of Infos
   Persistent text asset cache for internal mods
-  AI performance optimizations
-
   
 UI
   Portrait Interpolation enabled.  Character portraits will gradually age each year instead of having fixed ages at which they change.  They will also change depending on their opinion of you.  This can be enabled and disabled in the Graphics Options menu.
