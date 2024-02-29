@@ -37,13 +37,11 @@ Programming
   XML reading optimization
   Compressed MeshAnimator animations
   Improved performance of scenario menu when switching scenarios
-  Fall back to using default nation/dynasty if the player options file contains a disabled nation
   AI economy improvements 
   Infos and validation refactor
   Enabled parallel loading of Infos
   Persistent text asset cache for internal mods
   AI performance optimizations
-  Improved speed of scenario selection
 
   
 UI
@@ -125,4 +123,5 @@ Bugs Fixed
   Fixed missing platform DLL on GOG Mac build
   Fixed rare game freeze when exiting to main menu
   Fixed Map Editor not using specified size for generating maps
+  Fixed crash if the player options file contains a disabled nation
   Text and event fixes
