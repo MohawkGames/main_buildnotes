@@ -124,4 +124,5 @@ Bugs Fixed
   Fixed Donut mascript sometimes generating maps with a square hole
   Fixed missing platform DLL on GOG Mac build
   Fixed rare game freeze when exiting to main menu
+  Fixed Map Editor not using specified size for generating maps
   Text and event fixes
