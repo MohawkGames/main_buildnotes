@@ -1,7 +1,7 @@
 Main Branch: 1.0.71309 Release 03/06/2024
 
 Headline changes  
-  Portrait Interpolation enabled and Portrait Editor added. Character portraits will gradually age each year instead of having fixed ages at which they change.  They will also change depending on their opinion of you.  This can be enabled and disabled in the Graphics Options menu.
+  Portrait Interpolation enabled. Character portraits will gradually age each year instead of having fixed ages at which they change.  They will also change depending on their opinion of you.  This can be enabled and disabled in the Graphics Options menu.
   AI improvements and fixes
   New map script, turn scale and game options
   City production can now be automated
