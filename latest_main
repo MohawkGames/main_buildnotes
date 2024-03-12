@@ -1,4 +1,5 @@
 Main Branch: 1.0.71309 Release 03/06/2024
+Main Branch Hotfix: 1.0.71427 Release 03/12/2024
 
 Headline changes  
 
@@ -133,3 +134,10 @@ Fixed rare game freeze when exiting to main menu
 Fixed Map Editor not using specified size for generating maps
 Fixed crash if the player options file contains a disabled nation
 Text and event fixes
+  
+Fixed crash to desktop from new game screen with random nation selected
+Fixed scenario loading in MP
+Fixed worker value AI bug
+Possible fix for joining network games with mods
+Fixed Heroes of the Aegean scenario 3 Thessaly goal
+Added Safe Mode launch option for Steam
