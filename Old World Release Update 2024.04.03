@@ -1,11 +1,25 @@
 Main Branch: 1.0.71769 Release 2024-04-03
 
 Headline changes  
-
-
+  New game setting for player starting development in MP and new Victory Point setting option
+  Balance changes to bonus tech cards, families and dynasties
+  9 new events
+  Lowered apparent age of character portraits when using portrait interpolation
+  
 Design
   Added per player Development setting to multiplayer setup.  All players, Human and AI, can have their own development setting, which gives additional starting cities and techs.
+  Added new victory point setting: Very High.  This increases the VP required for winning by 50%.  The previous High setting now increases the VP required by 25%.   
+  Bonus tech cards position and cost in the tech tree reorganized
+  Free units now unlocked on a different tech than the one that would allow that unit to be built.  Free Longbowmen, Crossbowmen and Dromon cards now grant 2 units.
   Rider family seat now gives 1 Order / turn 
+  Sages no longer have +25% science in their seat 
+  Patrons now get a +25% city culture bonus per Precious Resource instead of the flat +4.  Patrons seat now gets 2 happiness levels per culture event instead of 1.
+  Khufu's wonder cost reduction lowered from 50% to 25% (Wonders and Dynasties)
+  Marius' enrolment post now gives -25% for warriors only instead of all infantry, training cost for project removed.  Sulla now more likely to cause Marius problems. (Wonders and Dynasties)
+  Hannibal now gets -20 family opinions and an increased legitimacy penalty in some Hannibal specific events (Wonders and Dynasties)
+  Added preferred families for more dynasty leaders (Wonders and Dynasties)
+  Sulla's Dictator trait now included in Terrifying trait group (Wonders and Dynasties)  
+  Agrippina unlocking a spymaster is now tied to a trait, the current one will stay if she dies but a new one cannot be appointed (Wonders and Dynasties)  
   Legitimacy cost for adoption reduced from 4 to 2
   Miserable trait has a chance per turn of being removed
   Competitive mode back to giving a flat rate of science, civics, training, and money
@@ -13,29 +27,16 @@ Design
   Old World pre-made map tweaks.  Extended map one tile north, fixed some resources and ruins that were out of borders.  Added Lavender to several locations on map. 
   You can now shift-click a law to abolish it without replacing it.  This will increase the cost of establishing a law in that pair by 100.
   When moving allied units, the moving player now gets exploration and ruins yields instead of the unit owner.  Moving allied units can no longer trigger events.
-  Khufu's wonder cost reduction lowered from 50% to 25% (Wonders and Dynasties)
-  Marius' enrolment post now gives -25% for warriors only instead of all infantry, training cost for project removed.  Sulla now more likely to cause Marius problems. (Wonders and Dynasties)
-  Hannibal now gets -20 family opinions and an increased legitimacy penalty in some Hannibal specific events (Wonders and Dynasties)
-  Added preferred families for more dynasty leaders (Wonders and Dynasties)
-  Sulla's Dictator trait now included in Terrifying trait group (Wonders and Dynasties)  
-  Agrippina unlocking a spymaster is now tied to a trait, the current one will stay if she dies but a new one cannot be appointed (Wonders and Dynasties)  
-  Parsa renamed to Persepolis in Heroes of the Aegean scenario 5
-  Added new victory point setting: Very High.  This increases the VP required for winning by 50%.  The previous High setting now increases the VP required by 25%. 
-  Sages no longer have +25% science in their seat 
-  Patrons now get a +25% city culture bonus per Precious Resource instead of the flat +4.  Patrons seat now gets 2 happiness levels per culture event instead of 1.
   Events giving a free siege unit will now give an Onager instead of a Ballista if the player has not yet researched Hydraulics
   Can no longer invalidate an ambition offer just by getting a bit closer during the turn in which it was offered
-  Heroes of the Aegean scenario 5 tweaks - boost science and units on Easy difficulty and limit Persian tech.  Persia can no longer build ships.
-  Ship build water area now takes priority over city territory (ships will spawn in selected ocean even if there is no space within player borders)
   Event trait delay no longer happens when there is no undo 
   Swapped names of Persian Cleric and Rider families (for historical accuracy)  
   Changed improvement adjacency requirements to be fulfilled in team territory, to be consistent with adjacency bonuses
-  Bonus tech cards position and cost in the tech tree reorganized
-  Free units now unlocked on a different tech than the one that would allow that unit to be built.  Free Longbowmen, Crossbowmen and Dromon cards now grant 2 units.
   Improved scaling of diplomatic event chance with number of AIs
   Marriage events now only occur for the leader and their children 
   Added Greedy to Seven Sins trait group and removed Extravagant
   Removed turn delay on more event bonuses when No Undo is enabled
+  Heroes of the Aegean scenario 5 tweaks - boost science and units on Easy difficulty and limit Persian tech.  Persia can no longer build ships. Parsa renamed to Persepolis
 
 New Events
   A More Disciplined Approach
@@ -49,23 +50,24 @@ New Events
   Whispers from the Gods
 
 Programming
+  Worker AI improvements
+  AI saves yields for Wonders less aggressively, allowing them to spend more developing their economy
+  Improved AI consideration for connecting its cities to foreign cities
+  AI no longer spends orders to place military units on city sites when it has not yet met any opponents
+  AI now purposely builds ships in specific water areas, like humans can 
   Moved map scripts to their own folder 
   Network code cleanup
   Adjusted character portrait selection to be more likely to choose same portraits if characters' age difference is large, all else being equal 
   Fallback for DLL mods that fail to load. A message will be shown and mods disabled.
-  AI now purposely builds ships in specific water areas, like humans can 
   Map files now support DynastySites in the tile data. Mods can append nation start tiles to premade maps
   Hotseat with one human player now behaves like single player for achievements, save files, discord, death with no heir, tutorial, hall of fame, etc 
   Portrait Editor now automatically attempts to regenerate portraits without feature points
   Network connection improvements
-  AI saves yields for Wonders less aggressively
   Dynasty start sites are now definable directly in map files
-  Worker AI improvements
-  Improved AI consideration for connecting its cities to foreign cities
-  AI no longer spends orders to place military units on city sites when it has not yet met any opponents
   Removed explicit construction states asset definitions for wonders that shouldn't have one
 
 UI
+  Adjusted mapping between portrait ages and rendered portraits.  This lowers the apparent age of characters portraits when using Portrait Age Interpolation.
   Clicking a link within a mission button will activate the mission rather than opening the link
   Popups and tooltips now have scrollbars when needed, will no longer make text smaller to fit
   Adjusted floating text to better accommodate some bonuses
@@ -100,7 +102,6 @@ UI
   Added unsubscribe instructions to multiplayer turn emails
   Mod browser speed improvements
   Display the build's date in unambiguous international format instead of American 
-  Adjusted mapping between portrait ages and rendered portraits.  This lowers the apparent age of characters portraits when using Portrait Age Interpolation.
   Character name is now always show in character help tooltip to give a link for selection
   Player option to follow moves of AI at war no longer includes civilian units
   Added target/prereq icons to techs tooltip while hovering over tech tree button
@@ -114,6 +115,7 @@ UI
   Units that level up no longer wake up.  This fixes auto-heal getting canceled on level up. 
 
 Bugs Fixed
+  Ship build water area now takes priority over city territory
   Fixed units incorrectly advancing when rout not possible 
   Fixed event level not being visible in scenario MP screen
   Fixed missing Resource density, city site density, and city site number options on some map scripts
