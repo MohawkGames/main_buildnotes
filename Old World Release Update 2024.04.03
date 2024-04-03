@@ -3,8 +3,8 @@ Main Branch: 1.0.71769 Release 2024-04-03
 Headline changes  
   New game setting for player starting development in MP and new Victory Point setting option
   Balance changes to bonus tech cards, families and dynasties
-  9 new events
   Lowered apparent age of character portraits when using portrait interpolation
+  9 new events
   
 Design
   Added per player Development setting to multiplayer setup.  All players, Human and AI, can have their own development setting, which gives additional starting cities and techs.
