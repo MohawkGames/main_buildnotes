@@ -1,143 +1,203 @@
-Main Branch: 1.0.71309 Release 03/06/2024
-Main Branch Hotfix: 1.0.71427 Release 03/12/2024
+Main Branch: 1.0.71795 Release 2024-04-04
 
 Headline changes  
 
-Portrait Interpolation enabled. Character portraits will gradually age each year instead of having fixed ages at which they change.  They will also change depending on their opinion of you.  This can be enabled and disabled in the Graphics Options menu.
-AI improvements and fixes
-New map script, turn scale and game options
-City production can now be automated
+New game setting for player starting development in MP and new Victory Point setting option
+Balance changes to bonus tech cards, families and dynasties
+Lowered apparent age of character portraits when using portrait interpolation
+9 new events
 
 
 Design
 
-New map script 'Lakes and Gulfs'
-New turn scale 'Seasons' 
-New game option 'Random Improvements', which randomizes the unique improvements (Shrines) for each nation
-New game option Revealed Map, which reveals the map on game start but regular visibility rules apply
-Artisans no longer get the Ingenuity promotion for Ship and Siege units, instead get a 25% resource cost reduction on these units
-Promotion options of a general no longer include invalid effects for their unit 
-The Jerwan Aqueduct gives free Farmers even to new farms after it has been built
-Added +6 Culture/turn to Necropolis 
-Added Player Start Location map option to Seaside map script
-Improved multiplayer start location selection, especially for team games 
-Tribal raiders are now willing to take a long path to their target if they cannot do anything else 
-Damaged cities can only be gifted to a teammate or their original owner 
-Regents no longer get a suffix
-Added multiple selection to the build queue for ships in cities with borders in multiple bodies of water to allow selection of where to build the ship
-When hovering over unit production the tile it will appear in will be highlighted
-Some Dynasty leaders now have a preferred family and will convert to that family if it is founded
-Carthage scenario 3 tweaks
-Added Theagenes as a historically correct general to the Sacred Band unit in Heroes of the Aegean scenario 3
+Added per player Development setting to multiplayer setup.  All players, Human and AI, can have their own development setting, which gives additional starting cities and techs.
+Added new victory point setting: Very High.  This increases the VP required for winning by 50%.  The previous High setting now increases the VP required by 25%.   
+Bonus tech cards position and cost in the tech tree reorganized
+Free units now unlocked on a different tech than the one that would allow that unit to be built.  Free Longbowmen, Crossbowmen and Dromon cards now grant 2 units.
+Rider family seat now gives 1 Order / turn 
+Sages no longer have +25% science in their seat 
+Patrons now get a +25% city culture bonus per Precious Resource instead of the flat +4.  Patrons seat now gets 2 happiness levels per culture event instead of 1.
+Khufu's wonder cost reduction lowered from 50% to 25% (Wonders and Dynasties)
+Marius' enrolment post now gives -25% for warriors only instead of all infantry, training cost for project removed.  Sulla now more likely to cause Marius problems. (Wonders and Dynasties)
+Hannibal now gets -20 family opinions and an increased legitimacy penalty in some Hannibal specific events (Wonders and Dynasties)
+Added preferred families for more dynasty leaders (Wonders and Dynasties)
+Sulla's Dictator trait now included in Terrifying trait group (Wonders and Dynasties)  
+Agrippina unlocking a spymaster is now tied to a trait, the current one will stay if she dies but a new one cannot be appointed (Wonders and Dynasties)  
+Legitimacy cost for adoption reduced from 4 to 2
+Miserable trait has a chance per turn of being removed
+Competitive mode back to giving a flat rate of science, civics, training, and money
+Improved city site resource placement so that it is less likely that one of them is unreachable
+Old World pre-made map tweaks.  Extended map one tile north, fixed some resources and ruins that were out of borders.  Added Lavender to several locations on map. 
+You can now shift-click a law to abolish it without replacing it.  This will increase the cost of establishing a law in that pair by 100.
+When moving allied units, the moving player now gets exploration and ruins yields instead of the unit owner.  Moving allied units can no longer trigger events.
+Events giving a free siege unit will now give an Onager instead of a Ballista if the player has not yet researched Hydraulics
+Can no longer invalidate an ambition offer just by getting a bit closer during the turn in which it was offered
+Event trait delay no longer happens when there is no undo 
+Swapped names of Persian Cleric and Rider families (for historical accuracy)  
+Changed improvement adjacency requirements to be fulfilled in team territory, to be consistent with adjacency bonuses
+Improved scaling of diplomatic event chance with number of AIs
+Marriage events now only occur for the leader and their children 
+Added Greedy to Seven Sins trait group and removed Extravagant
+Removed turn delay on more event bonuses when No Undo is enabled
+Heroes of the Aegean scenario 5 tweaks - boost science and units on Easy difficulty and limit Persian tech.  Persia can no longer build ships. Parsa renamed to Persepolis
+
+
+New Events
+
+A More Disciplined Approach
+Battle Diary
+Emergency War Taxes
+Enough Missiles to Block the Sun
+Learning From Our Mistakes
+Masquerade
+Taking the Reins
+The Fluffy Bunny
+Whispers from the Gods
 
 
 Programming
 
-Unity upgrade to 2021.3.34
-AI expansion improvements
-AI economy improvements
-Improved AI luxury strategy
-Refactor non-event legitimacy for completing wonders so the AI understands it
-AI now takes better advantage of the Jerwan Aqueduct
-Added AI for new Rider ability
-AI performance optimizations
-AI cache memory optimization
-Sprite repo optimization
-XML reading optimization
-Compressed MeshAnimator animations
-Improved performance of scenario menu when switching scenarios
-Infos and validation refactor
-Enabled parallel loading of Infos
-Persistent text asset cache for internal mods
-  
+Worker AI improvements
+AI saves yields for Wonders less aggressively, allowing them to spend more developing their economy
+Improved AI consideration for connecting its cities to foreign cities
+AI no longer spends orders to place military units on city sites when it has not yet met any opponents
+AI now purposely builds ships in specific water areas, like humans can 
+Moved map scripts to their own folder 
+Network code cleanup
+Adjusted character portrait selection to be more likely to choose same portraits if characters' age difference is large, all else being equal 
+Fallback for DLL mods that fail to load. A message will be shown and mods disabled.
+Map files now support DynastySites in the tile data. Mods can append nation start tiles to premade maps
+Hotseat with one human player now behaves like single player for achievements, save files, discord, death with no heir, tutorial, hall of fame, etc 
+Portrait Editor now automatically attempts to regenerate portraits without feature points
+Network connection improvements
+Dynasty start sites are now definable directly in map files
+Removed explicit construction states asset definitions for wonders that shouldn't have one
+
 
 UI
 
-Portrait Interpolation enabled.  Character portraits will gradually age each year instead of having fixed ages at which they change.  They will also change depending on their opinion of you.  This can be enabled and disabled in the Graphics Options menu.
-Portrait Editor added to Extras menu
-City production can now be automated
-Worker icon replaced with a shovel (to disambiguate it from Axemen)
-Added Current Tile worker filter and made it the default. Valid Improvements filter now ignores terrain requirements
-Research popup no longer always appears at the start of the turn and follows the priority set for events
-Visual improvements for Royal Library, Jerwan Aqueducts, Hanging Gardens, Hovel and Range Improvements
-Added action menu when right clicking military units in the Units tab
-F1 will now always open the encyclopedia even if no related tooltip showing
-Encyclopedia now defaults to a random Hints page instead of a completely random page 
-Hid "F1 to open encyclopedia entry" helptext for hidden projects 
-Added Encyclopedia category for "Traits (Items)" 
-Removed obsolete warnings about losing the game due to having no heirs
-Improved Riders family helptext
-Converted bug report screen to use TextTypes (for future localization)
-Removed popup warning about losing progress when exiting a cloud game, as progress is automatically saved
+Adjusted mapping between portrait ages and rendered portraits.  This lowers the apparent age of characters portraits when using Portrait Age Interpolation.
+Clicking a link within a mission button will activate the mission rather than opening the link
+Popups and tooltips now have scrollbars when needed, will no longer make text smaller to fit
+Adjusted floating text to better accommodate some bonuses
+HUD changes to prevent overlap.  Research is now centered according to the other HUD elements rather than the center of the screen
+Added founded turn to city sort.  This was always the default sort and can now be selected again after changing the sort order
+City screen (F7) now applies default founding turn sort when clicking the city name column 
+Added connected icon to cities tab
+Moved family/religion actions to bottom of selection panel 
+Added per-culture level limits to improvement Encyclopedia entries 
+Ships show a text status while anchoring
+Raider unit tooltips now show original tribe
+Unit tooltips now show original unit owner
+Improvements to unit range tooltips. Fixed range now indicated in the unit's tooltip
+Improvement yield modifiers are shown even if they sum to zero
+Trait gain / loss bonus helptext now shows yield change for traits with leader effects 
+Added popup for when connection is restored in network multiplayer 
+Changed Mod Browser resources link to Modding Guide page
+Added button with link to documentation to Portrait Editor
+Added Turns to Hall of Fame and allowed sorting by Legitimacy, VPs, Turns and Ambitions 
+Show character subject requirements in red when no valid characters found for a mission 
+Allow deselection on inheritance screen by clicking background
+Aligned ping popup dropdown/input field 
+Added a hint about customizing opponent player parameters in a single player game
+Former regents now included in turn summary
+Improvement helptext displays when max improvement count is 1 for a city
+Updated National Alliance helptext to include that players can move and attack with allied units
+Added descriptions to Make Clergy and Pagan Sacrifice missions
+Add Road button now shown on invalid terrain 
+Wonders now shown on city Improvements tooltip
+Negative penalty for missing family luxuries shown on send luxury to family button 
+Added email reminder to non-strict turnstyle team server and cloud games for the last player to take their turn
+Added unsubscribe instructions to multiplayer turn emails
+Mod browser speed improvements
+Display the build's date in unambiguous international format instead of American 
+Character name is now always show in character help tooltip to give a link for selection
+Player option to follow moves of AI at war no longer includes civilian units
+Added target/prereq icons to techs tooltip while hovering over tech tree button
+Killed unit log entry now includes the killed unit's promotions 
+Added reminders for clergy missions 
+Research choice event no longer appears.  Research popup shown on trying to end turn without having selected anything to research.
+Map Editor now handles setting DynastySites for defining where a dynasty will start from 
+Improved Hall of Fame column header formatting
+Improved tooltip for heir naming options 
+Renamed Enlist Next to Enlist Next Kill
+Units that level up no longer wake up.  This fixes auto-heal getting canceled on level up. 
 
 
 Bugs Fixed
-
-Potential fix for Multiplayer disconnect issues
-Fixed history generator not showing for SP games
-Fixed game of the week using the premade map in the options file 
-Fixed razed city undo/redo visibility issue 
-Fixed LAN menu being unavailable with no internet connection 
-Fixed non-host cloud game deleting
-Fixed username field in cloud setup screen not being copyable
-Fixed cloud load null reference
-Fixed "Join as any player" multiplayer game option 
-Fixed player team assignments not getting saved
-Fixed heir name in notable events
-Fixed case where heir could have the same name as a sibling 
-Fixed AI stun consideration bug
-Fixed AI passively healing when it would be better to attack 
-Fixed some AI improvement selection bugs
-Fixed AI specialist value calculation
-Fixed AI yields values
-Fixed bug with AI not realizing that adjacent unit bonus applies only for the same type of units
-Fixed worker AI that resulted in sub-optimal improvement placement decisions
-Fixed AI wasting orders shuffling their units around 
-Fixed rout indicator issues
-Fixed an issue with undo/redo in hotseat and cloud games 
-Fixed theology effects help text
-Fixed regent legitimacy bug where leaders after a regent would pass down too much legitimacy 
-Fixed Regent / Usurper bugs
-Fixed remote server host controls sometimes not working 
-Fixed misleading Ruthless AI tooltip
-Fixed lower tier ambitions being offered as crowning ambitions when higher tier ambitions are still valid
-Fixed null reference on start when default dynasty in saved player options is random
-Fixed trait helptext not displaying rating change in some cases 
-Fixed character rename undo bug
-Fixed game restart on premade maps
-Fixed city right-click menu clipping
-Heir name popup gets invalidated when the character is no longer the heir 
-Fixed bug with Carthage scenario 3 calculation for ship damage goal
-Fixed bug that prevented units in their own territory from bumping other units out of the way 
-Fixed Portrait Editor behavior when a selected mod has no portraits
-Fixed game load exception  
-Fixed for team color slider not working
-Fixed unit religion not being preserved upon upgrade 
-Tab panel layout fixes 
-Fixed Heroes of the Aegean scenario 3 bug where the Control Thessaly cities goal did not complete if the final city was acquired peacefully 
-Premade maps with tiles that have no terrain now load and terrain is treated as out of bounds instead of causing map load to fail
-Fixed Clergy opinion calculation bug 
-Fixed generic ping null reference
-Fixed null reference from razing a city near the map boundary 
-Fixed city production icon not showing correctly on loading save
-Fixed division by zero on tile mouseover
-Fixed divide-by-zero client exception
-Fixed bug report text appearing on game load
-Fixed load/save error related to Jerwan Aqueduct
-Fixed XML first-entry validation for mods that derive from existing Infos and add new fields
-Fixed empty text sometimes not updating properly in Encyclopedia
-Fixed clicking on preset character links in Encyclopedia not going to character page
-Fixed bugs with when African Elephants are valid to build in Carthage scenario 4
-Fixed Donut mascript sometimes generating maps with a square hole
-Fixed missing platform DLL on GOG Mac build
-Fixed rare game freeze when exiting to main menu
-Fixed Map Editor not using specified size for generating maps
-Fixed crash if the player options file contains a disabled nation
+Ship build water area now takes priority over city territory
+Fixed units incorrectly advancing when rout not possible 
+Fixed event level not being visible in scenario MP screen
+Fixed missing Resource density, city site density, and city site number options on some map scripts
+Fixed some mod load/unload issues 
+Fixed DLL mods not shutting down when loading a save in-game
+Mod assemblies are now reference counted to fix DLL load/unload issues  
+Fixed inconsistent header sizing on tab panel
+Fixed unit action buttons not appearing for units of allied nations
+Fix tile yield calculation with maiYieldRateSpecialistUrban only getting counted once per EffectCity
+Fixed assert error in Heroes of the Aegean scenario 5
+Fixed double mission display in Hero tooltip with Shammuramat selected (Wonders and Dynasties)
+Fixed unit harvest tooltip to display yields gained for allied units
+Fixed initialization of mod browser scrollbar on manage mod list. 
+Fixed clicking some input fields (text ping, bug report screen) selecting all text
+Fixed settlement religion icon update on undo
+Fixed bug where raiders could raid the wrong player
+Fixed fortification bar for AI units showing even when they are moving
+Fixed leader background not being updated when switching due to premade map 
+Fixed heir naming popup title
+Fixed overlap on dynasty portraits in SP setup 
+Fixed free ships spawning on smaller bodies of water when a larger one is available
+Fixed missing options menu tooltips 
+Fixed city luxury list tooltip not appearing 
+Fixed an AI-related UI assert
+Fixed an assert for automated human units 
+Fixed leader tooltip overlap with actions menu 
+Fixed dynasty dropdowns not populating correctly on scenario setup screen
+Fixed decision update bug for MP games 
+Fixed assign general audio level
+Fixed some team contact issues
+Fixed a movement bug where you could spend orders but not complete the entire move 
+Fixed mixed language text appearing in cloud games
+Fixed difficulty dropdown in SP advanced setup
+Fixed tribes entering their own camp getting credit for capturing a settlement
+Fixed highlighted tiles for selected Disciples
+Fixed human development not applying due to defaults 
+Fixed empty parenthesis on trait loss when no ratings change involved
+Fixed some button links still activating on click
+Fixed some settings getting reverted to default 
+Development fix in event editor 
+Portrait Editor fixes
+Heroes of the Aegean scenario 5 fixes
+Fixed Rome over expanding in Learn to Play 5
+Fixed raiders sometimes not raiding
+Fixed missing option defaults in Safe Mode
+Fixed hotkey rebinding in Safe Mode 
+Fixed tooltip locking on inheritance screen
+Fixed some cases where border preview showed the wrong color 
+Fixed tooltip positioning issues
+Fixed missing UI elements in Carthage and Pharaohs scenarios
+Fixed Exodus events not triggering in Pharaohs scenario 5 when loading from a save
+Fixed road pathfinder error when used on tiles where roads cannot be built 
+Fixed two character different character portraits actually referring to the same art  
+Fixed clergy reminder text reference 
+Fixed network multiplayer with non-internal mods
+Fixed an issue with loading modded games for network play
+Fixed issue with premade maps where all dynasty sites were given to an AI nation rather than random city sites based on development
+Fixed some button clicks not triggering button audio 
+Fixed errors on leader selection screen after coming from the scenario selection screen
+Fixed single player start menu sometimes not showing character portraits 
+Fixed an issue with the way player starting tiles are picked to include any dynasty starting tiles 
+Fixed automated icon showing on city list 
+Fixed free extra action effectUnit load/save inconsistency
+Fixed mod error notification when no mods loaded
+Fixed null exception on shutdown in hotkey manager 
+Fixed yield modifier bug
+Fixed invalid index exception
+Fixed text preventing tooltips from locking in some cases 
+Fixed tooltips incorrectly stating that the Pious trait increases the chance of a pagan religion spreading
+Fixed techs being able to give invalid bonuses i.e. courtiers in No Characters mode 
+Fixed Capture Buhen goal in Pharaohs of the Nile scenario 1 not triggering when moving a unit into the city when it has no HP
+City tooltip fixes
+Added Victory point level backwards compatibility (so that existing games don't have their VPs changed) 
+Default AI Dynasties option is hidden when No Characters is enabled 
 Text and event fixes
-  
-Fixed crash to desktop from new game screen with random nation selected
-Fixed scenario loading in MP
-Fixed worker value AI bug
-Possible fix for joining network games with mods
-Fixed Heroes of the Aegean scenario 3 Thessaly goal
-Added Safe Mode launch option for Steam
