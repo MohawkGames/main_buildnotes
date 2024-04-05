@@ -192,3 +192,5 @@ Bugs Fixed
   Added Victory point level backwards compatibility (so that existing games don't have their VPs changed) 
   Default AI Dynasties option is hidden when No Characters is enabled 
   Text and event fixes
+
+  Fixed network game relist bug
