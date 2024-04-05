@@ -1,4 +1,5 @@
 Main Branch: 1.0.71795 Release 2024-04-04
+Main Branch Hotfix: 1.0.71814 Release 2024-04-04
 
 Headline changes  
 
@@ -202,3 +203,5 @@ City tooltip fixes
 Added Victory point level backwards compatibility (so that existing games don't have their VPs changed) 
 Default AI Dynasties option is hidden when No Characters is enabled 
 Text and event fixes
+
+Fixed network game relist bug
