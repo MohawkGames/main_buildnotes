@@ -1,22 +1,26 @@
 Main Branch: 1.0.72162 Release 2024-05-01
 
+Headline Changes
+  Archipelago map script improvements
+  Changes to how players starting reserved city sites are calculated and displayed
+  Event tweaks and improvements
+
 Design
+  Archipelago map script improvements.  Maps are now 20% bigger than normal maps (down from 40%), large islands are bigger and added Water Size map option
   The number of reserved city sites (sites near start location not occupied by Tribes) is now set by the Tribal Strength setting
   The percentage of reserved city sites that are occupied by Barbarians is set by Difficulty
   Empty reserved sites are revealed on founding your capital  
+  Many events restructured and tweaked 
+  Events that offer ambitions are no longer canceled if the ambition is completed before dealing with the event
+  Most missions that can result in an event no longer do so on Minimal event level
   Launch Offensive now costs 800 training, up from 600
   Peaceful nations borders now count as neutral instead of friendly territory for the purposes of healing
-  Events that offer ambitions are no longer canceled if the ambition is completed before dealing with the event
   Tribal invasions can occur only if one of the player's cities is reachable from one of the tribe's settlements
   Minor Cities now give +10% defense and no longer give Discontent 
   Removed Cult events from Competitive mode (Sacred and Profane)
   Removed Kush's nation opinion modifier with Egypt
-  Many events restructured and tweaked
   Added difficulty restriction (minimum the Just) for some events that might contain only war options
   Improvements now allowed to be replaced by improvements of the same class (relevant for shrines)
-  Archipelago map script improvements.  Maps are now 20% bigger than normal maps (down from 40%), large islands are bigger and added Water Size map option
-  Most missions that can result in an event no longer do so on Minimal event level
-
   
 Programming
   Increased AI value for walls
