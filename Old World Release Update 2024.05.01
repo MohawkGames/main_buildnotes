@@ -2,8 +2,8 @@ Main Branch: 1.0.72162 Release 2024-05-01
 
 Headline Changes
   Archipelago map script improvements
-  Changes to how players starting reserved city sites are calculated and displayed
   Event tweaks and improvements
+  Changes to how players starting reserved city sites are calculated and displayed
 
 Design
   Archipelago map script improvements.  Maps are now 20% bigger than normal maps (down from 40%), large islands are bigger and added Water Size map option
