@@ -4,6 +4,7 @@ Headline Changes
   Allowed buying water tiles adjacent to land
   Improvement adjacency restrictions removed
   Added Resource improvement ping
+  AI improvements
 
 Design
   You can now buy water tiles that are adjacent to land in the same way as land tiles (with Colonies / Landowners seat)
