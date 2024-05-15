@@ -1,5 +1,10 @@
 Main Branch: 1.0.72357 Release 2024-05-08
 
+Headline Changes
+  Allowed buying water tiles adjacent to land
+  Improvement adjacency restrictions removed
+  Added Resource improvement ping
+
 Design
   You can now buy water tiles that are adjacent to land in the same way as land tiles (with Colonies / Landowners seat)
   Removed restriction on Shrines not being adjacent and the adjacency requirements for Cathedrals and the Courthouse line of improvements
