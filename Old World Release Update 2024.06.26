@@ -30,6 +30,7 @@ Design
   Added game option No Events.  This disables all events except those necessary for game progression or for leaders' unique abilities.
   Renamed newer Inland Sea map script to Mediterranean and made it the default initial map for single player games. The original Inland Sea map script is no longer hidden
   Added game option to ignore premade map nation starting locations
+  AI player starting city numbers are now capped at twice the average for the AI Development level
   Swapping the position of units now consumes a fatigue point for both units.  Units that have used all their fatigue can use Force March to enabled them to be swapped
   The Formation effect (Greek UU) now gives +20% strength from having the same unit adjacent, not just +20% defense
   All retiring Generals now get the Retiring General trait, allowing them to become governors
@@ -114,9 +115,7 @@ Bugs Fixed
   Fixed issue where selecting things between turns could lead to UI issues
   Fixed ask to declare war mission sometimes failing to lead to a result
   Fixed resource display issue in the Map Editor
-
   Fixed some traits causing the trait display to be inaccurate
-  Pharaohs of the Nile scenario 3 raider and unit bounce fixes
   Fixed Seaside map script help text (no longer default)
   Fixed turn summary popup scrolling
   Fixed raiders sometimes not finding the city they are supposed to raid 
@@ -128,8 +127,10 @@ Bugs Fixed
   Fixed bug where Developing wonders would grant AI the Weak legitimacy bonus, +2 instead of +4 
   Fixed diplomatic status icon not being removed from city widget when city is no longer owned by a tribe
   Fixed default setup options sometimes not displaying correctly
+  Fixed cloud game state being able to be changed by non-active players
+  Fixed unit bounce tile selection
+  Pharaohs of the Nile scenario 3 raider and unit bounce fixes
   Fixed opinion boost from Opulence not showing in the encyclopedia (Behind the Throne)
-
   Fixed Heroes of the Aegean scenario 4 intrigue techs sometimes not triggering events (Heroes of the Aegean)
   Fixed Nero wiki link (Wonders and Dynasties)
   Fixed reform eras getting stuck from imprisoned or exiled viziers (Behind the Throne)
