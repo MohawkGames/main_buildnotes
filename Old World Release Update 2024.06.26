@@ -129,7 +129,6 @@ Bugs Fixed
   Fixed diplomatic status icon not being removed from city widget when city is no longer owned by a tribe
   Fixed default setup options sometimes not displaying correctly
   Fixed cloud game state being able to be changed by non-active players
-  Fixed unit bounce tile selection
   Pharaohs of the Nile scenario 3 raider and unit bounce fixes
   Fixed opinion boost from Opulence not showing in the encyclopedia (Behind the Throne)
   Fixed Heroes of the Aegean scenario 4 intrigue techs sometimes not triggering events (Heroes of the Aegean)
