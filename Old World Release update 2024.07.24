@@ -7,8 +7,8 @@ Headline Changes
 
 Design
   Civilian units (Workers, Caravans, etc) can no longer defend when in a city center and will get bounced out if attacked when the city has no HP
-  Game of the Week will now use all dynasties from Wonders and Dynasties. Temporarily set GoTW to use the No Events setting.
-  Game of the week now always has Hittites and Kush enabled with a 50% chance for each other DLC to be enabled (regardless of DLC ownership)
+  Game of the Week uses all DLC nations and dynasties and will randomise enabled DLC regardless of DLC ownership
+  Temporarily set Game of the Week to use the No Events setting 
   Only Diplomat leaders can control the units of their national ally.  All leaders can still control tribal allies units
   Cohorts now requires Manor instead of Land Consolidation
   Land units can no longer stun units on water tiles
