@@ -1,13 +1,18 @@
- Main Branch 1.0.73323 Release 2024-07-24
+Main Branch 1.0.73323 Release 2024-07-24
+
+Headline Changes
+ Only Diplomat leaders can control the units of their national ally
+ Game of the Week uses all DLC nations and dynasties and will randomise enabled DLC regardless of DLC ownership
+ Performance and memory optimizations
 
 Design
   Only Diplomat leaders can control the units of their national ally.  All leaders can still control tribal allies units
+  Game of the Week will now use all dynasties from Wonders and Dynasties. Temporarily set GoTW to use the No Events setting.
+  Game of the week now always has Hittites and Kush enabled with a 50% chance for each other DLC to be enabled (regardless of DLC ownership)
   Cohorts now requires Manor instead of Land Consolidation
   Land units can no longer stun units on water tiles
   Stunned units now keep their Zone of Control
   Removed attack penalty for Tactician leader general
-  Game of the Week will now use all dynasties from Wonders and Dynasties. Temporarily set GoTW to use the No Events setting.
-  Game of the week now always has Hittites and Kush enabled with a 50% chance for each other DLC to be enabled (regardless of DLC ownership)
   Inland Sea map script no longer has desert and mountains at the top and bottom of the map
   Tweaks to eligible events for Minimal Event Level and No Events 
   Kush Scouts with a Schemer leader are no longer invisible when building Forts
