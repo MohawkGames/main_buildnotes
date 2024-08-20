@@ -1,5 +1,12 @@
 Main Branch 1.0.73566 Release 2024-08-13
 
+Hotfix 1.0.73676 Release 2024-08-20
+
+Hotfix
+  Fixed issue with game getting stuck due to looping attack animation
+  Fixed hidden units being visible on minimap and selectable.
+  Added popup to GOG Mac builds run natively offline regarding issues with DLC access.
+
 Design
 
 Game of the Week Event Level now has a 4% chance to be each of the non-default settings 
