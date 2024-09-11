@@ -16,6 +16,7 @@ Design
     Windlass requires Manor instead of Architecture
     Siege Tower bonus card requires Windlass
     Free Perfume card requires Architecture instead of Portcullis
+    Money Boost bonus card increased from 2000 to 4000 money
 
   Law changes:
    	Slavery now gives +4 Iron and +4 Stone per city instead of increasing Mine and Quarry output.  No longer gives +1 Discontent
@@ -25,7 +26,6 @@ Design
 	  Pilgrimage now gives +25% State Religion spread.  Holy City Money per Religion boost increased from +5 to +10.  No longer affects Science from Groves 
   
   Grove improvements now always give +2 Science in addition to previous effects     
-  Money Boost bonus card increased from 2000 to 4000 money
   Most map scripts in multiplayer now place all human players on the same landmass. 
     Exceptions are Archipelago, Continents, Player Islands and Disjunction
     This is optional on Mediterranean and Lakes and Gulfs maps using 'Connected Player Starts' as this can significantly affect player starting positions
