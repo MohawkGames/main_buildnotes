@@ -27,14 +27,14 @@ Design
   
   Grove improvements now always give +2 Science in addition to previous effects     
   
-  Most map scripts in multiplayer now place all human players on the same landmass. 
-    Exceptions are Archipelago, Continents, Player Islands and Disjunction
-    This is optional on Mediterranean and Lakes and Gulfs maps using 'Connected Player Starts' as this can significantly affect player starting positions
-
   Two new 1v1 premade maps added.
     Punic wars: Rome against Carthage 
     Median wars: Greece against Persia
     These are accessible using the Premade Map option on the setup screen and from the Scenario menu under World Maps 
+
+  Most map scripts in multiplayer now place all human players on the same landmass. 
+    Exceptions are Archipelago, Continents, Player Islands and Disjunction
+    This is optional on Mediterranean and Lakes and Gulfs maps using 'Connected Player Starts' as this can significantly affect player starting positions
 
   In MP games using the Player Development setting, extra cities have to obey the connection requirements of starting locations. If they can't the player will not get them
   Significantly increased the effect of Ruthless AI on player opinion and war declaration modifier 
