@@ -2,6 +2,34 @@ Main Branch 1.0.74xxx Release 2024-09-18 (WIP)
 
 Design
 
+  19 new base game events and 5 new Behind the Throne events.  New events have a focus on Exploring characters and aquiring items that give your leader unique benefits
+  New base game events: 
+    [CHARACTER]’s Travels
+    The Streets of [CITY]
+    Ransom
+    [CITY] Within Reach
+    A Gift
+    A Gift (alt)
+    A Crown from [NATION]
+    Towering Stones
+    Under Attack
+    A Dream in the Forest
+    Taking Root
+    The Ground
+    Stitched Together
+    [CHARACTER]’s Gift
+    From the Dead
+    Unwavering
+    Something to Remember Them By
+    Another Sunrise
+    The New Face of [NATION]
+  New Behind the Throne events
+    To Rule is to Disappoint
+    A Waning Star 
+    A Towering Reputation
+    [NATION] Rules [NATION], for Now
+    [NATION] Rules [NATION], for Now (alt)
+
   Tech tree changes:
     Moved Free Akkadian Archer card to Forestry
     Moved Free Battering Ram and Exotic Fur cards to Spoked Wheel 
