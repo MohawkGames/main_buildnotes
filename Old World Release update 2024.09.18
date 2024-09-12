@@ -1,5 +1,13 @@
 Main Branch 1.0.74xxx Release 2024-09-18 (WIP)
 
+Headline Changes
+  24 new events and 11 new items
+  Two new premade maps desgined for 1v1 duels
+  Tech tree and Law rebalancing
+  Performance and AI improvements
+  Hall of Fame improvements
+  Polishing updates to the Rise of Carthage and Heroes of the Aegean campaigns
+
 Design
 
   Added 19 base game events, 5 Behind the Throne events and 11 new items
@@ -50,7 +58,7 @@ Design
 
   Law changes:
     Slavery now gives +4 Iron and +4 Stone per city instead of increasing Mine and Quarry output.  No longer gives +1 Discontent
-    Freedom now gives +1 Happiness and +20% Growth instead of Money per Specialist
+    Freedom now gives +1 Happiness and +20% Growth in all cities instead of Money per Specialist
     Tyranny now gives +20% Training in all cities instead of a global Training boost. Money per unit in territory increased from 8 to 10
     Divine Rule now gives +1 Order per Pagan Religion in all cities instead of Happiness per Shrine
     Pilgrimage now gives +25% State Religion spread.  Holy City Money per Religion boost increased from +5 to +10.  No longer affects Science from Groves 
