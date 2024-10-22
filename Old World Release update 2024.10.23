@@ -1,0 +1,125 @@
+Old World Release update 2024.10.23
+
+Headline Changes
+  Shrine rebalancing
+  City damage is now affected by critical hits
+  Modded MP games are easier to start thanks to relaxed version checking
+  Many UI improvements
+
+Design
+  Shrines of Water (Melqart, Poseidon, Anahita) now give 2 money per water tile in the city in addition to previous effects
+  Shrines of Healing (Eshmun, Isis) now give a free Healer promotion to units built in the city instead of the previous healing ability
+  City damage is now affected by critical hits
+  Improvements now take 1 extra turn to build per 5 points of Worker damage (+1 turn at 15-19 HP to +4 turns at 1-4 HP)
+  Undo re-enabled for strict(teams) turnstyle cloud games.  After starting to play a turn it must now be completed before other players on the team can take their turn
+  Revised law switch costs. First switch costs 200 civics and each subsequent change costs 100 extra
+  Power comparison is now solely calculated on military unit strength, with ships counting for less based on how much water is on the map
+  Can no longer upgrade a unit if the upgraded unit is not allowed to be in that tile 
+  Can no longer build forts on non-urban tribe settlement ruins (affects non-default City Site Number options)
+  Rally Defense now only activates on killing promotable military units (i.e. not Militia)
+  Improvements that spawn units (Colosseum, Cothon, Holy Sites, etc) try first to spawn them on the tile of the improvement
+  Balance pass on Punic Duel premade map
+  Drunk trait now gives -20 opinion to religious and family heads, down from -40
+  Added turn delay to most event options with random traits or relationships 
+  Slander, High Synod, and Trade missions cost Money instead of Civics 
+  Grand Vizier position disabled in Competitive mode (Behind the Throne)
+  Beja Archers no longer have the Pierce effect (Pharaohs of the Nile)
+  Reduced the chance of an event from the "Scheme Against a Rival" mission (Behind the Throne)
+
+Programming
+  Relaxed version checking requirements on modded MP games. A warning only popup is displayed when joining games where mod versions do not match
+  MP players without identical mods will have a warning "Version Mismatch" in their player tooltip
+  In Simultaneous MP games, the AI now waits for all human players to end their turn, or the turn timer to almost expire, before taking its turn
+  Event processing performance optimization
+  Raider AI improvements
+  AI prioritizes building roads, connecting cities, and exploring more  
+  AI code cleanup
+  Ctrl-Shift-X (toggle replay) has no effect when it's not your turn in cloud games
+  Suppressed Modio errors (i.e. Invalid Token) on game start
+  Removed unneeded terrain rebuild on application focus for Macs 
+  minRating/maxRating subjects can now check for a value of 0
+  Reimplemented Rally Defense to be more robust for mods
+  Added mod support for adding new diplomacy types
+  Added mod support for dynamic improvement names
+  Yield price calculation values now moddable via XML
+  Map Editor max map size increased to 180x180.  This is now moddable via XML
+  XML changes to units and event links.  See the 'Notes for modders' section
+  Added event triggers EVENTTRIGGER_PLAYER_ALLIANCE_OFFER and EVENTTRIGGER_PLAYER_ALLY_DECLARED_WAR
+  Added STAT_CHILDREN_COUNT
+  Added InfoGoal.miCityLuxuries
+  Old World no longer supports runtime compiled scripts. Standalone compiler removed
+
+UI
+  Characters in mission target lists now sorted by importance
+  Shift-Clicking on recommended improvements now adds them to the worker's queue 
+  Shrine improvement pings can now be placed even if shrine already exists
+  Improved accuracy of yields on out of territory improvement pings
+  Player luxury management context menu is now scrollable
+  Unit tooltip is now scrollable and unit effects are alphabetically ordered
+  Cloud game tooltips now show elapsed time since the last upload
+  Removed recently added yield name and sign from helptext, now just shows yield icon as previously
+  Added legitimacy graph to Records screen 
+  Family unit banner shape now shown on family tab panel 
+  Existing specialists now shown on pillaged tiles 
+  Improved replay for team games
+  Added resource removal warning for Add Urban action 
+  Project help text now includes information about other projects that add the project (i.e. Inquiry shows the different levels)  
+  Moved opinion yield rate help text from potential to main effects 
+  Made contact event truce flags more consistent in event options
+  Religion icon now shown on unit production buttons when applicable
+  Simplified religion tooltips
+  Any non-leader character can now be pinned (e.g. foreign leaders) and pins are no longer cleared on character death
+  Reordered trait display order
+  Scenario screen category toggle arrows no longer select scenario class
+  Removed total yields display from most effectPlayer and effectCity help text, to simplify tooltips
+  Clicking on the nation name in a foreign city widget now selects the nation
+  Re-aligned game log graphics
+  Mod folders that begin with "." are no longer displayed
+  
+Bugs Fixed
+  Fixed religious improvements being affected by other religions theologies
+  Fixed workers stopping rout of African and Turreted Elephants
+  Fixed occasional doubled religion indicators on tribe widgets 
+  Fixed some raycasting issues on tribe widget, character list religion icons
+  Fixed former regents affecting succession in some cases
+  Fixed yield rates not updating when units move to/from improvements 
+  Fixed minimized decision UI not working for diplomacy decisions
+  Fixed effectCity improvement yield help text 
+  Fixed unit yield consumption estimate for effectPlayer to correctly show yields saved instead of new yields consumed 
+  Fixed yield preview overlays getting stuck
+  Fixed ally declared war event trigger
+  Fixed monitor option setting
+  Timeline screen map now only shows city borders that player currently has visibility of.  This fixes a bug where unrevealed borders could be shown.
+  Fixed missing damage preview for civilian units/ships if they are the only unit in a city
+  Fixed Passive AI attacking cities when it shouldn't 
+  Fixed EffectCity terrain yields being counted twice 
+  Fixed fog reveal animation not clearing tiles it has already animated
+  Fixed unit animations sometimes freezing 
+  Fixed some bad player start placement asserts
+  Fixed hidden units not getting bounced when hostile borders expand to include their location
+  Fixed clicks not behaving as expected on city screen
+  Fixed replay for games where multiple players can take their turns simultaneously 
+  Fixed mission results not appearing in target player's turn summary e.g. city damage from treachery 
+  Fixed bug which sometimes allowed tribute while at war 
+  Fixed issues with starting a multiplayer game from the mods screen
+  Fixed toggling off "Use Mods" in the MP setup screen not unloading mods 
+  Fixed null check for notification helptext 
+  Fixed exception if right-clicking the empty head of a not-yet-founded religion 
+  Fixed AI unit protection calculation and possible divide by zero errors when attackers can't do any damage (affects mods)
+  Fixed missing trait in Hanno II's dynasty tooltip (Wonders and Dynasties)
+  Text and Event fixes
+
+Notes for modders:
+
+  If your mod adds units in unit.xml:
+    Add a bRegular flag (after bGeneral in the order) to denote a "regular military" unit. 
+    The flag makes the unit count as "regular military" in the stats, and the AI also assumes that non-regular units are worth less.
+
+  If your mod adds event links in eventLink.xml:
+    aeSubjectClasses is no longer needed
+    The link will save all subjects in the triggering event, it will figure out the classes by itself
+    If you only want some subjects saved, put iNumSubjects on the link (in eventLink.xml) to save that many subjects
+    Put iNumSubjects = 0 if you don't care about any subjects and are only using the link as a shortcut to trigger something else
+    For any event links that are meant to be immediate, and are used with EventLinkStart:
+      Tag the link with bImmediate = 1 in eventLink.xml
+      Use EventLinkAdd in eventOption.xml, as with regular links. EventLinkStart will be removed in the future
