@@ -53,7 +53,6 @@ Script Support: Old World no longer supports runtime compiled scripts; standalon
 
 UI
 
-
 Mission Target List Sorting: Characters now sorted by importance in mission target lists.
 Shift-Click Improvements: Shift-clicking on recommended improvements now adds them to the worker’s queue.
 Shrine Pings: Shrine improvement pings can now be placed even if the shrine already exists.
