@@ -1,176 +1,126 @@
-Main Branch 1.0.74111 Release 2024-09-18
+Main Branch 1.0.74622 Release 2024-10-24
 
-Headline Changes
+Changes Overview
 
-24 new events and 11 new items
-Two new premade maps designed for 1v1 duels
-Tech tree and Law rebalancing
-Performance and AI improvements
-Hall of Fame improvements
-Polishing updates to the Rise of Carthage and Heroes of the Aegean campaigns
+Shrine Rebalancing: Adjustments to shrine effects.
+City Damage: Now affected by critical hits.
+Modded MP Games: Easier to start thanks to relaxed version checking.
+UI Improvements: Various interface updates.
 
 
 Design
 
-Added 19 base game events, 5 Behind the Throne events and 11 new items
-Base game events have a focus on Exploring characters and acquiring items that give unique benefits
-Behind the Throne events relate to Rising Star leaders. The Rising Star trait is no longer automatically removed on becoming leader
-
-Base game events:
-    [CHARACTER]’s Travels
-    The Streets of [CITY]
-    Ransom
-    [CITY] Within Reach
-    A Gift
-    A Gift (alt)
-    A Crown from [NATION]
-    Towering Stones
-    Under Attack
-    A Dream in the Forest
-    Taking Root
-    The Ground
-    Stitched Together
-    [CHARACTER]’s Gift
-    From the Dead
-    Unwavering
-    Something to Remember Them By
-    Another Sunrise
-    The New Face of [NATION]
-
-Behind the Throne events:
-    To Rule is to Disappoint
-    A Waning Star 
-    A Towering Reputation
-    [NATION] Rules [NATION], for Now
-    [NATION] Rules [NATION], for Now (alt)
-
-Tech tree changes:
-    Moved Free Akkadian Archer card to Forestry
-    Moved Free Battering Ram and Exotic Fur cards to Spoked Wheel 
-    Free Battering Ram, Akkadian Archer and Hoplite card costs brought in line with other nations free level 1 unique unit cards (200 -> 100)
-    Moved Free Scholar tech card from Forestry to Metaphysics 
-    Moved Architecture and Vaulting back a tier in the tech tree
-    Increased the cost of all 7th tier techs to compensate for the reduction in cost of Architecture and Vaulting (1500 -> 1600)
-    Architecture requires Drama instead of Portcullis
-    Portcullis no longer requires Drama
-    Stirrups requires Portcullis instead of Citizenship
-    Martial Code now requires Citizenship 
-    Windlass requires Manor instead of Architecture
-    Siege Tower bonus card requires Windlass
-    Free Perfume card requires Architecture instead of Portcullis
-    Money Boost bonus card increased from 2000 to 4000 money
-
-Law changes:
-    Slavery now gives +4 Iron and +4 Stone per city instead of increasing Mine and Quarry output.  No longer gives +1 Discontent
-    Freedom now gives +1 Happiness and +20% Growth in all cities instead of Money per Specialist
-    Tyranny now gives +20% Training in all cities instead of a global Training boost. Money per unit in territory increased from 8 to 10
-    Divine Rule now gives +1 Order per Pagan Religion in all cities instead of Happiness per Shrine
-    Pilgrimage now gives +25% State Religion spread.  Holy City Money per Religion boost increased from +5 to +10.  No longer affects Science from Groves 
-    Grove improvements now always give +2 Science in addition to previous effects     
-  
-Two new 1v1 premade maps added:
-    Punic wars: Rome against Carthage 
-    Median wars: Greece against Persia
-    These are accessible using the Premade Map option on the setup screen and from the Scenario menu under World Maps 
-
-Most map scripts in multiplayer now place all human players on the same landmass. 
-    Exceptions are Archipelago, Continents, Player Islands and Disjunction
-    This is optional on Mediterranean and Lakes and Gulfs maps using 'Connected Player Starts' as this can significantly affect player starting positions
-In MP games using the Player Development setting, extra cities have to obey the connection requirements of starting locations. If they can't the player will not get them
-Significantly increased the effect of Ruthless AI on player opinion and war declaration modifier 
-Laurion Mines now enable a Miner specialist on the tile 
-Undo is no longer available in cloud games using the Strict (Teams) turn style.  This does not affect cloud games using Strict (Players) which still have undo.
-Slums and Estates are now permanent and cannot be built over or pillaged (Behind the Throne)
+Shrines of Water: (Melqart, Poseidon, Anahita) now give 2 money per water tile in the city, in addition to previous effects.
+Shrines of Healing: (Eshmun, Isis) now give a free Healer promotion to units built in the city instead of the previous healing ability.
+City Damage: Now affected by critical hits.
+Improvement Build Times: Now take 1 extra turn to build per 5 points of Worker damage (+1 turn at 15-19 HP to +4 turns at 1-4 HP).
+Undo Functionality: Re-enabled for strict(teams) turnstyle cloud games. After starting to play a turn, it must be completed before other players on the team can take their turn.
+Law Switch Costs: First switch costs 200 Civics, with each subsequent change costing 100 extra.
+Power Comparison: Now solely calculated on military unit strength, with ships counting for less based on the amount of water on the map.
+Unit Upgrade Restrictions: Can no longer upgrade a unit if the upgraded unit is not allowed to be in that tile.
+Fort Building: Can no longer build forts on non-urban tribe settlement ruins (affects non-default City Site Number options).
+Rally Defense: Now only activates on killing promotable military units (i.e., not Militia).
+Unit Spawning from Improvements: Improvements that spawn units (Colosseum, Cothon, Holy Sites, etc.) now try to spawn them on the tile of the improvement.
+Punic Duel Balance Pass: Adjustments made to the premade map.
+Drunk Trait: Now gives -20 opinion to religious and family heads, down from -40.
+Event Options Delay: Added turn delay to most event options with random traits or relationships.
+Mission Costs: Slander, High Synod, and Trade missions now cost Money instead of Civics.
+Competitive Mode (Behind the Throne): Grand Vizier position disabled.
+Beja Archers: No longer have the Pierce effect (Pharaohs of the Nile).
+Scheme Against a Rival Mission: Reduced chance of an event from this mission (Behind the Throne).
 
 
 Programming
 
-Performance improvements relating to unit movement and reminders
-Tribal unit movement AI is now somewhat more sophisticated
-AI no longer declares war on tribes to expand when it's already actively fighting other players 
-AI is now more likely to build farms around the Jerwan Aqueduct and less likely to build the Cothon in small seas
-Improved player start selection on premade maps that do not dictate specific starting locations 
-Added randomization of player start selection on premade maps
-Achievement code cleanup
-Add virtual function for sorting of city site candidates, better for mods
-Improved AI unit danger estimate
-AI now helps their allies count down the capture timer for cities 
+Relaxed Version Checking: Modded MP games now show a warning popup when versions do not match but allow the game to proceed.
+Version Mismatch Warning: MP players without identical mods will see a "Version Mismatch" warning in their tooltip.
+Simultaneous MP AI Turns: AI now waits for all human players to end their turn, or for the turn timer to nearly expire, before taking its turn.
+Event Processing Optimization: Performance improvements.
+Raider AI Improvements: AI now prioritizes building roads, connecting cities, and exploring more.
+AI Code Cleanup: General improvements and optimization.
+Ctrl-Shift-X Functionality: No effect when it’s not your turn in cloud games.
+Modio Errors Suppressed: Suppressed "Invalid Token" errors on game start.
+Mac Terrain Rebuild: Removed unneeded terrain rebuild on application focus for Macs.
+Mod Support Updates: Added support for new diplomacy types and dynamic improvement names.
+Yield Price Calculation: Now moddable via XML.
+Map Editor: Max map size increased to 180x180 (modifiable via XML).
+XML Changes: Updates to units and event links (see Notes for Modders section).
+New Event Triggers: Added EVENTTRIGGER_PLAYER_ALLIANCE_OFFER and EVENTTRIGGER_PLAYER_ALLY_DECLARED_WAR.
+New Statistics: Added STAT_CHILDREN_COUNT.
+City Luxuries Info: Added InfoGoal.miCityLuxuries.
+Script Support: Old World no longer supports runtime compiled scripts; standalone compiler removed.
 
 
 UI
 
-Added sorting and filtering dropdowns and a regenerate button to Hall of Fame 
-Hall of Fame now has a SP/MP (Singleplayer / Multiplayer) column and this is shown on the game tooltip
-Hall of Fame now shows icons instead of text for Load and Delete
-Added audio option for continuing audio track when switching fullscreen tabs
-Added obsoleting information to unit encyclopedia entries 
-Added Religion Opinion tracking to stats screen 
-Goals/Ambitions with time limits now show limit in bonus text
-Removed some details of unlocked missions from tech tooltips
-Tiles are now highlighted when hovering over event options that affect specific tiles
-In Rise of Carthage scenario 4 the anchor command will now show an explanatory tooltip if ships can't anchor due to scenario rules
-Added notification for units that you kill during your turn 
-City borders now pulse when hovering over the city center
-Pin Character mission removed.  Pinning is now performed with a new star icon found under character actions
-Leader icon changed to a crown and non-succession royals to an asterisk to differentiate them from the pin icon
-Notable characters filter now only shows manually pinned characters and is ordered by turn pinned
-Harvested resource tooltip now shows regrow chance as a percentage instead of a die roll 
-Family tree toggles now remember their previous state 
-Yields are now shown for all agent network cities regardless of agent status when sorting by base yields 
-Added support for a more complete set of stats in No Characters mode
-Refactored ignore reminders code.  Now supports ignoring reminder types separately for characters with multiple roles
-Smaller tech status icons to reduce overlap on mini tech tree 
-All laws and theologies now show yield previews where relevant
-Moved the generic improvement pings to the top of the dropdown list
-Ambitions and goals with multiple requirements now show progress for each requirement on separate lines 
-Added yield name and sign in some bonus helptext
-Improved text selection in ping and bug reporting popups
-Heroes of the Aegean scenario 6 now highlights goal cities on the map
-Updated Credits 
-  
+Mission Target List Sorting: Characters now sorted by importance in mission target lists.
+Shift-Click Improvements: Shift-clicking on recommended improvements now adds them to the worker’s queue.
+Shrine Pings: Shrine improvement pings can now be placed even if the shrine already exists.
+Improvement Pings: Improved accuracy of yields for out-of-territory improvements.
+Luxury Management Menu: Now scrollable for easier management.
+Unit Tooltips: Now scrollable, with unit effects ordered alphabetically.
+Cloud Game Tooltips: Now show the elapsed time since the last upload.
+Yield Icons: Recently added yield name and sign removed from help text (now shows yield icon only, as previously).
+Legitimacy Graph: Added to the Records screen.
+Family Unit Banners: Family unit banner shape now shown on the family tab panel.
+Specialists on Pillaged Tiles: Existing specialists now shown on pillaged tiles.
+Replay for Team Games: Improved functionality.
+Resource Removal Warning: Added for Add Urban action.
+Project Help Text: Now includes information about other projects that add the same project (e.g., Inquiry shows different levels).
+Opinion Yield Rate Help Text: Moved from potential to main effects.
+Contact Event Truce Flags: Made more consistent in event options.
+Religion Icon on Unit Production: Now shown on unit production buttons when applicable.
+Religion Tooltips: Simplified for clarity.
+Character Pinning: Any non-leader character can now be pinned (e.g., foreign leaders), and pins are no longer cleared on character death.
+Trait Display Order: Reordered for clarity.
+Scenario Screen Arrows: Category toggle arrows no longer select scenario class.
+EffectPlayer and EffectCity Help Text: Total yields display removed from most entries to simplify tooltips.
+Foreign City Widget: Clicking on the nation name now selects the nation.
+Game Log Graphics: Re-aligned for improved presentation.
+Mod Folder Display: Mod folders that begin with "." are no longer displayed.
 
+  
 Bugs Fixed
 
-Rise of Carthage and Heroes of the Aegean campaign polishing pass, many bugs fixed
-Fixed damaged unit healthbar not always showing 
-Fixed resources staying faded when a unit exits a tile
-Fixed fatigue increasing effects (Swift, Zealot leader) not always affecting hired tribal units
-Fixed raiding units not raiding after making peace with their original tribe 
-Fixed pinned characters getting removed on leaders death
-Fixed tribe widgets being occluded by terrain in some cases 
-Fixed the effect of multiple holy cities in the same city not stacking
-Fixed abdication sometimes leaving permanently exploring leaders
-Fixed mirror maps sometimes not having symmetric vegetation on resource tiles
-Fixed events not popping up on start of turn in hotseat
-Fixed clicks on locked tooltip links not registering actions (e.g. selecting a character)
-Fixed hover effect not showing on tech cards
-Fixed nation/tribe opinion not updating immediately after diplomacy changes
-Fixed city camera state not resetting at start of turn when selecting a city between turns
-Fixed Royal characters sometimes not appearing in family tree 
-Fixed Assyrian capital combat preview being blocked by buildings on adjacent tile 
-Fixed invalid index exception from rebels spawning from a city without a family
-Fixed raiders disappearing while inside city territory or adjacent to Kemet/Aten units in Pharaohs of the Nile scenario 3
-Fixed Pharaohs of the Nile scenario 4 not completing when playing in Hotseat against the AI
-Fixed errors with portrait interpolation enabled when portraits are not setup for it
-Fixed portraits of characters without a tribe or nation 
-Fixed AI hang
-Fixed inheritance preview showing wrong character when there will be no heir 
-Fixed AI danger calculation for units that need to be unlimbered
-Fixed AI unit protection bug
-Fixed grammar on Unit Killed notification
-Fixed nested link issue in unit type link with promotions 
-Fixed assert from using waypoints to move units
-Fixed critical hit icon sometimes briefly appearing before a unit goes on cooldown 
-Fixed undo crash 
-Fixed AI building ships where it should not be building any i.e. in small seas
-Fixed Inheritance screen not updating
-Fixed some reminders starting dismissed 
-Fixed "No Team Movement" game option
-Fixed autonomous rule cities not repairing 
-Fixed units not fully resetting their animation queue when an undo or redo occurs 
-Fixed loading of lost games from the Hall of Fame
-Fixed bug preventing the hire of allied tribal units when in a player city
-Fixed loss of existing border expansion preview after selecting an event option 
-Fixed credits popup null reference on application close
-Fixed dynastic mechanics of Ptolemy, Ashur-Uballit, Khufu and Mursili in No Events mode (Wonders and Dynasties)
-Text and Event fixes
+Fixed religious improvements being affected by other religions’ theologies.
+Fixed workers stopping rout of African and Turreted Elephants.
+Fixed double religion indicators on tribe widgets.
+Fixed raycasting issues on tribe widget and character list religion icons.
+Fixed former regents affecting succession in some cases.
+Fixed yield rates not updating when units move to/from improvements.
+Fixed minimized decision UI not working for diplomacy decisions.
+Fixed effectCity improvement yield help text.
+Fixed unit yield consumption estimate for effectPlayer to show yields saved instead of new yields consumed.
+Fixed yield preview overlays getting stuck.
+Fixed ally declared war event trigger.
+Fixed monitor option setting.
+Timeline screen map now only shows city borders that the player currently has visibility of (fixes bug showing unrevealed borders).
+Fixed missing damage preview for civilian units/ships if they are the only unit in a city.
+Fixed Passive AI attacking cities when it shouldn't.
+Fixed EffectCity terrain yields being counted twice.
+Fixed fog reveal animation not clearing tiles it has already animated.
+Fixed unit animations freezing.
+Fixed bad player start placement asserts.
+Fixed hidden units not getting bounced when hostile borders expand to include their location.
+Fixed unexpected click behavior on city screen.
+Fixed multiplayer replay for games where multiple players can take their turns simultaneously.
+Fixed mission results not appearing in target player's turn summary (e.g., city damage from treachery).
+Fixed tribute bug which sometimes allowed tribute while at war.
+Fixed issues starting multiplayer games from the mods screen.
+Fixed unloading mods when toggling off "Use Mods" in the MP setup screen.
+Fixed null check for notification help text.
+Fixed exception when right-clicking the empty head of a not-yet-founded religion.
+Fixed AI unit protection calculation and possible divide-by-zero errors when attackers can't do any damage (affects mods).
+Fixed missing trait in Hanno II's dynasty tooltip (Wonders and Dynasties).
+Text and Event fixes.
+
+Notes for modders
+
+Units in unit.xml: 
+Add a bRegular flag (after bGeneral in the order) to denote a "regular military" unit. The flag makes the unit count as "regular military" in the stats, and the AI assumes that non-regular units are worth less.
+
+Event Links in eventLink.xml:
+aeSubjectClasses is no longer needed. The link will save all subjects in the triggering event and figure out the classes by itself.
+If you only want some subjects saved, put iNumSubjects on the link (in eventLink.xml) to save that many subjects.
+Use iNumSubjects = 0 if you don’t care about any subjects and are only using the link as a shortcut to trigger something else.
+For immediate event links, tag the link with bImmediate = 1 in eventLink.xml. Use EventLinkAdd in eventOption.xml. EventLinkStart will be removed in the future.
