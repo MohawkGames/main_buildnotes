@@ -1,0 +1,12 @@
+Main Branch Hotfix 1.0.74722 Release 2024-10-29
+
+UI
+
+Improved resolution of icons on family list
+Added stability warning popup for i9-13900K CPUs
+
+Bugs Fixed
+
+Fixed Timeline map display after game is completed
+Fixed Offer Tribute for Truce and Demand Tribute for Truce missions silently failing 
+Fixed Map Editor cursor position
