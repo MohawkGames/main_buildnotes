@@ -10,3 +10,4 @@ Bugs Fixed
 Fixed Timeline map display after game is completed
 Fixed Offer Tribute for Truce and Demand Tribute for Truce missions silently failing 
 Fixed Map Editor cursor position
+Fixed issue with load dialog not working in some cases
