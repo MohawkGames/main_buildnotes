@@ -65,6 +65,7 @@ Laurion Mines: No longer show extra text on map
 
 Bugs Fixed
 
+Fixed recruitment with legitimacy penalty not getting applied on loading a save
 Fixed info loading bug that could cause new games to fail to start
 Fixed undo/redo related to tribal invasions 
 Fixed bug with random seed for event story trigger test not matching the seed of the actual triggered event
