@@ -1,5 +1,11 @@
 Main Branch 1.0.75xxx Release 2025-01-08  (DRAFT!)
 
+Headline Changes
+
+Difficulty settings renamed
+Increased variety of crowning ambitions
+Grand Vizier rework (Behind the Throne) 
+
 Design
 
 Difficulty rename: 
@@ -65,7 +71,6 @@ Added some missing keyboard shortcuts to button help
 Improved Choose Governor tooltip
 Pillaged permanent improvements now show a pillaged icon 
 Encyclopedia improvements
-Acting Governor (Grand Vizier) effects now show on the Governor tooltip (Behind the Throne)
 
 Bugs Fixed
 
