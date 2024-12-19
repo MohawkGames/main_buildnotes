@@ -1,0 +1,119 @@
+Main Branch 1.0.75xxx Release 2025-01-08  (DRAFT!)
+
+
+Design
+
+Difficulty rename: 
+  The Advanced Setup Difficulty setting is now called Prosperity
+  The Simple Setup Difficulty presets remain as they were
+  Difficulty components are grouped together and indented under difficulty mode in the game parameters tooltip
+  Difficulty will be listed as Custom for combinations outside of the simple difficulty presets
+  Distant raids are now tied to Tribe Level instead of Difficulty
+  Achievements related to difficulty are now tied to Difficulty instead of Prosperity
+
+Changes to Ask to Declare War mission:
+  Ask to Declare War mission now requires a Leader with the Schemer archetype.  Removed mission tech requirement and lowered opinion needed to Cautious.  Disabled mission for allies
+  Ask to Join War mission added, where you must already be at war with the target.  This requires Pleased opinion
+  With Ruthless AI enabled, war requests will be denied if the player is close to victory
+
+Removed family preferences from crowning ambitions.  Most crowning ambition events now allow three choices of ambition instead of two.  Along with some bug fixes this should give a much higher variety of crowning ambitions offered
+Alliance victory is now an setup option, default is off
+Upgrading a unit now keeps its fortification state
+Gifting, converting, hiring, or recruiting a unit can no longer result in it being in territory where it should not be
+Can now upgrade units inside your team's cities, even if they are not your own cities
+Achievement 'Alexander the Great' no longer requires the Great cognomen, just have to destroy Persia as Alexander 
+Removed restriction on marrying Libyans in Rise of Carthage scenario 1
+The Random Improvements option now allows any combination of shrine effects instead of picking a set from a random nation
+Launch Offensive can now be used from a unit with a rout cooldown and it removes rout cooldowns from adjacent units
+Pathfinder trait now gives 50% bonus to Camps and Nets as Governor and 20% as Leader instead of 100/50%
+Swapped maintenance costs of Philosophy/Engineering and Professional Army/Volunteers
+The territory of a city being captured is considered neutral territory for the purposes of healing, forts and roads
+The terriorty of a nation the player is at peace with is not considered neutral territory 
+Characters with a religion trait (Clergy, Mani etc.) can no longer be targeted by conversion missions
+Conquered cities can no longer be given to a family that has not yet been founded
+Grand Vizier now acts as a governor in cities without a governor and controls production only in those cities. Removed all other Grand Vizier yields (Behind the Throne)
+Grand Vizier managed cities can no longer rush buy (Behind the Throne)
+Grand Vizier courtiers are no longer giftable in MP (Behind the Throne)
+Unpopular trait now gives nationwide 5% rebel spawn chance (Behind the Throne)
+
+Programming
+
+AI performance optimization
+AI builds fewer duplicate roads
+Improved AI retreat vs attack decision making
+Added more logging for AI unit priority comparison failure
+Hall of Fame games now store the active player so that when you load them the player stays the same
+Improved replay so that it still works if there is data only from the current turn
+Removed improvement dynamic text object from each tile to save some memory
+Bonuses and EffectCities give only EffectUnits, not Promotions. Promotions are only for units that can gain XP
+Unit effects that come from disabled promotions can now be assigned by bonuses and city effects
+Disabled implicit subject conversion for DiplomacySubjects bonuses
+
+UI
+
+Character tooltips no longer show trait effects 
+All attacks now listed under Units Attacked notifications (previously kills were not shown)
+Free promotions are now indicated in the city production list and unit type tooltip
+"Death of governor" decision now auto-invalidates if the city can no longer have a governor
+Defeat status now shown when the active player is eliminated in MP even if the game is still ongoing 
+Event browser story preview improvements
+Law strategy notes updated
+Added minimize toggle to player goals/ambitions display
+Inverted red/green warning text in some cases for negative yields 
+User assigned hotkeys now have more flexibility.  Assignments can use previously reserved keys and conflict with non-assignable hotkeys
+Crowning ambitions are now indicated with the legitimacy crown icon
+Added some missing keyboard shortcuts to button help
+Improved Choose Governor tooltip
+Pillaged permanent improvements now show a pillaged icon 
+Encyclopedia improvements
+Acting Governor (Grand Vizier) effects now show on the Governor tooltip (Behind the Throne)
+
+Bugs Fixed
+
+Fixed invalid moves adding undo points
+Fixed some events failing to appear with the Ruthless AI setting enabled
+Fixed player connection state UI for single-player network games
+Fixed Thracians in Learn to Play 4 being visible before they should be
+Fixed server games preventing eliminated players from joining one last time to see what happened, and for the game to be saved locally as a loss
+Fixed bug where client could be in a different language to the active player 
+Fixed Hall of Fame bug where regenerating was replacing Scenario specific text with Generic game text for Nation, Leader names, and Difficulty
+Fixed Hall of Fame difficulty sorting
+Fixed network messages being sent out of order
+Fixed character suffix bug where a ruler would get the II suffix if a parent had the same name but never was a ruler
+Fixed achievement text that referred to Kushite Cavalry instead of Mounted Lancers
+Fixed Ten Crowns achievement incorrectly counting regents twice
+Fixed Rise of Carthage scenario 2 goals sometimes not getting offered
+Fixed Rise of Carthage starting heirs not being Royal and therefore not tutorable
+Fixed Pharaohs of the Nile scenario 2 event triggering multiple times
+Fixed improvement pings not appearing when law requirements are not met 
+Fixed vegetation help text to correctly state a ranged attack penalty 
+Fixed possible array out of range for bad event links
+Fixed bug preventing some Crowning Ambitions from appearing
+Fixed bug allowing ambitions to appear in events with random ambition selections that should only appear in specific events
+Fixed cycle button position not updating shortcut keys and not getting saved
+Fixed some road pathfinding issues
+Fixed player start location bug in the desert map script and made start location picking more robust in general
+Fixed illegal urban tiles placed in mirror maps 
+Fixed unintended Militia appearing on founding in Learn to Play 2
+Fixed character ratings appearing with a divider in some cases 
+Fixed research popup closing after using Redraw
+Fixed null ref in encyclopedia 
+Fixed duplicate Hall of Fame entries when reloading a completed cloud game 
+Fixed incorrect suffix on Ptolemy II
+Fixed event system bug that can very rarely lead to valid subjects being deemed invalid
+Fixed tooltip expansion when hotkey changed
+Fixed order yield rates not updating when starting/finishing construction
+Fixed broken Civ Fanatics forum link on main menu
+Fixed AI movement null reference
+Fixed several Portrait Editor bugs
+Fixed load/save bug for mods that give bonus effectUnits
+Fixed duplicated Hittite portrait
+Fixed errors when loading saves with deprecated promotions
+Fixed wrong memory display when giving a conquered city to a family 
+Fixed opinion and legitimacy bonus from founding a family seat getting applied more than once in some cases
+Fixed Macedonia not getting family promotions on their starting units in Heroes of the Aegean scenario 6
+Fixed Grand Vizier traits not affecting the cities where they are acting governor (Behind the Throne)
+Fixed some UI instances where the acting governor was being treated as the actual governor (Behind the Throne)
+Fixed unit widgets failing to display icon and shapes not included in their respective default sprite atlases (affects mods)
+Fixed General not getting removed when upgrading a unit to a type that cannot have one (affects mods)
+Text and Event fixes
