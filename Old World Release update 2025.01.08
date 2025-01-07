@@ -125,3 +125,9 @@ Fixed some UI instances where the acting governor was being treated as the actua
 Fixed unit widgets failing to display icon and shapes not included in their respective default sprite atlases (affects mods)
 Fixed General not getting removed when upgrading a unit to a type that cannot have one (affects mods)
 Text and Event fixes
+
+Notes for Modders
+
+EffectCity.aeFreePromotion becomes EffectCity.aeFreeEffectUnit
+Promotion.aeGrantsEffectUnit is replaced by EffectUnit.aeKillGrantsEffectUnit
+Bonus.aePromotions no longer exists, bonuses should grant EffectUnits instead
