@@ -116,9 +116,18 @@ Fixed wrong memory display when giving a conquered city to a family
 Fixed opinion and legitimacy bonus from founding a family seat getting applied more than once in some cases
 Fixed enlist effect not getting cleared after use
 Fixed cases when opinion and legitimacy for founding a family seat could get applied more than once for the same family
+Fixed spymaster context menus sometimes not appearing 
+Fixed agent missions and networks menus appearing on foreign spymasters
+Fixed formatting of tile and city tooltips
+Fixed improvements from inactive DLC showing up in build menus
+Fixed invalid improvements sometimes appearing under Valid Improvements filter
+Fixed goals display spacing
+Fixed AI modified collection exception
+Event audio fix
 Fixed Rise of Carthage scenario 2 goals sometimes not getting offered
 Fixed Rise of Carthage starting heirs not being Royal and therefore not tutorable
 Fixed Macedonia not getting family promotions on their starting units in Heroes of the Aegean scenario 6
+Fixed bug in Heroes of the Aegean scenario 6
 Fixed Pharaohs of the Nile scenario 2 event triggering multiple times
 Fixed Grand Vizier traits not affecting the cities where they are acting governor (Behind the Throne)
 Fixed some UI instances where the acting governor was being treated as the actual governor (Behind the Throne)
