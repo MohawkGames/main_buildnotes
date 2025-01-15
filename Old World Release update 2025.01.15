@@ -125,6 +125,7 @@ Fixed goals display spacing
 Fixed AI modified collection exception
 Event audio fix
 Fixed trait loss causing unrelated events
+Fixed tribal invasions getting stuck
 Fixed Rise of Carthage scenario 2 goals sometimes not getting offered
 Fixed Rise of Carthage scenario 2 and 3 olive-counting goals 
 Fixed Rise of Carthage starting heirs not being Royal and therefore not tutorable
