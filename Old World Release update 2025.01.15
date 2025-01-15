@@ -1,4 +1,4 @@
-Main Branch 1.0.75xxx Release 2025-01-15  (DRAFT!)
+Main Branch 1.0.75707 Release 2025-01-15
 
 Headline Changes
 
@@ -124,7 +124,9 @@ Fixed invalid improvements sometimes appearing under Valid Improvements filter
 Fixed goals display spacing
 Fixed AI modified collection exception
 Event audio fix
+Fixed trait loss causing unrelated events
 Fixed Rise of Carthage scenario 2 goals sometimes not getting offered
+Fixed Rise of Carthage scenario 2 and 3 olive-counting goals 
 Fixed Rise of Carthage starting heirs not being Royal and therefore not tutorable
 Fixed Macedonia not getting family promotions on their starting units in Heroes of the Aegean scenario 6
 Fixed bug in Heroes of the Aegean scenario 6
