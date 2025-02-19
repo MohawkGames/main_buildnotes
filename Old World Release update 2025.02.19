@@ -94,6 +94,7 @@ Standalone scenarios are now shown on the top level of the scenario screen inste
 Bugs Fixed
 
 Fixed memory leaks
+Fixed improvements being buildable in territory of non-allied foreign nations
 Fixed AI sometimes being unable to declare war on a nation while at peace
 Fixed queued unit moves not happening when destination blocked
 Fixed automated units sometimes not moving 
