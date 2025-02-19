@@ -1,145 +1,150 @@
-Main Branch 1.0.75717 Release 2025-01-15
+Main Branch 1.0.76453 Release 2025-02-19
 
-Headline Changes
+Headline changes
 
-Difficulty settings renamed, to make the difference between presets and individual settings clearer.  Settings outside the presets are now shown as 'Custom' difficulty in game with a breakdown of the individual settings.
-Increased variety of crowning ambitions.  This should make winning an ambition victory easier and more varied.
-Grand Vizier rework (Behind the Throne).  A big change to Grand Viziers based on player feedback, they now act as governors in all cities without a named governor and only control production in these cities. 
+Premade map updates including major expansion of The Old World map
+New game setup options, UI and accessibility features
+AI improvements and performance optimizations
 
 Design
 
-Difficulty rename: 
-  The Advanced Setup Difficulty setting is now called Prosperity
-  The Simple Setup Difficulty presets remain as they were
-  Difficulty components are grouped together and indented under difficulty mode in the game parameters tooltip
-  Difficulty will be listed as Custom for combinations outside of the simple difficulty presets
-  Distant raids are now tied to Tribe Level instead of Difficulty
-  Achievements related to difficulty are now tied to Difficulty instead of Prosperity
+Major expansion of The Old World premade map to accommodate Aksum (upcoming DLC nation)
+Minor adjustments to The Middle East premade map, Aksum starting position added
+Updated resources on The Imperium Romanum premade map, all luxury resources are now present
+Added tribes to The Mediterranean premade map 
+New game option added 'Allow Negative Cognomens'.  Disabled by default
+High Event Level now allows more events to occur per turn
+Repeatable technologies increase by 50% of the original cost each time they are researched (+1000, up from +500)
+All religious buildings (Temples, Monasteries, Cathedrals) are now permanent 
+Crossbowmen bonus against melee now only applies to attack instead of strength
+New advanced setup option 'Balanced starting resources' for single player (previously MP only)
+Commander leaders now always grant +10XP per turn to all units (previously units had to be idle)
+If the AI reaches a victory condition on its turn and the player also does at the start of their next turn, the player will now be given the victory instead of the AI
+Reduced the effect of Grand Vizier and AI leader traits on the number of units they tend to build
+Reduced cost of Burning improvements to 50 Training (down from 100)
+Purging a religion from a city now prevents it spreading to the city again without use of a Disciple
+Can no longer gift Family Seats
+Ambition victory now disabled in multiplayer by default (will remain on for ongoing games where it is enabled)
+Better matchmaking for auto-marrying characters.  More likely for characters that are attracted to each other to get married and less likely for characters that hate each other
+Ambition-picking events will try to avoid giving a second crowning ambition, a lower tier fallback will be offered if possible
+Seizing the throne no longer adds bypassed relationships to former leader's succession
+A non-fatal attack that triggers an event that immediately kills the unit is now treated as a unit kill (for kill unit ambitions, routing etc)
+Competitive Mode no longer disables Grand Viziers but does now disable some Rising Star events related to seizing the throne
+Laurion Mines now cost 10 wood to repair (previously had no cost)
+New tutorial event added when Warriors can be upgraded to Spearmen (previously only occured for Axemen upgrades)
+In Heroes of the Aegean scenario 2, Themistocles now retires after the battle of Salamis
+Tweaks to invasions in Pharaohs of the Nile scenario 5
+Heroes of the Aegean scenario 5 tweaks - easier difficulties are now easier and initial landing goal made clearer
+In Rise of Carthage scenario 4, tribal allies will automatically declare war on Rome
+When using the Caesar Dynasty, Princess Julia will now take up family Julius if picked (Wonders and Dynasties)
+Rising Stars now demand the throne less and to be Grand Viziers more (Behind the Throne)
 
-Changes to Ask to Declare War mission:
-  Ask to Declare War mission now requires a Leader with the Schemer archetype.  Removed mission tech requirement and lowered opinion needed to Cautious.  Disabled mission for allies
-  Ask to Join War mission added, where you must already be at war with the target.  This requires Pleased opinion
-  With Ruthless AI enabled, war requests will be denied if the player is close to victory
-
-Removed family preferences from crowning ambitions.  Most crowning ambition events now allow three choices of ambition instead of two.  Along with some bug fixes this should give a much higher variety of crowning ambitions offered
-Alliance victory is now an setup option, default is off
-Upgrading a unit now keeps its fortification state
-Gifting, converting, hiring, or recruiting a unit can no longer result in it being in territory where it should not be
-Can now upgrade units inside your team's cities, even if they are not your own cities
-Achievement 'Alexander the Great' no longer requires the Great cognomen, just have to destroy Persia as Alexander 
-Removed restriction on marrying Libyans in Rise of Carthage scenario 1
-The Random Improvements option now allows any combination of shrine effects instead of picking a set from a random nation
-Launch Offensive can now be used from a unit with a rout cooldown and it removes rout cooldowns from adjacent units
-Pathfinder trait now gives 50% bonus to Camps and Nets as Governor and 20% as Leader instead of 100/50%
-Swapped maintenance costs of Philosophy/Engineering and Professional Army/Volunteers
-Neutral territory is now defined as either unclaimed, anarchy (city being captured), or owned by a nation or tribe you are not at war with
-Fort defensive bonus, road and exploration river movement, Hero and Fort healing, Scout tree invisibility, all require neutral or friendly territory
-Road and Fort construction requires friendly, unclaimed, or Anarchy territory
-Added regular reminder to complete Influence goal in Learn to Play 3
-Characters with a religion trait (Clergy, Mani etc.) can no longer be targeted by conversion missions
-Conquered cities can no longer be given to a family that has not yet been founded
-Grand Vizier now acts as a governor in cities without a governor and controls production only in those cities. Removed all other Grand Vizier yields (Behind the Throne)
-Grand Vizier managed cities can no longer rush buy (Behind the Throne)
-Grand Vizier courtiers are no longer giftable in MP (Behind the Throne)
-Unpopular trait now gives nationwide 5% rebel spawn chance (Behind the Throne)
 
 Programming
 
-AI performance optimization
-AI builds fewer duplicate roads
-Improved AI retreat vs attack decision making
-Added more logging for AI unit priority comparison failure
-Hall of Fame games now store the active player so that when you load them the player stays the same
-Improved replay so that it still works if there is data only from the current turn
-Removed improvement dynamic text object from each tile to save some memory
-Bonuses and EffectCities give only EffectUnits, not Promotions. Promotions are only for units that can gain XP
-Unit effects that come from disabled promotions can now be assigned by bonuses and city effects
-Disabled implicit subject conversion for DiplomacySubjects bonuses
-Turn Lock function removed
+Optimization and performance improvements
+Tactical AI improvements
+Improved AI use of anchoring
+Improved AI Scout movement under Exploration law
+Improved AI unit movement
+Improved AI family selection when founding a city 
+Moved default improvement repair cost to XML
+Better scenario difficulty mode support
+Added command line argument -loadgame 
+Refactored opinion levels to be independent of XML order
 
 UI
 
-Character tooltips no longer show trait effects 
-All attacks now listed under Units Attacked notifications (previously kills were not shown)
-Free promotions are now indicated in the city production list and unit type tooltip
-"Death of governor" decision now auto-invalidates if the city can no longer have a governor
-Defeat status now shown when the active player is eliminated in MP even if the game is still ongoing 
-Event browser story preview improvements
-Law strategy notes updated
-Added minimize toggle to player goals/ambitions display
-Inverted red/green warning text in some cases for negative yields 
-User assigned hotkeys now have more flexibility.  Assignments can use previously reserved keys and conflict with non-assignable hotkeys
-Crowning ambitions are now indicated with the legitimacy crown icon
-Added some missing keyboard shortcuts to button help
-Improved Choose Governor tooltip
-Pillaged permanent improvements now show a pillaged icon 
-Encyclopedia improvements
+New feature: Generating a parameter string, which players can use in the setup screen to restart the same game from the beginning
+The SP setup screen now has a third tab (Simple/Advanced/Parameter String), where players enter the parameter string
+Parameter Strings can be found on the in game menu
+
+Added Accessibility option for one-click map centering
+A preview of potential water control is now shown when holding CTRL with ship selected
+Notification display order reversed, now shows oldest notifications at the top
+Character tooltips now show trait effects that are relevant to the current position (leader, general, governor) of the character 
+In MP the turn timer warning sound now plays with 15 seconds remaining (up from 5) and increases the size of the timer text.  Paused text is now shown when the timer is paused.
+In Observer mode, decision popups no longer get removed by clicking on an option
+Character selection for job assignment popups now defaults to an idle character
+Tweaks to job assignment highlighting behavior, selection clearing on the city screen
+Opening the reminders list closes the job assignment menu
+Unit filter for Infantry changed to Melee Infantry
+Rearranged city queue display to avoid overlap.  Queue can now display 9 items (up from 4)
+Known visibility button now shows visibility for all rivals if no unit or player is selected
+Buy Orders shortcut key now defaults to SHIFT+O (instead of O)
+Added Leader Archetype dropdown to Basic Setup options for Barbarian Horde scenario
+Added icons for strength and weakness to character tooltips
+MP player UI (team research and gifting options) is now shown in SP when player has AI teammates
+Stats for all players are now shown to observers in MP games
+Removed the 'Edit in Wizard' button from existing events in the Event Browser
+Fixed confusing color of unit fatigue pips when already force marched and there is no movement limit. Force marched units now display flashing "marched" text
+MP scenario tooltips now show scenario subtitle 
+Renamed Units Killed stat on stats screen to Military Units Killed
+Removed Raiders and Rebels from game history 
+Improved "Slow AI" tooltip 
+Bonus tech cards now indicate that they are bonus cards
+Added cause of death field to the character tooltip. Traits with a probability of death are removed after death 
+Riders icon now shown on city widget instead of Connected icon for Riders cities
+Rising Star trait no longer removed upon death 
+Simplified and cleaned up some Family help issues 
+Removed some yield clutter from specialist tooltips 
+Encyclopedia and tutorial corrections and improvements
+Standalone scenarios are now shown on the top level of the scenario screen instead of under their own category
 
 Bugs Fixed
 
-Fixed invalid moves adding undo points
-Fixed some events failing to appear with the Ruthless AI setting enabled
-Fixed player connection state UI for single-player network games
-Fixed Thracians in Learn to Play 4 being visible before they should be
-Fixed server games preventing eliminated players from joining one last time to see what happened, and for the game to be saved locally as a loss
-Fixed bug where client could be in a different language to the active player 
-Fixed Hall of Fame bug where regenerating was replacing Scenario specific text with Generic game text for Nation, Leader names, and Difficulty
-Fixed Hall of Fame difficulty sorting
-Fixed network messages being sent out of order
-Fixed achievement text that referred to Kushite Cavalry instead of Mounted Lancers
-Fixed Ten Crowns achievement incorrectly counting regents twice
-Fixed improvement pings not appearing when law requirements are not met 
-Fixed vegetation help text to correctly state a ranged attack penalty 
-Fixed possible array out of range for bad event links
-Fixed bug preventing some Crowning Ambitions from appearing
-Fixed bug allowing ambitions to appear in events with random ambition selections that should only appear in specific events
-Fixed cycle button position not updating shortcut keys and not getting saved
-Fixed some road pathfinding issues
-Fixed player start location bug in the desert map script and made start location picking more robust in general
-Fixed illegal urban tiles placed in mirror maps 
-Fixed character ratings appearing with a divider in some cases 
-Fixed research popup closing after using Redraw
-Fixed null ref in encyclopedia 
-Fixed duplicate Hall of Fame entries when reloading a completed cloud game 
-Fixed character suffix bug where a ruler would get the II suffix if a parent had the same name but never was a ruler
-Fixed incorrect suffix on Ptolemy II
-Fixed event system bug that can very rarely lead to valid subjects being deemed invalid
-Fixed tooltip expansion when hotkey changed
-Fixed order yield rates not updating when starting/finishing construction
-Fixed broken Civ Fanatics forum link on main menu
-Fixed AI movement null reference
-Fixed several Portrait Editor bugs
-Fixed load/save bug for mods that give bonus effectUnits
-Fixed duplicated Hittite portrait
-Fixed errors when loading saves with deprecated promotions
-Fixed wrong memory display when giving a conquered city to a family 
-Fixed opinion and legitimacy bonus from founding a family seat getting applied more than once in some cases
-Fixed enlist effect not getting cleared after use
-Fixed cases when opinion and legitimacy for founding a family seat could get applied more than once for the same family
-Fixed spymaster context menus sometimes not appearing 
-Fixed agent missions and networks menus appearing on foreign spymasters
-Fixed formatting of tile and city tooltips
-Fixed improvements from inactive DLC showing up in build menus
-Fixed invalid improvements sometimes appearing under Valid Improvements filter
-Fixed goals display spacing
-Fixed AI modified collection exception
-Event audio fix
-Fixed trait loss causing unrelated events
-Fixed tribal invasions getting stuck
-Fixed Rise of Carthage scenario 2 goals sometimes not getting offered
-Fixed Rise of Carthage scenario 2 and 3 olive-counting goals 
-Fixed Rise of Carthage starting heirs not being Royal and therefore not tutorable
-Fixed Macedonia not getting family promotions on their starting units in Heroes of the Aegean scenario 6
-Fixed bug in Heroes of the Aegean scenario 6
-Fixed Pharaohs of the Nile scenario 2 event triggering multiple times
-Fixed Grand Vizier traits not affecting the cities where they are acting governor (Behind the Throne)
-Fixed some UI instances where the acting governor was being treated as the actual governor (Behind the Throne)
-Fixed unit widgets failing to display icon and shapes not included in their respective default sprite atlases (affects mods)
-Fixed General not getting removed when upgrading a unit to a type that cannot have one (affects mods)
-Text and Event fixes
-
-Notes for Modders
-
-EffectCity.aeFreePromotion becomes EffectCity.aeFreeEffectUnit
-Promotion.aeGrantsEffectUnit is replaced by EffectUnit.aeKillGrantsEffectUnit
-Bonus.aePromotions no longer exists, bonuses should grant EffectUnits instead
+Fixed memory leaks
+Fixed improvements being buildable in territory of non-allied foreign nations
+Fixed AI sometimes being unable to declare war on a nation while at peace
+Fixed queued unit moves not happening when destination blocked
+Fixed automated units sometimes not moving 
+Fixed ships sometimes being built on the city center instead of the intended water area
+Fixed event syntax bug
+Fixed nested link in generated diplomacy links 
+Fixed hover issue on team research display
+Fixed UI issue with Create Game button being disabled after unloading a server game 
+Fixed some AI confusion about who benefits when performing a mission on a character of a different nation
+Fix for initial city naming - only relevant in mods
+Fixed tribe link in city widget not selecting tribe
+Fixed some UI issues with tile highlighting
+Fixed AI exception with tribal cities
+Fixed missing seat founding bonus in the family class Encyclopedia entries
+Fixed add urban recommendation not showing border preview on hover 
+Fixed regenerating Hall of Fame entries leading to points wins becoming defeats after opulence VP changes 
+Fixed player placement bug for 2-team MP games that also have independent AI nations 
+Fixed portrait interpolation errors for portraits that do not have interpolation settings when interpolation is disabled 
+Fixed boat projectiles causing rendering artifacts on macs 
+Fixed breaking peace with a tribe in no characters mode
+Fixed name display issue in some languages for royal characters with jobs 
+Fixed goals not completing when new units created
+Fixed marauder prefabs being slightly offset 
+Fixed portraits not updating when age interpolation is enabled for the first time in-game
+Fixed portrait editor breaking when interpolation is disabled in graphics options
+Fixed portrait editor portraits not updating correctly when a source portrait 
+Fixed portrait editor opinion tab displays
+Fixed incorrect tile highlighting for event options that affect tiles 
+Fixed ambitions that should only come from specific events (i.e. Destroy the Rival Nation) appearing randomly
+Fixed AI complaining about the same stolen city site repeatedly
+Fixed Stun preview text incorrectly showing for units in splash radius 
+Fixed years reigned text issue that could occur with regency 
+Fixed empty series warning for opinion graphs
+Fixed some cases of dropdowns getting cut off
+Fixed units with no family sometimes showing incorrect family icon 
+Fixed attack preview issues
+Fixed river movement in captured territory
+Fixed religion icons sometimes showing on tribal camps when city site did not have religion 
+Fixed implicit subject conversion issue
+Fixed save game version not being updated
+Fixed game editor unit placement in water
+Fixed city production yield costs sometimes disappearing
+Fixed some succession issues related to usurpers
+Fixed non-active city site on Middle East map 
+Fixed unit effect formatting issues
+Fixed bug that allowed the player to choose invalid nations on premade maps
+Fixed some Map Editor errors
+Fixed Pharaohs of the Nile scenario 5 unit AI
+Fixed Learn to Play 2 choose tech goal not completing immediately
+Fixed potential issues with retake islands events in Rise of Carthage scenario 4
+Fixed bugs with rebellion event triggering twice and Aristotle event not triggering in Heroes of the Aegean scenario 4
+Fixed some broken links in Rise of Carthage campaign
+Text and event fixes
