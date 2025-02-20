@@ -18,7 +18,6 @@ Repeatable technologies increase by 50% of the original cost each time they are 
 All religious buildings (Temples, Monasteries, Cathedrals) are now permanent 
 Crossbowmen bonus against melee now only applies to attack instead of strength
 New advanced setup option 'Balanced starting resources' for single player (previously MP only)
-Commander leaders now always grant +10XP per turn to all units (previously units had to be idle)
 If the AI reaches a victory condition on its turn and the player also does at the start of their next turn, the player will now be given the victory instead of the AI
 Reduced the effect of Grand Vizier and AI leader traits on the number of units they tend to build
 Reduced cost of Burning improvements to 50 Training (down from 100)
