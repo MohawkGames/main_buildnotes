@@ -1,8 +1,3 @@
-Main Branch 1.0.76330 Release 2025-02-28
+Main Branch 1.0.76679 Release 2025-03-04
 
-Hotfix release that fixes a couple of bugs and includes content needed for upcoming DLC
-
-Bugs Fixed
-
-Fixed Game of the Week 
-Fixed bug that could cause the game to get stuck on AIs turn
+Hotfix release that fixes a bug preventing mountains from being removed on the Tumbling Mountain map script.  This fix applies to new games only.
