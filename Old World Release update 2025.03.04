@@ -1,0 +1,7 @@
+Main Branch 1.0.76679 Release 2025-03-04
+
+Hotfix release that fixes a bug with the Tumbling Mountain map script.  This fix will apply to new games only.
+
+Bugs Fixed
+
+Fixed bug preventing mountains from being removed on the Tumbling Mountain map script
