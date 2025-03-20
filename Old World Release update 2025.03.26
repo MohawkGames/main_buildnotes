@@ -171,7 +171,6 @@ Fixed Organized tribes not healing
 Fixed some AI bugs
 Fixed research UI not updating immediately when yield rates change
 Fixed Carthage scenarios giving a lower-tier victory than earned if one of the goals was completed indirectly
-Fixed Calamities causing city sites to become impassable
 Fixed Portrait Editor loading issue
 Fixed portrait models potentially obscuring each other
 Fixed unit cycle tooltip sometimes not locking
@@ -186,6 +185,7 @@ Fixed some dropdown appearance issues
 Fixed autobuild cities not repairing upon being founded with a damaged settler
 Fixed bug in effectCity help text yield breakdown
 Fixed aiUnitTraitConsumptionModifier help text bug (only affects mods)
+Fixed repair yield purchase for Stateira (Wonders and Dynasties)
 Fixed Flood not displaying correctly in some cases (Wrath of Gods)
 Fixed Calamity level showing on in-game difficulty mode and game parameters tooltips, if the content is disabled in the current game (Wrath of Gods)
 Fixed calamity postprocessing profiles overriding postprocessing settings from graphics settings i.e. Motion Blur (Wrath of Gods)
@@ -195,12 +195,11 @@ Fixed eruptions displaying on volcanos obscured by fog of war (Wrath of Gods)
 Fixed double legitimacy penalty when abandoning a Demand (Wrath of Gods) 
 Fixed trees removed from building improvements not being counted for demands (Wrath of Gods)
 Fixed issue where some global calamities that target tiles were instead targeting all tiles (Wrath of Gods)
-Fixed Wrath of Gods scenario failure when random nation and random archetype chosen (Wrath of Gods)
 Fixed Wrath of Gods scenario victory event not triggering when next victory becomes impossible (Wrath of Gods)
 Fixed Wrath of Gods scenario duplicate victory threshold events in some cases (Wrath of Gods)
-Fixed repair yield purchase for Stateira (Wonders and Dynasties)
 Fixed Hurricanes not displaying correctly in some cases (Wrath of Gods)
 Fixed wrath generation issues casued by Undo / Restart Map (Wrath of Gods)
 Fixed mid and major raid Occurrences being invalidated (Wrath of Gods)
+Fixed Calamities causing city sites to become impassable (Wrath of Gods)
 Global Occurrence fixes (Wrath of Gods)
 Text and event fixes
