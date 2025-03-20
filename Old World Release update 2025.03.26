@@ -11,7 +11,7 @@ Design
 
 National Ambitions:
 The final ambition is now called a National Ambition and may be offered early, after a player has completed 5 ambitions
-The offer is triggered soon after the player reaches 75% progress towards one of the national ambitions
+The offer is triggered soon after the player reaches 70% progress towards one of the national ambitions
 National Ambitions are not used for tier counting purposes i.e. they do not make regular ambition offers harder
 All National Ambitions are listed in the Encyclopedia under their own category
 Added new National Ambition '+250 Food, Iron, Stone, Wood and Money per turn'.  This replaces the previous ambition to stockpile 2000 of each resource
@@ -56,7 +56,7 @@ Wrath of Gods scenario now uses a customized map script with more Volcanoes (Wra
 
 Programming
 
-Rendering API change: Linux / Steam Deck now default to Vulkan. Windows supports Vulkan with a command-line switch
+Rendering API change: Linux / Steam Deck now default to Vulkan. Windows supports Vulkan with a command-line switch -force-vulkan
 Epic Mac build now runs natively when run outside of the Epic launcher, i.e. using alternative launcher such as Heroic
 Improved UI responsiveness when cycling through workers
 Performance improvements
