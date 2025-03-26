@@ -35,7 +35,7 @@ Stun is now possible when attacking a unit in a city without any HP left
 Panic and Fireship effects now cause units that cannot retreat to become Disarmed instead of Stunned 
 Enlisted units by a Zealot leader now return to full health
 Hidden units now always ignore ZOC 
-Money Boost bonus card swapped with Free Trireme (available at Coinage / Navigation)
+Money Boost bonus card moved to Coinage
 National ambitions now offered at 70% completion instead of 75%
 National Ambitions event enabled in no events mode
 Fire shrines now have adjacent modifier to any improvement in the Mine class (now also affects Laurion Mines)
