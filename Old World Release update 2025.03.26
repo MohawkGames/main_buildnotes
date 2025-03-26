@@ -1,4 +1,4 @@
-Main Branch 1.0.????? Release 2025-03-26
+Main Branch 1.0.76983 Release 2025-03-26
 
 Headline Changes
 
@@ -46,6 +46,7 @@ Events where the AI offers Truce on breaching a city now trigger when the city i
 Can no longer build roads and improvements in territory of an ally
 Water tiles no longer need to be adjacent to land in order to transfer them from one of your cities to another
 Units that earn XP past the maximum level convert that XP to training
+Free Trireme and Free Dromon tech cards removed
 Ezana's Evangelist trait only gives new units Christianity/Adept in city where he is governor (Wrath of Gods)
 7 new events relating to Calamities happening to other players (Wrath of Gods)
 Reduced other religion opinion penalty duration for Venerate mission (Wrath of Gods)
@@ -184,6 +185,11 @@ Fixed pillage notification links selecting units
 Fixed some dropdown appearance issues
 Fixed autobuild cities not repairing upon being founded with a damaged settler
 Fixed bug in effectCity help text yield breakdown
+Fixed occurrence effects after a new city has been founded 
+Fixed sporadic disconnections in network and server games when one or more player slots are open
+Fixed pathfinding for hidden units
+Fixed AI bug that caused it to sometimes move units back and forth between the same tiles
+Fixed null pointer if an init phase EffectPlayer, i.e. from difficulty mode, uses miReligionOpinionChange (only affects mods)
 Fixed aiUnitTraitConsumptionModifier help text bug (only affects mods)
 Fixed repair yield purchase for Stateira (Wonders and Dynasties)
 Fixed Flood not displaying correctly in some cases (Wrath of Gods)
