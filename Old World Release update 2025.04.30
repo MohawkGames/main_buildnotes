@@ -1,0 +1,132 @@
+Main Branch 1.0.xxxx release 2025-04-30
+
+Headline Changes
+
+New map script Rejuvenation added to the Wrath of Gods DLC.  A barren desert that becomes more temperate and acquires resources over time
+Ships can now enter defensive formation, which works in the same way as Fortify for melee infantry.  Ship promotion balance tweaked
+Added upgrade icon to city production buttons for specialists that replace an existing specialist
+
+Design
+
+Ships can enter defensive formation, giving +10% defence against Ships per turn, up to a max of 30%.  A counterattack is gained at maximum level and each attack against the ship removes one level. 
+Grappler promotion immobilizes ships instead of stunning them and no longer has an attack penalty
+Fireship promotion no longer gives +10% attack
+Cockswain promotion gives +20% strength in National Territory instead of Rout 
+AI more likely to break alliances with poor opinion 
+Ruthless AI declares war on a winning player even if it's not completely ready to do so 
+When a tribal alliance ends and there are tribal units in the same tile as player units, the tribal units are bounced, not the player units
+When a national alliance ends, a unit in its own territory never gets bounced
+Expose Agent mission takes 1 turn to complete (was 2)
+Rise of Carthage campaign tweaks and rebalancing 
+Heroes of the Aegean scenario 2 rebalanced 
+Slums worker discount removed and militia discount increased (Behind the Throne)
+New map script Rejuvenation added (Wrath of Gods)
+Occurrences that affect water movement (eg Hurricane) affect player-controlled water as well, both for water units and land units using anchored tiles (Wrath of Gods)
+Hurricanes remove Anchored status from ships (Wrath of Gods)
+
+Programming
+
+Restart Game and New Map now generate a new game ID so that a new entry can be recorded in the Hall of Fame 
+AI less averse to building Militia and Conscripts when it cannot build a latest upgrade regular military unit
+Pathfinder performance optimization
+Moved project spread to the Player class
+Memory refactor
+Testudo is now a unit effect
+Added delete functionality to Manage Mods tab for mapfiles with no ModioID/WorkshopID
+Added support for showing images of workshop maps in Manage Mods tab
+Added support for council positions that don't require any traits
+Added support in the game class for adding visual effects to tiles independently from the occurrence system
+Added support for yields with negative demand
+
+UI
+
+Added upgrade icon to city production buttons for specialists that replace an existing specialist
+Added year of discovery to each acquired tech on the Tech Tree
+Can no longer see citizens, specialists, and happiness level of foreign cities without an agent
+Selection panel tooltips appear on the left
+Score/ambitions panel hidden with attack preview active
+Ambition display tweaks
+Added Net Yield Change to project build tooltips 
+Improvement and specialist tooltip tweaks
+Added reminder count on tooltip for pillage reminders 
+Decreased size of religion icons on city widgets and archetype/family icons near leader portrait
+Discord/Steam rich presence now updated after loading a save
+Added Save button to cloud host controls screen
+Notification URL icon shown in cloud game list
+Observer hosts of MP games can send messages only to everyone 
+Added notification icon for City Damaged
+Added Increase Unit Movement Radius Visibility button to accessibility options to allow players to boost unit movement radius contrast 
+Added spacing between archetype/ratings/items on character cards 
+Source of counterattack damage in the combat preview is more specific
+Improved tooltip alignment and positioning
+Law tooltips now show F1 Encyclopedia links
+Encyclopedia updates
+Localization text updates
+Added explanation popup to target player when a mission has resulted in an AI or a tribe agreeing to declare war on that player
+Shrines are listed in city pagan religion help text, just as monasteries, temples, etc are listed for world religions 
+Agent networks with agents now shown in Spymasters Agent Networks submenu
+Improved helptext for traits that can replace other traits 
+Removed the Text tab from the Event Browser
+
+Bugs Fixed
+
+Fixed DLC that is not owned being marked as disabled 
+Fixed bug that forced some map scripts to put all players on the same continent
+Fixed increasing player count disabling Allow Duplicate Nations option
+Fixed Governor gendered helptext issue
+Fixed event browser not using selected language for event preview
+Fixed broken river segments in mirror maps
+Fixed missing available luxury highlights
+Fixed enlisted unit of eliminated nation becoming a rebel 
+Fixed bug with AI understanding of how city attacks work
+Fixed character mission tooltip positioning inconsistency 
+Fixed left unit healthbar always showing 0 damage in attack preview
+Fixed specialist tooltip net yield change to correctly account for the loss of a citizen
+Fixed tile tooltips revealing yields for foreign improvements when at Peace
+Fixed restarting a hotseat game losing player information
+Fixed map selection clickthrough issues
+Fixed F7 city list not sorting when agent tab is selected
+Fixed incorrect default number of opponents set in single player setup screen 
+Fixed configuration of female scout and female worker combat portrait prefabs
+Fixed city recommendation icons appear for non-visible production buttons 
+Fixed agent networks submenu player colors 
+Fixed issues with city widget capture text
+Fixed data issue for culture on city tab
+Fixed data issues for specialist widgets and pings 
+Fixed improvements placed in the map editor always getting raised to the hill height offset 
+Fixed irrelevant tribes appearing in the tooltip of some character bonuses 
+Fixed team/tribe diplomacy icon not updating in score area when diplomacy changes
+Fixed event text/goal mismatch
+Fixed incorrect number of players stored in the options file for multiplayer settings
+Fixed hotseat games restarting with the wrong active player
+Fixed modio maps not showing in mod browser 
+Fixed modio maps not updating properly
+Fixed a couple of issues with maps on Workshop
+Fixed Modio API errors on uploading mods
+Fixed modio uploading all files in Maps folder 
+Fixed modio maps reporting version issues if modVersion is blank 
+Fixed modio maps sometimes not getting metadata embedded in the mapfile
+Fixed modio maps images not showing on manage mods tab
+Fixed possible null reference when map filename isn't the same as map display name
+Fixed mods with file information showing private full path filename 
+Fixed mod uninstall button not working on Install tab immediately after an installation
+Fixed issues with loading mod units from asset bundles
+Fixed UI exception for non-civics projects when AI build recommendations are enabled (affects mods only)
+Fixed non-civics projects displaying the incorrect yield above the build queue (affects mods only)
+Fixed Enlist killing enlisted units if the enlist-on-heal amount was too low (affects mods only)
+Fixed Rise of Carthage scenario 3 not taking into account the final turn's yields for determining goal completion
+Fixed Rise of Carthage scenario 3 issue with rebels capturing cities
+Fixed Civil War affecting all players (Behind the Throne)
+Fixed missing Clergy in Wrath of Gods scenario
+Fixed Stele appearing in improvements list when it cannot be built manually (Wrath of Gods)
+Fixed crash caused by Inferno (Wrath of Gods)
+Fixed Occurrences sometimes occurring more often than they should for a given player (Wrath of Gods)
+Fixed map Occurrences not being added to mirror maps (Wrath of Gods)
+
+Notes for Modders
+
+Five separate memory types (MemoryCharacter, MemoryTribe, MemorReligion, MemoryFamily, MemoryPlayer) are now one type, Memory. The base file name is memory.xml
+Mods that add memories need to rename files, e.g. memoryCharacter-add.xml should be memory-character-add or just memory-add. The dash after memory is the important part
+Event bonuses are now just Memory / Forget, for all memory types. Events should take care to apply the bonus to the right subject. For example, a Memory bonus applied to a SUBJECTCLASS_CHARACTER subject is the equivalent of the earlier MemoryCharacter bonus
+
+It is recommended to upload new versions of map mods in order to take advantage of fixes and new features
