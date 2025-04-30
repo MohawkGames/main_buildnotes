@@ -1,4 +1,4 @@
-Main Branch 1.0.xxxx release 2025-04-30
+Main Branch 1.0.77501 release 2025-04-30
 
 Headline Changes
 
@@ -37,6 +37,7 @@ Added support for showing images of workshop maps in Manage Mods tab
 Added support for council positions that don't require any traits
 Added support in the game class for adding visual effects to tiles independently from the occurrence system
 Added support for yields with negative demand
+Added backwards compatibility for mods with zero-cost projects (notably fixes freezes in Projects+ mod)
 
 UI
 
@@ -75,6 +76,7 @@ Fixed bug that forced some map scripts to put all players on the same continent
 Fixed increasing player count disabling Allow Duplicate Nations option
 Fixed Governor gendered helptext issue
 Fixed event browser not using selected language for event preview
+Fixed a bug that sometimes prevented the AI from declaring war to expand
 Fixed broken river segments in mirror maps
 Fixed missing available luxury highlights
 Fixed enlisted unit of eliminated nation becoming a rebel 
