@@ -86,9 +86,6 @@ Foreign city tooltips no longer show defense and damaged state unless the city i
 Jobs are no longer shown on foreign character tooltips, unless their unit is visible (for Generals) or player has an agent in the relevant city (for Governors)
 Added missing improvement warning text to unique unit production buttons
 Added opinion gain line to Make Agent tooltip
-Religions now always show founding requirements in the Encyclopedia
-Characters entries in Encyclopedia now list unique events and missions
-Encyclopedia, when viewed in-game, show entries based on currently enabled DLC instead of owned DLC
 Improved German grammar for character relationships
 Stacked worker count shown on tooltip even when not actively building an improvement 
 Added "Improvements (Special)" section to the Encyclopedia, to include non-buildable Improvements
@@ -103,6 +100,9 @@ Leader now shown on Court tab
 Leader concept added to Encyclopedia
 Horse trait now shown in Encyclopedia
 Improved Encyclopedia entry for Citizen concept
+Religions now always show founding requirements in the Encyclopedia
+Characters entries in Encyclopedia now list unique events and missions
+Encyclopedia, when viewed in-game, show entries based on currently enabled DLC instead of owned DLC
 
 Bugs Fixed
 
