@@ -23,15 +23,14 @@ Library class improvements Science increase changed from 20%/30%/50% to 10%/20%/
 Courthouse class improvements Civics increase changed from 20%/30%/50% to 20%/30%/40%
 Market class improvements Money increase changed from 20%/30%/50% to 30%/40%/50%
 Rider family Import projects allow cities to build relevant units directly instead of adding resources to map. Added extra order to rider seat (1 -> 2)
+Increased AI penalties on The New difficulty (20% -> 25%)
 Ruthless AI declares war on a winning player even if that player is not directly reachable
 Ruthless AI gets more chances to conduct diplomacy when a player is close to winning 
 Ruthless AI now takes alliances and national ambitions into account for determining if a player is close to winning
 The Old World premade map edits - boundaries slightly expanded, marshes added and resources redistributed
 When a unit move cannot be completed because a lack of orders, a partial 1-tile move results in a unit swap, if possible
-Increased AI penalties on The New difficulty (20% -> 25%)
 Damaged cities cannot be gifted to another team 
 Added 'No city gifting' option to MP setup
-Ruthless AI no longer counts VPs of player allies as a double victory threat 
 Disjunction mapscript with King of the Hill option balance improvements
 Minor cities can be created even if the site is occupied
 Borders with team-owned tiles on opposite sites are now claimed by the city with the most adjacent tiles
@@ -156,4 +155,3 @@ Fixed "Wrath of Gods" map script showing with "show hidden map scripts" enabled 
 Fixed occurrences causing rivers with deltas flowing into land tiles (Wrath of Gods)
 XML ordering fixes
 Text and event fixes
-
