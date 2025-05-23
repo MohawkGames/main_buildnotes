@@ -87,7 +87,6 @@ Jobs are no longer shown on foreign character tooltips, unless their unit is vis
 Added missing improvement warning text to unique unit production buttons
 Added opinion gain line to Make Agent tooltip
 Religions now always show founding requirements in the Encyclopedia
-Improved Encyclopedia entries for Capital and Citizen concepts
 Characters entries in Encyclopedia now list unique events and missions
 Encyclopedia, when viewed in-game, show entries based on currently enabled DLC instead of owned DLC
 Improved German grammar for character relationships
@@ -103,6 +102,7 @@ Improved border expansion predictions
 Leader now shown on Court tab
 Leader concept added to Encyclopedia
 Horse trait now shown in Encyclopedia
+Improved Encyclopedia entry for Citizen concept
 
 Bugs Fixed
 
