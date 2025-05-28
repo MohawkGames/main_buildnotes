@@ -1,11 +1,10 @@
-Main Branch 1.0.????? Release 2025-05-28
+Main Branch 1.0.78053 Release 2025-05-28
 
 Design
 
 Garrison and Governor changes:
 
 Governors no longer require a Garrison
-Garrisons now give +1 order (up from 0.5)
 Garrison and Stronghold stone cost reduced by 20 (80/100 -> 60/80)
 Darius dynasty now gives 50% discount to appointing Governors (Wonders and Dynasties)
 
