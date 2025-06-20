@@ -3,7 +3,7 @@ Main Branch 1.0.????? Release 2025-06-25
 Design
 
 Cleric family now gets free Divine Rule law on founding. Removed free Monasticism and Found Religion Project from Clerics
-Cleric seats can build Christian and Manicheist Disciples without the religion being present (after they have been founded)
+Cleric seats can build Christian and Manicheist Disciples after the religions have been founded without the religion being present 
 Cleric seats have double speed Disciples only for State Religion
 Religion spread no longer has a distance limit from the Holy City 
 Guilds law now allows building Elder Specialists directly, skipping any prerequisite specialists.  Hamlet happiness bonus removed
