@@ -1,5 +1,11 @@
 Main Branch 1.0.????? Release 2025-06-25
 
+Headline Changes
+
+Clerics family changes
+Guilds law now allows building Elder specialists directly, skipping prerequisite specialists
+New UI system for placing free improvements and resources
+
 Design
 
 Cleric family now gets free Divine Rule law on founding. Removed free Monasticism and Found Religion Project from Clerics
