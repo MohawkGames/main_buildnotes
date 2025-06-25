@@ -1,167 +1,113 @@
-Main Branch 1.0.78053 Release 2025-05-28
-Hotfix 1.0.78114 Release 2025-06-02
+Main Branch 1.0.78527 Release 2025-06-25
 
-Hotfix release fixes bugs with some events and automated workers that could cause the game to get stuck
+Headline Changes
 
-Headline changes
-
-Governor, Law and Improvement changes
-Ruthless AI improvements
-14 new events
-New Ship icons
+Clerics family changes
+Guilds law now allows building Elder specialists directly, skipping prerequisite specialists
+New UI system for placing free improvements and resources
 
 Design
 
-Garrison and Governor changes:
+Cleric family now gets free Divine Rule law on founding. Removed free Monasticism and Found Religion Project from Clerics
+Cleric seats can build Christian and Manicheist Disciples after the religions have been founded without the religion being present 
+Cleric seats have double speed Disciples only for State Religion
+Religion spread no longer has a distance limit from the Holy City 
+Guilds law now allows building Elder Specialists directly, skipping any prerequisite specialists.  Hamlet happiness bonus removed
+Tribe-owned units no longer get a strength modifier against other tribes at strong and raging tribe levels
+Regents now become Royal if they usurp the throne or continue ruling after the rightful heir's death
+Projects and specialists that are automatically removed from the build queue because they are no longer valid now add any progress to the player's yield stockpile 
+AI governors now emphasize growth and build fewer growth units when city has no citizens 
+Persia's Shapur dynasty gets the Found Religion project (Wonders and Dynasties)
+Rising Stars are now less common and ask to become a Grand Vizier less (Behind the Throne)
+Opulence project now requires a luxury in addition to estates (Behind the Throne)
+Reduced probability of Occurrence ready events (Wrath of Gods)
 
-Governors no longer require a Garrison
-Capital no longer gets a free Garrison
-Garrison and Stronghold stone cost reduced by 20 (80/100 -> 60/80)
-Darius dynasty now gives 50% discount to appointing Governors (Wonders and Dynasties)
+Multiplayer Turn Style changes 
 
-Law changes:
-
-Guilds now gives +10 money per specialist type per city instead of -10% Rebel chance
-Freedom now gives -5% Rebel chance instead of +1 happiness per city
-Calligraphy now gives +10 culture per city instead of +4 culture per library
-Swapped Calligraphy and Iconography upkeep costs
-Swapped Colonies and Serfdom upkeep costs
-
-Other design changes:
-
-Library class improvements Science increase changed from 20%/30%/50% to 10%/20%/30%
-Courthouse class improvements Civics increase changed from 20%/30%/50% to 20%/30%/40%
-Market class improvements Money increase changed from 20%/30%/50% to 30%/40%/50%
-Rider family Import projects allow cities to build relevant units directly instead of adding resources to map. Added extra order to rider seat (1 -> 2)
-Increased AI penalties on The New difficulty (20% -> 25%)
-Ruthless AI declares war on a winning player even if that player is not directly reachable
-Ruthless AI gets more chances to conduct diplomacy when a player is close to winning 
-Ruthless AI now takes alliances and national ambitions into account for determining if a player is close to winning
-The Old World premade map edits - boundaries slightly expanded, marshes added and resources redistributed
-When a unit move cannot be completed because a lack of orders, a partial 1-tile move results in a unit swap, if possible
-Damaged cities cannot be gifted to another team 
-Added 'No city gifting' option to MP setup
-Disjunction mapscript with King of the Hill option balance improvements
-Minor cities can be created even if the site is occupied
-Borders with team-owned tiles on opposite sites are now claimed by the city with the most adjacent tiles
-Barbarian Horde will now spawn inside player territory if there are not enough tiles available otherwise
-In Rise of Carthage scenario 3, Orator-recruited mercenaries now count as hired and contribute to the optional merc hiring goal 
-Drought effect tweaks (Wrath of Gods)
-Occurrences that result in small seas (18 tiles or less) convert that water to lakes.  Mainly affects Ebbing Sea mapscript (Wrath of Gods)
-Occurrences can now cause terrain changes on improved tiles, as long as the improvement remains legal for that tile (Wrath of Gods)
-
-
-New Events
-
-14 new events added - 11 for base game and 3 for Behind the Throne DLC
-
-A City Like No Other
-Deadly Inheritance
-I Love It When A Plan Comes Together!
-New Front
-No War Declaration
-Not to Be Trusted
-Offensive Remarks
-Reaping the Whirlwind
-The God Queen
-Triple Cross!
-Tutorial: Upgrade Mercenaries
-No Longer of Use (x2) (Behind the Throne)
-Support or Scheme (Behind the Throne)
+Loose turn style can be selected only with a turn timer
+Renamed normal turn style to adaptive
+Tight turn style is now the default
+Strict turn styles no longer allow players to perform any actions when not their turn (this also affects single player)
 
 Programming
 
-The AI claims cleared city sites more urgently (with force march, if necessary) 
 Performance optimization
-Replaced valid terrain fields by TerrainTargetType to make improvement requirements more flexible 
-Family bonuses now check whether the bonus player has that family
-Improved AI chokepoint management and attacks with high unit density
-Memory allocation improvements
-Occurrence terrain change refactor, now more mod friendly
-Changed opinion-calculating functions to return a tuple
-Event triggers can now have an arbitrary number of subjects
-Added EffectUnits miAdjacentDifferentModifier, maeBuyTile, mbPillage, mabHideTerrainTarget and miMarchCostModifier
-Added EffectCity aiYieldRateSpecialistRural 
-Allow the road pathfinder to accept TeamType.NONE, returning a road path which ignores visibility or diplomacy
-Promoted Infos validator from ModPath to GameFactory so mods can supply custom validators
-Added support for Religions to have a law opinion directly, not just through theologies
+Memory allocation optimization
+Bug reporting system improvements
+Improved AI valuation of Disciples and Religions
+AI now uses Cleric seat ability to build disciples of non-present religions
+Improved AI use of unit staging before an attack
+AI checks whether a city can have an effect from resources before building a project that gives that same effect (i.e. Riders Import Horses)
+AI knows to use units that do not require orders when it's out of orders 
+Improved sprite loading thread safety 
+Added safeguards against unexpected UI resets from a game restart 
+Added 3 additional resource categories to the default map script for use by mods
+Added support for partial counterattack strength for use by mods (replaced InfoUnit.mbMeleeCounter with miMeleeCounterPercent)
+Added support for upgrading rural improvements for use by mods
+Generalized event subject picking so it no longer needs an event, just a list of subjects
+Various missions started by the leader now no longer block all events with a leader subject
+UI mod files (UI/includes and UI/styles) are excluded from game CRC
+Added UI/templates to UI modding paths
 
 UI
 
-Ship unit icons replaced to make the differences between them clearer
-Added improvement net yields in tooltip
-Foreign city citizen and specialist numbers now shown if the city tile is visible
-Foreign city tooltips no longer show defense and damaged state unless the city is visible 
-Jobs are no longer shown on foreign character tooltips, unless their unit is visible (for Generals) or player has an agent in the relevant city (for Governors)
-Added missing improvement warning text to unique unit production buttons
-Added opinion gain line to Make Agent tooltip
-Improved German grammar for character relationships
-Stacked worker count shown on tooltip even when not actively building an improvement 
-Added "Improvements (Special)" section to the Encyclopedia, to include non-buildable Improvements
-Added dynamic helptext for Attribute effects and tweaked Attribute helptext 
-Added Prosperity to Wrath of Gods setup 
-Ambitions display no longer gets minimized when clicking on listed ambitions
-Pin Character icon has higher saturation when character is pinned
-General traits which only affect some unit types now display affected unit types
-Character relatives display now left-aligned
-Improved border expansion predictions
-Leader now shown on Court tab
-Leader concept added to Encyclopedia
-Horse trait now shown in Encyclopedia
-Improved Encyclopedia entry for Citizen concept
-Religions now always show founding requirements in the Encyclopedia
-Characters entries in Encyclopedia now list unique events and missions
-Encyclopedia, when viewed in-game, show entries based on currently enabled DLC instead of owned DLC
+Free improvements and resources are now added to the event queue and placed by clicking a valid tile
+Tooltip in tech tree shows the date team mates have discovered each tech, as well as for observers in MP games, and all players when the game is completed
+Games with custom names (i.e. Game of the Week) now show their name in the parameters tooltip
+Improvement net yield now includes Patrons Precious Resource culture bonus
+Border expansion preview has the correct border colors for families
+Added Items to Encyclopedia in their own category, with unique events listed
+Encyclopedia now lists DLC source for traits where applicable
+ESC clears luxury selection before opening menu 
+City luxury tooltip improvements
+Valid unit types now listed for 'New units start with <promotion>' helptext 
+Improved luxury tooltip positioning 
+Removed tile raw yield from the city net yield tooltip
+Added min height for OK button on turn summary popup 
+Scripted tutorial events blur the background UI, preventing events being bypassed
+Added strength/weakness icons to concept links
+Improved Riders 'Import Resource' project helptext 
+Yield and unit strength previews when assigning jobs now take into account the opinion change caused by the job switch
+Mission requirements in tooltips are no longer shown in some situations where these requirements are all met
+Ratings shown on character tooltip when they are 0 if they produce a yield (i.e. Schemer Agents)
+Removed resource ping from improvements dropdown. This was made obsolete by the new UI to place free resources 
+Improved tooltips and interactions between Behind the Throne traits and imprison/assassinate missions
 
 Bugs Fixed
 
-Fixed tribal diplomacy cooldown not being enforced
-Fixed minor cities not always being created when they should be 
-Fixed Send Goods icon display
-Fixed load/save error from border expansion
-Fixed null reference when tribe sites sit outside map boundaries 
-Fixed incorrect default value for resource hill height offset
-Fixed improvement culture prereqs not working with modded culture
-Fixed family opinion penalty from the Imprison mission getting applied to the character instead
-Fixed net yields for projects to include secondary effects
-Fixed sign error in specialist net yield help text
-Fixed occurrence notification localization when playing MP with players using different languages
-Fixed tech names not showing up on cards in some languages 
-Fixed changing a tile improvement affecting city build queue specialists on other tiles
-Fixed character card not selecting tribe leader 
-Fixed occurrence overlay getting stuck in some cases
-Fixed temporary overlays not getting cleared when blocking popups are active
-Fixed units being bounced by an Occurrence before taking damage from it
-Fixed bug with Player.canEverHaveEffectCity
-Fixed tile territory assignment in game editor 
-Fixed Grand Vizier interfering with automated unit management 
-Fixed camera zooming to fog when clicking foreign character with job
-Fixed Towers giving extra height instead of extra range
-Fixed movement bug that resulted in allied units not getting bounced out of your territory
-Fixed some AI retreat confusion
-Fixed promotion button icons not aligning to right of button
-Fixed nation crest color issues 
-Fixed tooltip positioning issues with HUD scaling 
-Fixed missing source traits on some effectCity entries
-Fixed Opulence project not granting family opinion bonus
-Fixed tooltip for event options that marry away characters
-Fixed city production text not updating after builds finish 
-Fixed founded city territory bug 
-Fixed extra mission buttons appearing in some cases 
-Fixed missing at sea bonus description
-Fixed production text sometimes not appearing in some languages when city healthbar is visible
-Fixed Chancellors with negative discipline not reducing money income
-Fixed Learn to Play ambitions not displaying correctly in Hall of Fame
-Fixed mods not showing in Upload tab in some cases
-Fixed map mod attributes not being checked in setup screen
-Fixed scenario victory achievements sometimes not completing 
-Fixed Heroes of the Aegean scenario 4 tech tree completion achievement triggering too early
-Fixed Heroes of the Aegean scenario 4 state religion adoption
-Fixed Pharaohs of the Nile scenario 2 Tribal peace/truce/war missions
-Fixed Pharaohs of the Nile scenario issues with Urusalim not being a city site 
-Fixed Pharaohs of the Nile overlapping goals UI
-Fixed unwanted VPs in The Hill scenario 
-Fixed "Wrath of Gods" map script showing with "show hidden map scripts" enabled and content not owned
-Fixed occurrences causing rivers with deltas flowing into land tiles (Wrath of Gods)
-XML ordering fixes
+Fixed event job forcing not always working 
+Fixed trade breakdown tooltip
+Fixed governor marker showing in city widget for No Characters 
+Fixes to the Old World premade map - re-added dynasty start positions and fixed empty tiles warning
+Fixes to the Punic Duel premade map - removed underwater trees and fixed missing city name
+Fixed border expansion preview not updating after changes in player decision queue 
+Fixed Stele placement not being restricted to chosen city 
+Fixed a bug with AI unit effect evaluation
+Fixed Game.canStartOccurrence modifying the game state
+Fixed players being unable to surrender in MP games when they are the last active human player
+Fixed events checking for mutual attraction selecting divorced spouses 
+Fixed incorrect amount of orders when ending the turn without founding a city
+Fixed temporarily impassable tiles getting counted for minor city creation
+Fixed leader bio paragraph indentation inconsistencies 
+Fixed farm model roof bug
+Fixed visibility load/save error from terrain height change
+Fixed an AI bug that made it misjudge large battle outcomes and attack when it should be retreating 
+Fixed number of improvement ambitions becoming impossible after losing control of a city
+Fixed mini tech tree names not being accounted for in scroll area 
+Fixed council character tooltip positioning with selection active
+Fixed reference to Stun in Retreat helptext
+Fixed Guilds help text inconsistency 
+Fixed top bar yield arrows for selected character
+Fixed events giving characters jobs getting invalidated when character is general of a unit on cooldown
+Fixed yield preview showing incorrectly when replacing an improvement with a specialist
+Fixed duplicate characters getting generated from events
+Fixed AI bug that caused retreat from non hostile AI units
+Fixed critical hit chance not resetting on General wisdom change 
+Fixed flicker when hovering over improvement recommendations
+Fixed border expansion algorithm 
+Fixed family and religion crest color and opinion display
+Fixed potential infinite recursion in AI bonusValue calculations
+Fixed another case of Carthage scenario 4 Epic Victory achievement not being granted
+Fixed Pharoahs of the Nile scenario 4 being continuable after winning
+UI modding fixes
 Text and event fixes
