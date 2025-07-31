@@ -1,4 +1,7 @@
 Main Branch 1.0.78921 Release 2025-07-23
+Hotfix 1.0.79004 Release 2025-07-31
+
+Hotfix fixes a couple of potential game hangs and reverts the UI change requiring ctrl+click to load cloud games from previous versions on release builds
 
 Headline Changes
 
@@ -59,7 +62,6 @@ Added option Advanced Help Text.  Some tooltip information is removed when this 
 Event triggers are now displayed at the top of events where relevant
 Added popup notifications for some bonuses (Diplomatic, Subjugator, King of Kings, Fickle Band)
 Landmark discovery popups no longer shown when starting an alliance 
-Cloud games that were last played on a different version will be greyed out with a warning.  Use Ctrl+click to load a game from an earlier version.  Saves from later version cannot be loaded
 Added starting characters to SP setup stats screen
 Added support for cycling through occurrence tiles on click 
 Added turns of/since conflict to player and tribe tooltips 
@@ -72,6 +74,8 @@ Added custom helptext for Ebbing Sea occurrence (Wrath of Gods)
 
 Bugs Fixed
 
+Fixed game hang when Send Caravan mission is completed in one turn
+Fixed game hang when city site urban tiles are outside the map playable area
 Fixed yield previews getting stuck
 Fixed bug that could cause games to fail to start after selecting Learn to Play scenarios
 Fixed map generation for games with 2 human teams where the middle of the map is not suitable for player starts (e.g. Hardwood Forest) 
