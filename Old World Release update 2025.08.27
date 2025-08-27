@@ -15,7 +15,7 @@ The AI avoids founding a religion for a certain number of turns, depending on AI
 The AI can no longer start with improvements that are required for founding a religion (Shrines and Pastures)
 Units that are no longer hidden because of an effect being removed remain hidden until they move or attack
 Hidden scouts no longer get bounced several tiles away just to remain hidden in Trees
-Make Peace/Alliance with a Tribe amitions no longer require tribe contact and don't fail if the last contacted tribe is eliminated 
+Make Peace/Alliance with a Tribe ambitions no longer require tribe contact and don't fail if the last contacted tribe is eliminated 
 Adad-Guppi and Ramesses II cannot die for the first 50 years (Wonders and Dynasties)
 Slum improvements are now Urban (Behind the Throne)
 Added new map script Desolation, a fertile land with deserts that expand over time (Wrath of Gods) 
