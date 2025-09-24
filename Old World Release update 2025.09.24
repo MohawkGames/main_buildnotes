@@ -2,6 +2,9 @@ Main Branch 1.0.xxxx release 2025-09-24
 
 Design
 
+Increased Discontent per turn on Sufficient, Modest and Fragile Prosperity levels (Glorious, Magnificent and Great difficulty levels)
+Removed free Crossbowmen bonus tech
+Nomad effect now gives +25% strength in Arid as well as Sand tiles - affects Camel Archer, Libyan Cavalry and Elite Libyan Cavalry
 Temporarily hidden units (i.e. Scouts bounced out of Trees) now become visible after 5 turns (or after attacking or moving)
 Temporarily hidden units can no longer occupy territory that they would not be able to occupy if not hidden (i.e. foreign territory while at Truce)
 Scouts are no longer removed from the map after establishing an Agent Network and instead get a 5 turn cooldown and are hidden for 10 turns
@@ -21,6 +24,7 @@ Further decreased likelihood of AI founding religions early based on AI Developm
 Assault bonus to attack against forts no longer applies when forts give no defensive bonus
 Disabled some more ambitions in One City Challenge
 Rightful Heirs can no longer become Missing, Exiled, Imprisoned or Fugitive
+Games with two human players and AI no longer place the humans at opposite ends of the map and the AI in the middle. Instead, they are treated like a FFA.
 Added ambitions for building Wonders added in Wonders and Dynasties
 Delvers have an opinion penalty towards Stewards of the Land.  These traits are now mutually exclusive (Wrath of Gods)
 
@@ -61,6 +65,7 @@ Yield production graphs also display the total accumulated up until the hovered 
 Learn to Play is removed from the main menu after completing all the LTP or LBP scenarios or on disabling the tutorial
 Added help text for event options that give archetypes in Roleplaying mode
 Imprisoned trait removed from characters on death
+Update difficulty descriptions
 
 Bugs Fixed
 
@@ -84,9 +89,11 @@ Fixed potential null reference in Map Editor
 Fixed some temporary invisibility issues 
 Fixed audio tracks not always being listed in Main Menu audio options
 Fixed tribal units with a raid target counting towards a tribal camp's defend threshold or raid start threshold 
+Fixed AI not knowing how to repair improvements that cannot be built (e.g. Towns)
 Fixed edge case with Carthage3 African Invasion goal not completing
 Fixed iGovernorCostModifier applying to orders (affects Darius dynasty and mods)
 Fixed unbuildable units and tech cards showing on the tech tooltip (affects mods)
+Fixed mod version mismatch being displayed incorrectly, preventing modded saves from being loaded in some case
 Fixed foreign occurrence effects on units, movement and visibility not being applied immediately (Wrath of Gods)
 Fixed some occurrence load/save issues (Wrath of Gods)
 Fixed some non-global Occurrences showing as global in helptext (Wrath of Gods)
