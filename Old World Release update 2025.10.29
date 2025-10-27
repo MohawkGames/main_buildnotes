@@ -1,5 +1,12 @@
 Main Branch 1.0.xxxxx release 2025-10-29
 
+Headline changes
+
+Leader archetype balancing for Heroes, Builders, Zealots and Diplomats
+Added Road Improvement Ping (Map pin)
+Rebel chance icon added to Cities Screen and City tooltip
+MP setup and observer mode improvements
+
 Design
 
 Hero leaders can now Launch Offensive after attacking.  This still puts the Hero unit on cooldown, so they cannot act after Launch Offensive
@@ -43,16 +50,16 @@ UI
 
 Added Road improvement ping
 Cities with effects that give Rebel chance are marked with a Rebels icon in the city list screen and city tooltip 
-Population in the city list screen is now a link to city specialists 
-Worker build action button yields no longer subtract unimproved tile yields
-Map Overlay Customizer now has seperate options for Urban and Rural Improvements
-Renamed the City Number options and City Site Density to City Site Spacing 
 Default player name in MP and network server name are now taken from the online platform nickname
 MP Setup screen newly added players duplicate the parameters of the previous player
 Cloud game hosts can now rename the game using the host control popup 
 In sequential turn network games, observer view automatically switches to the next player when the observed player's turn ends.  This is disabled after manually switching to a different player
 Observers now use their set language rather than the language of the observed player
 Chat hotkey no longer works for non-host observers 
+Population in the city list screen is now a link to city specialists 
+Worker build action button yields no longer subtract unimproved tile yields
+Map Overlay Customizer now has seperate options for Urban and Rural Improvements
+Renamed the City Number options and City Site Density to City Site Spacing 
 Show Foreign Family Colors option now also applies to city widget crests 
 Clicking a General portrait on a selected unit now selects the character
 Law tooltips now show family opinion changes instead of family class opinion
