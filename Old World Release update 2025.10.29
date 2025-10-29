@@ -35,7 +35,7 @@ Added initial turn timer time stockpile.  Slow adds 3 minutes, Medium 2 and Fast
 
 Programming
 
-Fixed several memory leaks
+Fixed several memory leaks (more improvements here coming next update)
 Memory allocation optimization
 Minor MP performance optimization
 Improved AI for Zealot leader enlisting
