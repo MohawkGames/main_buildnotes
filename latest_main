@@ -1,4 +1,7 @@
 Main Branch 1.0.80396 release 2025-10-29
+Hotfix 1.0.80522 release 2025-11-04
+
+Hotfix release fixes some game hang issues, paticularly when using Road pings, issues with cloud game Host Controls, event text not always displaying correctly in some languages, changing terrain height in the game editor, tile visibility issues when in an alliance and borders not updating for Observers
 
 Headline changes
 
