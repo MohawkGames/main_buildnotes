@@ -22,6 +22,8 @@ Capturing city timer no longer counts back up when city is left vacant
 Cities in the capturing state no longer go to Anarchy if no capturing progress has been made
 Units can pass through capturable cities without capturing them as long as they don't stop inside 
 Changing the Succession Law no longer results in characters becoming Bypassed and suffering opinion penalties
+The cost to change the Succession Law now starts at 400 civics and increases at 100 civics per switch
+Judge leaders can change the Succession Law for 100 civics as per other laws
 Stunned units no longer counterattack
 Characters are more likely to get a strength or weakness before reaching adulthood 
 In 2 team MP games, leaders initial strength is now mirrored when set randomly 
