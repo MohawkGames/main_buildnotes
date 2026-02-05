@@ -1,6 +1,6 @@
 Main Branch 1.0.81xxx Release 2026-02-11
 
-Up to date as of 3rd Feb, doesn't include latest test changes
+Up to date as of 5th Feb
 
 Design
 
@@ -29,7 +29,7 @@ Doubled Master/Elder Scribe money per Citizen, to +2/+4
 Anchoring and Unlimbering states are not interrupted by attacks that apply new cooldowns (i.e. Immobilize, Stun)
 Killed civilian units now count for Assyrian orders, Hero Leader Training, Epics Culture, etc
 Units can pass through hostile civilian units, as long as they don't end their movement on their tile
-Families and Religions get upset when their civilian units get killed and suffer -20 opinion for 40 turns per unit killed
+Families and Religions suffer -40 opinion for 20 turns when their Workers and Disciples are killed
 Improvements to Carthage campaign persistency
 Increased maximum effect of god opinion on religion opinion in Wrath of Gods scenario (200 -> 500)
 Reduced Tribal raid range in Wrath of Gods scenario
@@ -45,19 +45,23 @@ Memory leak fixes
 Improvements to Safe Mode
 AI border expansion tweaks
 AI law value correction to avoid frequent changes
+Better AI legitimacy evaluation
 Added Latin supplemental characters U+100 to U+17F to Avalon, Trajan and Judson assets, to assist Polish translation mods
+Added support for bonus cards to use bonus names in tooltips (affects mods only)
 
 UI
 
 Restart Game button renamed Reroll Game. This keeps the same map and preserves nation/dynasty of random AI opponents but now rerolls the random seed
 New Map button renamed to Reroll Map. This button is not shown for games on predefined maps
 Valid Improvements, Rural, and Urban worker filters show improvements valid anywhere in the city rather than just for current tile
-End Turn button now always eligible to be clicked with 0 orders, will cycle to required items when clicked
+End Turn button can now always be clicked on your turn, will cycle to required items if needed
+Added hotkey for suppressing tooltips (hold Ctrl + X)
+Added hotkey for extending turn time (Alt-E)
 Added Reset option when editing hotkeys
+Added Unimproved Resources overlay to Overlay Customizer
 Character XP is now shown when they have upgraded at least once but progress to next level is 0
 Added Peak Legitimacy and Peak Legitimacy per Leader to Hall of Fame (requires regenerating HOF for existing games, won't display on very old saves)
 Added on-map icon to units that have been disarmed
-Added hotkey for extending turn time (Alt-E)
 Updated ZOC help text
 Enabled gold cost to buy yields for recommended improvements tooltip
 Added color-coding for Send/Return text in Luxury Management
@@ -73,6 +77,12 @@ Cities with zero yield are included in the nation yield breakdown
 When a non-server network game has disconnected human players and the turn timer is counting down, a warning is displayed next to the turn time 
 Improvements to Citrus resource and Grove models
 Improvements to Ruins model
+Improvements to Luxury Management display, especially when no luxuries available
+End Turn button now always active, clicking it will cycle to decisions preventing turn from ending
+Free improvement bonuses now show as normal event popups first
+Place improvement overlay not shown while bonus event is active
+When placing free improvements, ctrl+click is required to replace existing improvements
+Games with custom victories are skipped for unloaded scenario mods in Hall of Fame
 
 Bugs Fixed
 
@@ -110,6 +120,17 @@ Fixed Unyielding Banner reassigning general to non-player units
 Fixed scores not updating after effectPlayers change
 Fixed event decisions not getting restored after clearing selection
 Fixed tutorial videos not showing in the encyclopedia on Linux
+Fixed missing theology info on tech tooltips
+Fixed bonus yield text bug
+Fixed Unit Seen notification not firing if unit becomes visible mid-move
+Fixed Default Governor bugs
+Fixed Peaks adjacency requirement being ignored by Clerics on Sand tiles
+Fixed encyclopedia display issue
+Fixed Research UI not showing after renaming landmark
+Fixed MP games with one human team getting stuck after victory
+Fixed Ask to Declare War mission helptext
+Fixed tile tooltip to show improvement defensive modifier in neutral territory
+Fixed scenario selection getting cleared when moving to MP setup screen
 Fixed Occurrence effects not being removed when ended by an event/bonus (Wrath of Gods)
 Fixed Veneration jealousy penalty being applied to both religion and god in Wrath of Gods scenario 
 Fixed tech helptext not listing non religion-based project unlocks in Wrath of Gods scenario
