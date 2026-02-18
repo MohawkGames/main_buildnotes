@@ -12,6 +12,7 @@ Portrait Age Interpolation is not working and has been disabled regardless of th
 Fog of War can flicker on and off following movement in some cases
 Unit models and banners can fail to display consistently during AI turn
 Free promotion icon partially hidden
+Cycling to a stacked unit can show their icon behind other units
 Volcano display issues
 
 Design
