@@ -1,19 +1,24 @@
 Main Branch 1.0.82189 Release 2026-02-18
+Main Hotfix 1.0.82387 Release 2026-02-26
+
+Hotfix release fixes several bugs introduced in the previous update
+
+Hotfix Bugs Fixed
+
+Fixed Portrait Interpolation and re-enabled
+Fixed terrain display issues
+Fixed partially hidden free promotion icon
+Fixed network game timeout issues
+Fixed End Turn button in Simultaneous MP games
+Fixed tooltip flicker on game browser
+Fixed ping wheel initial position
+Fixed specialist icon display
 
 Headline changes
 
 Major Unity and rendering system update 
 Improved graphics performance and memory optimization
 Unique Unit (UU) tech bonus cards are now unlocked through culture instead of tech
-
-Known Issues
-
-Portrait Age Interpolation is not working and has been disabled regardless of the player setting
-Fog of War can flicker on and off following movement in some cases
-Unit models and banners can fail to display consistently during AI turn
-Free promotion icon partially hidden
-Cycling to a stacked unit can show their icon behind other units
-Volcano display issues
 
 Design
 
