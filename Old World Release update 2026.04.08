@@ -57,6 +57,7 @@ Changed color of unit health bar difference to green, when health is increasing 
 Order movement now shows below yield preview
 Adjusted selection circle animation for tutorial
 Added some references to bonus UU techs to Tech Encyclopedia and Culture links (with advanced help)
+Forest and Jungle on Mountains are now partly hidden, for clarity
 Disabled Mirror Map option on Desolation & Ebbing Sea mapscripts (Wrath of Gods)
 Added description for Vassalize Tribe mission (Empires of the Indus)
 Added description to the Hinduism tooltip (Empires of the Indus)
@@ -65,6 +66,7 @@ Edited World Religion concept to include Buddhism (Empires of the Indus)
 
 Bugs Fixed
 
+Fixed unit banners being visible when they shouldn't in some cases during hotseat games
 Fixed text outside of viewport bounds sometimes not clipping
 Fixed custom overlay icons not showing correctly on first opening
 Fixed barbarian widget sorting incorrectly with rivers
@@ -105,6 +107,7 @@ Fixed improvement yields from adjacent improvements that belong to a different t
 Fixed minimum detail rivers not showing when initially loading a game with minimum settings
 Fixed blocky rivers on minimum terrain detail in some scenarios
 Fixed tribe widget upgrade timer text cutting box out of clouds
+Fixed inconsistent capitalisation in DLC names 
 Game Editor UI fixes
 Fixed Jerwan Aqueduct flickering between turns (Wonders and Dynasties)
 Fixed Rejuvenation replacing Trees with Scrub (Wrath of Gods)
