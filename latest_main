@@ -1,4 +1,7 @@
-Main Branch 1.0.83036 Release 2026-04-08
+Main Branch 1.0.83036 release 2026-04-08
+Hotfix 1.0.83082 release 2026-04-09
+
+Hotfix fixes issues with rendering tile edge highlights, such as ship anchored range and ranged unit attack
 
 Headline changes
 
