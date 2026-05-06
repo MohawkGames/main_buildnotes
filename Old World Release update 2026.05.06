@@ -8,7 +8,7 @@ New Map Search function
 
 Design
 
-Crossbows now have +50% strength against melee, instead of +50% attack
+Crossbows now have +50% strength against melee (from +50% attack)
 Tech costs for columns in the tech tree changed to 100, 150, 250, 400, 700, 1100, 1600 (from 80, 120, 200, 400, 600, 1000, 1600)
 Increased flat science from difficulty level by 2
 At least two non-trashable tech cards will be offered if possible, to prevent all tech choices being bonus cards
