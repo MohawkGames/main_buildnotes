@@ -1,4 +1,4 @@
-Main Branch 1.0.83xxx Release 2026-05-06
+Main Branch 1.0.83499 Release 2026-05-06
 
 Headline Changes
 
@@ -13,11 +13,13 @@ Tech costs for columns in the tech tree changed to 100, 150, 250, 400, 700, 1100
 Increased flat science from difficulty level by 2
 At least two non-trashable tech cards will be offered if possible, to prevent all tech choices being bonus cards
 Slingers are now obsolete at Bodkin arrow
-Rising Star trait now replaces Infamous and Unpopular
+Gold and Silver mine output increased to 50 money (was 40)
+Reduced culture requirements for Market class improvements (Market requires Weak, Grocer Developing and Fair Strong) and adjusted some ambitions accordingly
 Units can repair any improvement they can build (affects Disciples and Brahmins)
 Ship build queue options added for each harbor in a city, in addition to each body of water that does not have a harbor, to allow choosing where the ship spawns
 Improved city site distribution for 2-team maps
 AIs will no longer have child leaders, instead using the next adult in the succession or generating a new character if needed
+Rising Star trait now replaces Infamous and Unpopular
 All Hindu cities can now build Brahmins, without requiring Holy City/State Religion/Tolerance (Empires of the Indus)
 Decreased Indian Unique Unit vision to be in line with other units, with the exception of Steppe Riders which retain extra vision (Empires of the Indus)
 The owner of the unit, not the upgrading player, needs Polis to upgrade Steppe Riders (Empires of the Indus)
