@@ -13,7 +13,7 @@ Tech costs for columns in the tech tree changed to 100, 150, 250, 400, 700, 1100
 Increased flat science from difficulty level by 2
 At least two non-trashable tech cards will be offered if possible, to prevent all tech choices being bonus cards
 Slingers are now obsolete at Bodkin arrow (previously also required Windlass)
-Gold and Silver mine output increased to 50 money (was 40)
+Gold and Silver mine output increased to 50 money (from 40)
 Reduced culture requirements for Market class improvements (Market requires Weak, Grocer Developing and Fair Strong) and adjusted some ambitions accordingly
 Units can repair any improvement they can build (affects Disciples and Brahmins)
 Ship build queue options added for each harbor in a city, in addition to each body of water that does not have a harbor, to allow choosing where the ship spawns
