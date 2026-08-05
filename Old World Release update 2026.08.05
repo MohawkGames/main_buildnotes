@@ -65,7 +65,7 @@ Fixed tooltips remaining frozen when switching screens
 Fixed yield previews showing for invalid tiles with Current Tile or General filters selected
 Fixed event cycling while bonus placement is active
 Fixed popup processing after surrendering
-Japaense text localization fixes
+Japanese text localization fixes
 Fixed Korean decimal & thousands separator
 Fixed Game of the Week mapscript potentially differing depending on owned DLC
 Fixed terrain sometimes not updating after closing timeline
