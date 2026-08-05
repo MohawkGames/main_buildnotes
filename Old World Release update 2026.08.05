@@ -1,0 +1,89 @@
+Main Branch 1.0.84365 Release 2026-08-05
+
+Headline changes
+
+Schemers can be Ambassadors and Chancellors in addition to Spymasters and Agents
+Added new City Site Number game option choice - 6 per player
+Added new player UI option 'High contrast Player Colors'
+
+Design
+
+Schemers can be Ambassadors and Chancellors in addition to Spymasters and Agents
+Priest specialists increase happiness by 1/2/3 (from 1/1.5/2) and religion opinion by 2/4/6 (from 1/2/3)
+Bishop specialists increase religion opinion by 3/6/9 (from 1/2/3)
+In team games where one player has a tribal alliance, tribes are less likely to demand tribute from non-allied teammates
+Killing or hiring a tribe unit no longer immediately changes the number of turns until the next tribe unit spawns from the closest site
+Luxury resources are now more common on randomly generated maps
+The more expensive (350+ science cost) Courtier bonus card techs give two Courtiers instead of one
+Changed Tribe unit cooldown behavior to be consistent with player units
+Tribe units receive a 2-turn cooldown if acting on another players turn (was 1)
+Tribe units cooldowns are processed (reduced) before unit movement, not after
+Tribe units Stun cooldown becomes Attacked cooldown on turn end
+Immobile cooldown gets converted to Attacked at the end of the unit's turn, similar to what happens with Stunned
+Increased tiers of later religion (Christianity, Manichaeism, Buddhism) disciple ambitions
+Removed repair improvements ambitions
+In the Barbarian Horde scenario, the Huns are no longer organized
+Carved Ivory (Aksum) is now a Precious Resource (Wrath of Gods)
+Huns won't ask for tribute before turn 20 or repeat demands until at least 10 turns after first being met (Empires of the Indus)
+Added missing event for completing the Buddhist holy site (Empires of the Indus)
+
+Programming
+
+Improved AI character selection for governors and generals
+Added tech path history to saves. Not shown in-game, for use by community save analyzers
+
+UI
+
+Added new City Site Number game option choice - 6 per player
+Added new player UI option 'High contrast Player Colors'
+Added modsets functionality to mods screen, to allow grouping mods that can all be enabled at once 
+Added All Player filter to Map Search
+Map Search can now be closed by clicking any top tab, in addition to clicking the Map Search icon
+Updated Luxuries concept/link text to list all luxuries dynamically
+Added succession to Upgrade Character text
+Renamed Game option 'No Organized Tribes' to 'Disable Organized Tribes'
+Text localization updates
+Repair recommendation no longer always assumes buying goods, instead depends on ALT
+Modifier signs for negative yields are no longer reversed
+Increased visibility of attack range outline for ranged units
+Added Urban to map pin options
+Luxury/source helptext improvements
+Updated Discord channel helptext on MP join screen
+Added Disable SRP Batcher troubleshooting option
+
+Bugs Fixed
+
+Fixed missing holy city icons on city widget
+Fixed screen visibility lag after history screen has been opened
+Fixed MP serialization errors that result in ghost units and repeated animations
+Fixed event kills not advancing/routing when they should
+Fixed units being valid to convert to a different owner if the unit is on its own city or settlement
+Fixed consistency for yield help text with negative multipliers
+Fixed team color on mines
+Fixed repair recommendations always showing as dimmed
+Fixed tooltips remaining frozen when switching screens
+Fixed yield previews showing for invalid tiles with Current Tile or General filters selected
+Fixed event cycling while bonus placement is active
+Fixed popup processing after surrendering
+Japaense text localization fixes
+Fixed Korean decimal & thousands separator
+Fixed Game of the Week mapscript potentially differing depending on owned DLC
+Fixed terrain sometimes not updating after closing timeline
+Fixed tribal stun and immobilize in Simultaneous and Loose turn styles 
+Fixed AZERTY keyboard shortcut issues
+Fixed Map Search player/tribe filter
+Fixed Precious Resource help text
+Fixed tribe killing goal getting invalidated too early in some cases
+Fixed duplicate floating text in some cases
+Fixed Buy Yields text on Road ping tooltip
+Fixed resource overlay and harvested icons overlaying each other when both are present
+Fixed unit widget healthbars rendering behind resource overlay
+Fixed character portrait interpolation settings (Tamil Male 05 and Rome Female 11)
+Fixed Rise of Carthage scenario 1 goals potentially not triggering when Tribe Level set to Weak/Passive
+Fixed possible portrait duplication in Rise of Carthage Game One scenario
+Fixed score list for The Hill scenario
+Fixed occurrences still affecting tiles after they became invalid for it i.e. Wildfire on water (Wrath of Gods)
+Fixed occurrences that reduce vegetation pillaging and destroying improvements by that mechanic (Wrath of Gods)
+Fixed some missing source improvement / project lists (affects mods)
+Fixed UI fragment modding with Remove tags
+Text and event fixes
