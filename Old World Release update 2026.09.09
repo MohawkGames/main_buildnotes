@@ -1,0 +1,64 @@
+Main Branch 1.0.84658 Release 2026-09-09
+
+Headline changes
+
+Polybolos now have +50% attack (was +50% attack vs Ranged)
+Forts cannot be adjacent to other Forts
+AI builds fewer Militia, Conscripts and obsolete units
+
+Design
+
+Polybolos now have +50% attack (was +50% attack vs Ranged)
+Forts cannot be adjacent to other Forts
+Increased defensive modifier of Garrison/Stronghold/Citadel by 10%
+Swapped base ratings for Schemers and Scholars
+Tribal units no longer move if they have been previously moved by their ally on that turn
+Tribal units no longer retreat to their settlement when closer to allied territory
+Increased water margin at map edges for some mirrored map scripts, to ensure both sides have a water pass
+Lowered The Gatherer and The Resourceful cognomen levels (from 30/50 legitimacy to 20/40) and values (300/100 for harvest/chop to 200/50) (Empires of the Indus)
+
+Programming
+
+AI builds fewer Militia, Conscripts and obsolete units
+AI places a lower priority on attacking expansion targets if it's short on orders
+AI always guards city sites even when it believes no other player is nearby
+Added some Mac crash debugging
+
+UI
+
+Improved display of rivers on tundra tiles
+Added Pillaged filter for Improvements in Map Search
+Unit type help improvement
+Cut down on character life event announcements
+Random traits and ratings are now only shown in the turn summary for the leader and the heir
+Religion conversions are only shown for leader, heir, family heads and the first character to convert after founding
+Hovering on timeline shows year at hovered position instead of currently displayed year
+Add Urban / Road ping tooltip improvements
+Legacy helptext adjustment
+Added reign time to character help for former leaders
+
+Bugs Fixed
+
+Fixed conquest games as Tamilakam sometimes not getting marked as completed
+Fixed hotseat surrender issue
+Fixed point mirrored Coastal Rain Basin and Arid Plateau map scripts sometimes not generating enough mountains, leading to strange river generation
+Fixed missing religion opinion details on city happiness/discontent helptext
+Fixed trashed UU tech cards being placed on the discard pile on culture growth
+Fixed some client null reference exceptions
+Fixed cognomen help null reference
+Fixed tooltip buy costs
+Fixed unit consumption link always showing the active player's unit breakdown
+Fixed minimap ping placement 
+Fixed player alliance ambitions being offered in games with 1 or 2 teams
+Fixed some heir and leader assassination achievement issues
+Fixed religion context menus not being clickable in some situations
+Fixed city effects sometimes being counted twice in previews and helptext
+Fixed text issue with abdicate mission helptext
+Fixed some bugs with AI movement
+Fixed loading save with no settlement improvement on a city site
+Fixed cycling through Map Search results
+Fixed team alliance contact inconsistencies
+Fixed unlimber audio overriding subsequent selections
+Possible fix for some UI system issues
+Fixed building improvements over jungle not granting cut jungle achievement (Empires of the Indus)
+Fixed text in Rise of Carthage scenario 2
