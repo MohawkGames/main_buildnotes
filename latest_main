@@ -1,65 +1,74 @@
-Main Branch 1.0.84658 Release 2026-09-09
+Main Branch 1.0.84977 Release 2026-10-07
 
 Headline changes
 
-Polybolos now have +50% attack (was +50% attack vs Ranged)
-Forts cannot be adjacent to other Forts
-AI builds fewer Militia, Conscripts and obsolete units
+Added a Mod Editor, available from the Extras menu
+AI anchoring and overseas expansion improvements
+Sages no longer get a free Archive on founding a city
 
 Design
 
-Polybolos now have +50% attack (was +50% attack vs Ranged)
-Forts cannot be adjacent to other Forts
-Increased defensive modifier of Garrison/Stronghold/Citadel by 10%
-Reduced culture from Ambassador and science from Spymaster. Adjusted Chancellor Money and Civics.
-Swapped base ratings for Schemers and Scholars
-Tribal units no longer move if they have been previously moved by their ally on that turn
-Tribal units no longer retreat to their settlement when closer to allied territory
-Increased water margin at map edges for some mirrored map scripts, to ensure both sides have a water pass
-Lowered The Gatherer and The Resourceful cognomen levels (from 30/50 legitimacy to 20/40) and values (300/100 for harvest/chop to 200/50) (Empires of the Indus)
+Sages no longer get a free Archive on founding a city, instead they can build Archives without Metaphysics
+Units with leader generals are now immune to the Fireship effect
+Generic religion building ambitions are no longer offered (religion-specific building ambitions remain)
+Event review and tweaks based on analytics and player feedback
+Olympiad projects up to 100/200/300/400 Training (from 50/100/150/200)
+Added mission to exchange maps with another human player
+Improved symmetry of free city sites on mirror maps
+Free Settler bonus card no longer appears if all city sites are settled
+Disbanding Workers/Disciples gives the same opinion penalty as having them killed
+Sword of the Gods now gives +50% attack vs infantry (was +50% strength)
 
 Programming
 
-AI builds fewer Militia, Conscripts and obsolete units
-AI places a lower priority on attacking expansion targets if it's short on orders
-AI always guards city sites even when it believes no other player is nearby
-Added some Mac crash debugging
+AI anchoring and overseas expansion improvements
+Fixed issues with MP not connecting to cloud VM servers
+Removed duplicate log spam when the send queue is full
+Moved some event bonuses from multiple independent trait rolls to a single uniform roll
+Characters are processed before units at turn start
+Reduced some heap memory allocations when calculating water control
+Eliminated some unnecessary network traffic
 
 UI
 
-Improved display of rivers on tundra tiles
-Added Pillaged filter for Improvements in Map Search
-Unit type help improvement
-Cut down on character life event announcements
-Random traits and ratings are now only shown in the turn summary for the leader and the heir
-Religion conversions are only shown for leader, heir, family heads and the first character to convert after founding
-Hovering on timeline shows year at hovered position instead of currently displayed year
-Add Urban / Road ping tooltip improvements
-Legacy helptext adjustment
-Added reign time to character help for former leaders
+Added a Mod Editor, available from the Extras menu
+Unit list filter left click now shows only that type instead of hiding them, shift+click toggles type
+Notable characters (Exploring, Imprisoned, Exiled, Rising Star, Power Hungry, Trade Venture, Distant Claimant, Vengeful, Plotting, Bypassed) now added automatically to the pinned characters tab
+Active mods popup no longer shown when starting or loading a game with mods. The loading screen now displays active mods in the bottom left
+Added the ability to trigger the combat preview panel for tiles other than the selected unit's current tile. To use this, add a waypoint using CTRL+click, then mouse over the attack tile from the waypoint.
+In network games with observers allowed, players can send chat messages that only observers can see and observers can send messages to specific players
+AI no longer plays the rest of the turn after a player surrenders in a 1v1 game
+Cloud game order reversed so that the more urgent ones are at the bottom
+Added email field to bug reporting popup
+Added player notification for rejection of human proposal for alliance/peace/truce/map sharing
+Savegames from completed named games will include the game name in the filename
 
 Bugs Fixed
 
-Fixed conquest games as Tamilakam sometimes not getting marked as completed
-Fixed hotseat surrender issue
-Fixed point mirrored Coastal Rain Basin and Arid Plateau map scripts sometimes not generating enough mountains, leading to strange river generation
-Fixed missing religion opinion details on city happiness/discontent helptext
-Fixed trashed UU tech cards being placed on the discard pile on culture growth
-Fixed some client null reference exceptions
-Fixed cognomen help null reference
-Fixed tooltip buy costs
-Fixed unit consumption link always showing the active player's unit breakdown
-Fixed minimap ping placement 
-Fixed player alliance ambitions being offered in games with 1 or 2 teams
-Fixed some heir and leader assassination achievement issues
-Fixed religion context menus not being clickable in some situations
-Fixed city effects sometimes being counted twice in previews and helptext
-Fixed text issue with abdicate mission helptext
-Fixed some bugs with AI movement
-Fixed loading save with no settlement improvement on a city site
-Fixed cycling through Map Search results
-Fixed team alliance contact inconsistencies
-Fixed unlimber audio overriding subsequent selections
-Possible fix for some UI system issues
-Fixed building improvements over jungle not granting cut jungle achievement (Empires of the Indus)
-Fixed text in Rise of Carthage scenario 2
+Fixed city widget not being hoverable with city open, which prevented renaming a city
+Fixed Hittite portraits showing the Egyptian portrait background
+Fixed Chittogarh (Empires of the Indus) and Blessing of Healing (Wrath of Gods) healing all units, now only heals team and allied units
+Fixed inheritance screen and family/religion tab text potentially displaying outside of their windows
+Fixed undo delay and redo issues
+Fixed random traits from events sometimes applying multiple times
+Fixed point symmetry resource issue
+Fixed MP chat dropdown issue
+Fixed bug preventing servers running on Linux
+Fixed cloud games with non-ASCII characters in the game name failing to upload
+Fixed pending critical sometimes not happening when it should
+Fixed clicking unit name on unit list not selecting unit
+Fixed panic into a hidden unit's tile sometimes resulting in Disarm instead
+Fixed ambitions to send X luxuries to tribes failing if fewer than X tribes are alive
+Fixed hostile unit notification and Schapur suffix shown incorrectly in German translation
+Fixed some religion mission translation issues
+Fixed events sometimes not displaying 'not' requirements correctly
+Fixed AI losing the game due to no heir
+Fixed UU card being moved from draw pile to discard pile on culture growth
+Fixed Nation/Tribe crest being shown twice in "unit seen" notifications
+Fixed an issue where Occurrence Ready events could happen on back-to-back turns
+Fixed AI overvaluing border expansion
+Fixed ursurper succession load/save bug
+Fixed duplicate Sin-Muballit name
+Fixed promotions being available for Workers upgraded from Steppe Riders (Empires of the Indus)
+Fixed potential Family Control null reference (Empires of the Indus)
+Text and event fixes
