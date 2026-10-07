@@ -30,6 +30,7 @@ Reduced some heap memory allocations when calculating water control
 Eliminated some unnecessary network traffic
 
 UI
+
 Added a Mod Editor, available from the Extras menu
 Unit list filter left click now shows only that type instead of hiding them, shift+click toggles type
 Notable characters (Exploring, Imprisoned, Exiled, Rising Star, Power Hungry, Trade Venture, Distant Claimant, Vengeful, Plotting, Bypassed) now added automatically to the pinned characters tab
