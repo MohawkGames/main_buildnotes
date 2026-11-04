@@ -40,6 +40,7 @@ UI
 Added a Players Screen (F9) showing a consolidated view of all known nations
 Added new notifications about known rival player state changes: relative power, relative knowledge, increase in best city culture, when they get 1, 4, or 7 laws
 Important character notifications are shown in the notification icon tooltips even if they are not included in the turn summary
+Improved display clarity for applied unit effects
 CTRL+clicking a mission now allows cancelling an active character mission and starting the new one in one click
 Notable (pinned or with notable trait or relationship) character updates are among those included in notifications
 Cycle buttons are now only draggable with right click, to prevent accidental re-ordering
@@ -49,7 +50,6 @@ Added additional helptext for right-click & drag to reorder cycle buttons
 Moved inactive bonuses to Potential Bonuses link on Connected and Citizen tooltips. Potential Bonuses are hidden when Advanced Help Text is not enabled
 Removed some redundant terrain checks for Bath improvements
 OS user name is no longer used as a fallback for player name when platform nickname not available
-Tweaked display of turns remaining on applied unit effect tooltips
 Appended tech card concept help to the tech tree status icon tooltip
 Pending decisions can be skipped to end your turn early if there is an unpaused dynamic turn timer, or if the turn style is not strict
 
