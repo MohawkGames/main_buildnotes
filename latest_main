@@ -6,10 +6,12 @@ Added a Players Screen (F9) showing a consolidated view of all known nations
 Stunned units are immune from being re-stunned
 Performance optimization
 
+
 Known Issues
 
 Old World on Mac does not currently work correctly with the latest version of the GOG Galaxy launcher (version 2.1).  
 A fix is planned for the next update, in the meantime please use the previous version of GOG Galaxy (version 2.0) 
+
 
 Design
 
